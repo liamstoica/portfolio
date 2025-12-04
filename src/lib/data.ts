@@ -19,6 +19,7 @@ export interface LiveSite {
   href: string
   icon?: string
   color?: string
+  image?: string    // <--- FIXED HERE
 }
 
 export interface SandboxItem {
@@ -27,6 +28,7 @@ export interface SandboxItem {
   description: string
   icon?: string
   color?: string
+  image?: string    // <--- OPTIONAL IMAGE (prevents similar future errors)
 }
 
 // Featured Work - Case Studies (Approved Projects Only)
@@ -36,28 +38,29 @@ export const projects: Project[] = [
     title: 'Hard Rock: Global Web Platform',
     description: 'Designing a unified digital ecosystem for 100M+ annual visitors across resorts, casinos, cafes, entertainment, and retail.',
     role: 'Lead UX/UI Designer',
-    color: '#FEF3C7', // Warm amber
+    color: '#FEF3C7',
   },
   {
     slug: 'hp-ai',
     title: 'HP Business Intelligence',
-    description: 'Design engineering a custom AI assistant for an HP executive\'s team to streamline workflows, communication, and innovation.',
+    description:
+      'Design engineering a custom AI assistant for an HP executive\'s team to streamline workflows, communication, and innovation.',
     role: 'Design Engineer',
-    color: '#DBEAFE', // Soft blue
+    color: '#DBEAFE',
   },
   {
     slug: 'track-tennis',
     title: 'Track.Tennis',
     description: 'Design driven strategy to expand brand, product, and market reach across racket sports.',
     role: 'Product Designer',
-    color: '#D1FAE5', // Soft green
+    color: '#D1FAE5',
   },
   {
     slug: 'hard-rock-app',
     title: 'Hard Rock: Experience App',
     description: 'Designing a unified lifestyle platform for millions of guests across hotels, casinos, cafes, entertainment, and retail.',
     role: 'UX/UI Designer',
-    color: '#FCE7F3', // Soft pink
+    color: '#FCE7F3',
   },
 ]
 
@@ -67,61 +70,61 @@ export const liveSites: LiveSite[] = [
     title: 'Adcetera',
     href: 'https://www.adcetera.com/',
     color: '#FEF3C7',
-    image: "/images/live-sites/adcetera.png"
+    image: '/images/live-sites/adcetera.png',
   },
   {
     title: 'Everon',
     href: 'https://www.everonsolutions.com/',
     color: '#FED7AA',
-    image: "/images/live-sites/everon1.png"
+    image: '/images/live-sites/everon1.png',
   },
   {
     title: 'Amalgamat. Bank',
     href: 'https://www.amalgamatedbank.com/',
     color: '#FECACA',
-    image: "/images/live-sites/amgb.png"
+    image: '/images/live-sites/amgb.png',
   },
   {
     title: 'JMW Consulting',
     href: 'https://www.jmw.com/',
     color: '#DBEAFE',
-    image: "/images/live-sites/jmw.png"
+    image: '/images/live-sites/jmw.png',
   },
   {
     title: 'Mellow Home',
     href: 'https://mellow-home.com.au/',
     color: '#E0E7FF',
-    image: "/images/live-sites/mellow.png"
+    image: '/images/live-sites/mellow.png',
   },
   {
     title: 'Frazer-Nash Consultancy',
     href: 'https://www.fnc.co.uk/',
     color: '#FCE7F3',
-    image: "/images/live-sites/fnc.png"
+    image: '/images/live-sites/fnc.png',
   },
   {
     title: 'KBR',
     href: 'https://www.kbr.com/en',
     color: '#D1FAE5',
-    image: "/images/live-sites/kbr.png"
+    image: '/images/live-sites/kbr.png',
   },
   {
     title: 'Kodak Alaris',
     href: 'https://www.kodakalaris.com/en',
     color: '#CFFAFE',
-    image: "/images/live-sites/kodak-alaris.png"
+    image: '/images/live-sites/kodak-alaris.png',
   },
   {
     title: 'Pliteq',
     href: 'https://pliteq.com/',
     color: '#CFFAFE',
-    image: "/images/live-sites/pliteq.png"
+    image: '/images/live-sites/pliteq.png',
   },
   {
     title: 'iconectiv Store',
     href: 'https://store.iconectiv.com/',
     color: '#CFFAFE',
-    image: "/images/live-sites/iconectiv.png"
+    image: '/images/live-sites/iconectiv.png',
   },
 ]
 
@@ -131,8 +134,8 @@ export const sandbox: SandboxItem[] = [
     slug: 'apple-profiles',
     title: 'Apple Profiles',
     description: 'An interactive exploration of component architecture and design tokens.',
-    color: '#F3E8FF', // Soft purple
-    image: "/images/sandbox/apple/apple-tile.png"
+    color: '#F3E8FF',
+    image: '/images/sandbox/apple/apple-tile.png',
   },
 ]
 
