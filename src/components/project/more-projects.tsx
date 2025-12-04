@@ -10,28 +10,28 @@ const workProjectsData = [
     title: 'Hard Rock — Global Web Platform',
     tags: ['Web', 'Design System'],
     year: '2024–2025',
-    image: '/images/hard rock web/hard-rock-hero.jpg',
+    image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   {
     slug: 'hard-rock-app',
     title: 'Hard Rock Experience App',
     tags: ['iOS', 'Mobile'],
     year: '2024–2025',
-    image: '/images/hard rock app/hrx-hero.png',
+    image: '/images/hard-rock-app/hrx-hero.png',
   },
   {
     slug: 'hp-ai',
     title: 'HP — AI Assistant',
     tags: ['AI', 'Internal Tool'],
     year: '2023',
-    image: '/images/hp ai/hp-hero.png',
+    image: '/images/hp-ai/hp-hero.png',
   },
   {
     slug: 'track-tennis',
     title: 'Track.Tennis',
     tags: ['Web', 'Sports'],
     year: '2022',
-    image: '/images/work-tracktennis.jpg',
+    image: '/images/track-tennis/track-tennis-hero.png',
   },
 ]
 
