@@ -193,7 +193,7 @@ export async function POST(request: NextRequest) {
     if (!apiKey) {
       return NextResponse.json(
         { message: "I'm not connected yet. The site owner needs to add the Claude API key." },
-        { status: 200 },
+        { status: 500 },
       );
     }
 
