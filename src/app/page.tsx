@@ -14,7 +14,7 @@ const workProjects = [
     sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
     tags: ['Web', 'Design System'],
     year: '2025—Ongoing',
-    image: '/images/hard rock web/hard-rock-hero.jpg',
+    image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   {
     slug: 'hard-rock-app',
@@ -22,7 +22,7 @@ const workProjects = [
     sentence: 'Rebuilt the loyalty experience for members across all lines of business.',
     tags: ['iOS', 'Mobile'],
     year: '2025—Ongoing',
-    image: '/images/hard rock app/hrx-hero.png',
+    image: '/images/hard-rock-app/hrx-hero.png',
   },
   {
     slug: 'hp-ai',
@@ -30,7 +30,7 @@ const workProjects = [
     sentence: 'Designed HP\'s internal AI assistant to make daily workflows faster and more reliable.',
     tags: ['AI', 'Internal Tool'],
     year: '2024',
-    image: '/images/hp ai/hp-hero.png',
+    image: '/images/hp-ai/hp-hero.png',
   },
   {
     slug: 'track-tennis',
@@ -38,7 +38,7 @@ const workProjects = [
     sentence: 'Complete redesign across product, brand, and value.',
     tags: ['Web', 'Sports'],
     year: '2021—2022',
-    image: '/images/track tennis/track-tennis-hero.png',
+    image: '/images/track-tennis/track-tennis-hero.png',
   },
 ]
 
