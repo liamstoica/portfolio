@@ -75,8 +75,7 @@ export default function HomePage() {
 
       {/* Intro Paragraph */}
       <p className="intro-text">
-        I believe design is the link between creativity and business. It's how ideas become useful, 
-        how systems become simple, and how brands earn trust. 
+        I believe design is the link between creativity and business. It&apos;s how ideas become useful, how systems become simple, and how brands earn trust. 
       </p>
 
       {/* Work Section - 2×2 Grid */}
