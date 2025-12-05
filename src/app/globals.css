@@ -1202,6 +1202,31 @@ t.ios-tile {
   }
 }
 
+/* Mobile overlay - intercepts taps to open modal */
+.chat-input-mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Mobile: show overlay that intercepts taps */
+  .chat-input-mobile-overlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: inherit;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Make input appear clickable but not focusable */
+  .chat-input-pill input {
+    pointer-events: none;
+    cursor: pointer;
+  }
+}
+
 /* =====================================================
    CHAT PANEL (Side Slide)
    ===================================================== */
@@ -1398,11 +1423,12 @@ t.ios-tile {
   flex: 1;
   border: none;
   background: transparent;
-  font-size: 14px;
+  font-size: 16px; /* 16px prevents iOS zoom on focus */
   color: var(--text-primary);
   outline: none;
   min-width: 0;
   pointer-events: auto;
+  touch-action: manipulation; /* Prevents double-tap zoom */
 }
 
 .chat-panel-input input::placeholder {

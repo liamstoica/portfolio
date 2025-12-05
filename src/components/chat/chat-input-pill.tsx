@@ -11,7 +11,16 @@ export function ChatInputPill() {
   const [input, setInput] = useState('')
   const [pillState, setPillState] = useState<PillState>('idle')
   const [isAnimating, setIsAnimating] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // Detect mobile on mount
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Determine if user has typed content
   const hasContent = input.trim().length > 0
@@ -67,6 +76,13 @@ export function ChatInputPill() {
     setInput(e.target.value)
   }
 
+  // Mobile tap handler - opens modal instead of focusing input
+  const handleMobileTap = () => {
+    if (isMobile) {
+      setIsOpen(true)
+    }
+  }
+
   // Build dynamic class names for outer container
   const containerClasses = [
     'chat-input-container',
@@ -91,6 +107,12 @@ export function ChatInputPill() {
       {/* Gradient border wrapper */}
       <div className={wrapperClasses}>
         <form onSubmit={handleSubmit} className={pillClasses}>
+          {/* Mobile tap overlay - intercepts taps to open modal */}
+          <div 
+            className="chat-input-mobile-overlay"
+            onClick={handleMobileTap}
+            aria-hidden="true"
+          />
           <input
             ref={inputRef}
             type="text"
@@ -101,6 +123,7 @@ export function ChatInputPill() {
             placeholder={placeholderQuestion}
             disabled={isLoading}
             aria-label="Ask a question"
+            readOnly={isMobile}
           />
           <button
             type="submit"
