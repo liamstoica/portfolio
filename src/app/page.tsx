@@ -1,10 +1,11 @@
-'use client'
-
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { IosTile } from '@/components/ui/ios-tile'
 import { WorkGridCard } from '@/components/ui/work-card'
+import { BlogCard } from '@/components/ui/blog-card'
 import { liveSites, sandbox } from '@/lib/data'
+import { getRecentPosts } from '@/lib/blog'
 import Image from "next/image"
+import Link from "next/link"
 
 // Work projects data for 2×2 grid
 const workProjects = [
@@ -43,6 +44,8 @@ const workProjects = [
 ]
 
 export default function HomePage() {
+  const recentPosts = getRecentPosts(3)
+
   return (
     <div className="card-container">
       {/* Hero Header */}
@@ -75,14 +78,13 @@ export default function HomePage() {
 
       {/* Intro Paragraph */}
       <p className="intro-text">
-        I believe design is the link between creativity and business. It&apos;s how ideas become useful, how systems become simple, and how brands earn trust. 
+        I believe design is the link between creativity and business. It makes ideas practical, systems clear, and brands trustworthy.
       </p>
 
       {/* Work Section - 2×2 Grid */}
       <section className="content-section">
         <div className="section-heading">
-          <h2 className="section-header">Work</h2>
-          <p className="section-subtitle">A selection of projects I&apos;ve chosen to share.</p>
+          <h2 className="section-header">Selected Work</h2>
         </div>
         <div className="work-grid">
           {workProjects.map((project) => (
@@ -126,23 +128,29 @@ export default function HomePage() {
       {/* Divider */}
       <div className="section-divider" />
 
-      {/* Sandbox - Keep iOS tiles */}
+      {/* Blog Section */}
       <section className="content-section">
         <div className="section-heading">
-          <h2 className="section-header">Sandbox</h2>
-          <p className="section-subtitle">A space for experiments that might just work.</p>
+          <h2 className="section-header">My Perspectives</h2>
+          <p className="section-subtitle">Ideas and thoughts on product, design, and strategy.</p>
         </div>
-        <div className="tile-grid">
-          {sandbox.map((item) => (
-            <IosTile
-              key={item.slug}
-              href={`/sandbox/${item.slug}`}
-              label={item.title}
-              image={item.image}   // <-- NEW
-              color="#f3e8ff"
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {recentPosts.map((post) => (
+            <BlogCard
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              subtitle={post.subtitle}
+              date={post.date}
+              tags={post.tags}
+              image={post.headerImage || ''}
+              variant="home"
             />
           ))}
         </div>
+        <Link href="/blog" className="blog-cta">
+          Explore All Blog Posts →
+        </Link>
       </section>
 
       {/* Divider */}
@@ -153,16 +161,10 @@ export default function HomePage() {
         <h2 className="section-header">About My Career</h2>
         <div className="body-text prose-block">
           <p>
-            Right now, I&apos;m leading 🏨 <a href="https://hardrock.com" target="_blank" rel="noopener noreferrer">Hard Rock International</a>&apos;s 
-            global digital transformation—unifying several lines of businesses and shaping the next evolution of the 
-            Hard Rock Experience across web and app. My focus is creating connected, intuitive experiences that reach millions of guests.
+          Currently designing <a href="https://hardrock.com" target="_blank" rel="noopener noreferrer"><strong>Hard Rock International's</strong></a> global digital transformation across web and app, unifying multiple business lines into one connected platform. My work focuses on clarity, system design, and creating intuitive experiences for millions of guests worldwide.
           </p>
           <p>
-            Before this, I designed across B2B, SaaS, and D2C: a locally hosted AI assistant at <a href="https://hp.com" target="_blank" rel="noopener noreferrer">HP</a>, 
-            {' '}metaverse strategy for <a href="https://bmw.com" target="_blank" rel="noopener noreferrer">BMW</a>, 
-            {' '}Govtech SaaS at Deep Water Point (adopted by <strong>Deloitte</strong>), 
-            {' '}and product design at <a href="https://mrgn.com" target="_blank" rel="noopener noreferrer">mrgn</a> and Track.Tennis.
-            {' '}I&apos;ve received <strong>30+ international design awards</strong> and studied Human Computer Interaction and Design Management at <strong>SCAD</strong>.
+          Before Hard Rock, I designed across B2B, SaaS, and D2C. I built an AI assistant for <strong>HP</strong>, developed metaverse strategy for <strong>BMW</strong>, created GovTech products at <strong>Deep Water Point & Associates</strong> that were later adopted by <strong>Deloitte</strong>, and shaped early startup product direction at <strong>mrgn</strong> and <strong>Track.Tennis</strong>. I have earned more than 30 international design awards and studied Human Computer Interaction and Design Management at <strong>SCAD</strong>.
           </p>
         </div>
       </section>
@@ -174,11 +176,7 @@ export default function HomePage() {
       <section className="content-section">
         <h2 className="section-header">About Me</h2>
         <p className="body-text prose-block">
-          I grew up competing in tennis and represented New Zealand throughout my junior years. 
-          I coached at the <strong>Rafa Nadal Academy</strong>, which taught me patience, leadership, 
-          and how to bring out the best in people. Outside of design I love cooking, painting, 
-          traveling, and history. The world used to feel beautifully complex, and I love exploring 
-          the stories that shaped it.
+        I grew up competing in tennis and represented New Zealand throughout my junior years. Coaching at the <strong>Rafa Nadal Academy</strong> taught me patience, leadership, and how to help people perform at their best. Outside of design I love cooking, painting, traveling, and learning about history. The world used to feel beautifully complex, and I enjoy exploring the stories that shaped it.
         </p>
       </section>
 
@@ -198,9 +196,6 @@ export default function HomePage() {
           <a href="https://www.linkedin.com/in/liam-stoica/" target="_blank" rel="noopener noreferrer">
             💼 LinkedIn
           </a>
-          <a href="https://www.instagram.com/liamstoica/" target="_blank" rel="noopener noreferrer">
-            📷 Instagram
-          </a>
         </div>
       </section>
 
@@ -212,18 +207,4 @@ export default function HomePage() {
       </footer>
     </div>
   )
-}
-
-// Helper function for Live section emoji
-function getLiveEmoji(title: string): string {
-  const t = title.toLowerCase()
-  if (t.includes('hotel')) return '🏨'
-  if (t.includes('cafe')) return '☕'
-  if (t.includes('casino')) return '🎰'
-  if (t.includes('hp')) return '🖨️'
-  if (t.includes('bmw')) return '🚗'
-  if (t.includes('mrgn')) return '💰'
-  if (t.includes('track') || t.includes('tennis')) return '🎾'
-  if (t.includes('deep water')) return '🏛️'
-  return '🌐'
 }

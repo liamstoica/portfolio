@@ -1,0 +1,159 @@
+/* Blog Markdown Styles */
+
+.blog-prose-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Typography */
+.blog-prose-container h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 2rem 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.blog-prose-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.75rem 0 0.875rem 0;
+  letter-spacing: -0.01em;
+}
+
+.blog-prose-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.blog-prose-container h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1.25rem 0 0.625rem 0;
+}
+
+.blog-prose-container p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 1.25rem 0;
+  color: var(--text-primary);
+}
+
+/* Lists with orange bullets */
+.blog-prose-container ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.blog-prose-container ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.blog-prose-container li {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+/* Orange bullet markers */
+.blog-prose-container ul li::marker {
+  color: #FFA500;
+}
+
+.blog-prose-container ol li::marker {
+  color: #FFA500;
+  font-weight: 600;
+}
+
+/* Blockquote */
+.blog-prose-container blockquote {
+  border-left: 3px solid #FFA500;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Links */
+.blog-prose-container a {
+  color: #FFA500;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.blog-prose-container a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Strong and emphasis */
+.blog-prose-container strong {
+  font-weight: 600;
+}
+
+.blog-prose-container em {
+  font-style: italic;
+}
+
+/* Code */
+.blog-prose-container code {
+  background: var(--bg-muted, #f5f5f5);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: 'SF Mono', 'Menlo', monospace;
+}
+
+.blog-prose-container pre {
+  background: var(--bg-muted, #f5f5f5);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.blog-prose-container pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Horizontal rule */
+.blog-prose-container hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 2rem 0;
+}
+
+/* Images within content */
+.blog-prose-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* Header image container */
+.blog-header-image-container {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-muted, #f5f5f5);
+}
+
+.blog-header-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
