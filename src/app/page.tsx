@@ -73,6 +73,9 @@ export default function HomePage() {
             <span className="hero-title">Designing for Growth</span>
           </h1>
           <p className="hero-tagline">At the intersection of art, science and business.</p>
+          <Link href="/services" className="services-cta">
+            Explore My Services →
+          </Link>
         </div>
       </header>
 
@@ -161,7 +164,7 @@ export default function HomePage() {
         <h2 className="section-header">About My Career</h2>
         <div className="body-text prose-block">
           <p>
-          Currently designing <a href="https://hardrock.com" target="_blank" rel="noopener noreferrer"><strong>Hard Rock International's</strong></a> global digital transformation across web and app, unifying multiple business lines into one connected platform. My work focuses on clarity, system design, and creating intuitive experiences for millions of guests worldwide.
+          Currently designing <a href="https://hardrock.com" target="_blank" rel="noopener noreferrer"><strong>Hard Rock International&apos;s</strong></a> global digital transformation across web and app, unifying multiple business lines into one connected platform. My work focuses on clarity, system design, and creating intuitive experiences for millions of guests worldwide.
           </p>
           <p>
           Before Hard Rock, I designed across B2B, SaaS, and D2C. I built an AI assistant for <strong>HP</strong>, developed metaverse strategy for <strong>BMW</strong>, created GovTech products at <strong>Deep Water Point & Associates</strong> that were later adopted by <strong>Deloitte</strong>, and shaped early startup product direction at <strong>mrgn</strong> and <strong>Track.Tennis</strong>. I have earned more than 30 international design awards and studied Human Computer Interaction and Design Management at <strong>SCAD</strong>.

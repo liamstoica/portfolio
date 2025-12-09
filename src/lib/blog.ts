@@ -60,8 +60,23 @@ export function getAllBlogTags(): string[] {
   return Array.from(tagSet).sort()
 }
 
+// Case-insensitive tag filtering, sorted newest first
 export function getPostsByTag(tag: string): BlogPost[] {
   const posts = getAllPosts()
-  return posts.filter((p) => p.tags.includes(tag))
+  const tagLower = tag.toLowerCase()
+  return posts.filter((p) => 
+    p.tags.some((t) => t.toLowerCase() === tagLower)
+  )
 }
 
+// Get posts matching "Startup" or "Startups" tag (case-insensitive)
+export function getStartupPosts(count?: number): BlogPost[] {
+  const posts = getAllPosts()
+  const startupPosts = posts.filter((p) =>
+    p.tags.some((t) => {
+      const tagLower = t.toLowerCase()
+      return tagLower === 'startup' || tagLower === 'startups'
+    })
+  )
+  return count ? startupPosts.slice(0, count) : startupPosts
+}
