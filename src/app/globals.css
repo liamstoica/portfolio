@@ -15,7 +15,7 @@
   --bg-green: #e8f0e4;
   --bg-peach: #fdf3eb;
   
-  --card-bg: rgba(255, 255, 255, 0.96);
+  --card-bg: rgba(247, 243, 235, 0.96);
   --card-shadow: 
     0 4px 6px rgba(0, 0, 0, 0.02),
     0 12px 24px rgba(0, 0, 0, 0.04),
@@ -2905,7 +2905,7 @@ t.ios-tile {
   align-items: center;
   gap: 4px;
   margin-top: 20px;
-  color: #FFA500;
+  color: #CC7A00; /* Darker orange for light mode legibility */
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -2920,7 +2920,7 @@ t.ios-tile {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #FFA500;
+  background: #CC7A00;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -2931,13 +2931,21 @@ t.ios-tile {
   opacity: 0.5;
 }
 
+/* Dark mode: restore original bright orange */
+.dark .blog-cta {
+  color: #FFA500;
+}
+.dark .blog-cta::after {
+  background: #FFA500;
+}
+
 /* Services CTA Button */
 .services-cta {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   margin-top: 12px;
-  color: #FFA500;
+  color: #CC7A00; /* Darker orange for light mode legibility */
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -2956,7 +2964,7 @@ t.ios-tile {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #FFA500;
+  background: #CC7A00;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -2965,6 +2973,14 @@ t.ios-tile {
 }
 .services-cta:hover::after {
   opacity: 0.5;
+}
+
+/* Dark mode: restore original bright orange */
+.dark .services-cta {
+  color: #FFA500;
+}
+.dark .services-cta::after {
+  background: #FFA500;
 }
 
 /* Services Page Styles */

@@ -113,6 +113,10 @@ KNOWLEDGE BASE
 • experience.md, Work history, industries, achievements
 • qna.md, Pre-written Q&A and talking points
 • other-design-work.md, Additional shipped projects
+• services.tsx, Services offered
+• src/content/blog/ — All blog posts covering product, design, and startup strategy
+
+
 
 If information is missing: "Here's what I can tell you…"
 
