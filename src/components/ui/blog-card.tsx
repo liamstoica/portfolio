@@ -38,15 +38,14 @@ export function BlogCard({
     color: 'var(--blog-tag-color, #555)',
   }
 
-  // Homepage variant: image LEFT, content RIGHT
+  // Homepage variant: image LEFT, content RIGHT (vertical on mobile)
   if (variant === 'home') {
     return (
       <Link
         href={`/blog/${slug}`}
-        className="blog-card blog-card-home"
+        className="blog-card blog-card-home flex flex-col sm:flex-row"
         style={{
           display: 'flex',
-          flexDirection: 'row',
           alignItems: 'stretch',
           borderRadius: '12px',
           border: '1px solid var(--border-light)',
@@ -69,13 +68,11 @@ export function BlogCard({
           e.currentTarget.style.borderColor = 'var(--border-light)'
         }}
       >
-        {/* Image - edge to edge, no padding */}
+        {/* Image - full width on mobile, fixed width on desktop */}
         <div
-          className="blog-card-image-container"
+          className="blog-card-image-container w-full h-[140px] sm:w-[160px] sm:min-w-[160px] sm:h-auto"
           style={{
             position: 'relative',
-            width: '160px',
-            minWidth: '160px',
             overflow: 'hidden',
             backgroundColor: 'var(--bg-muted, #f5f5f5)',
           }}
@@ -85,7 +82,7 @@ export function BlogCard({
               src={image}
               alt={title}
               fill
-              sizes="160px"
+              sizes="(max-width: 639px) 100vw, 160px"
               style={{ objectFit: 'cover' }}
             />
           ) : (

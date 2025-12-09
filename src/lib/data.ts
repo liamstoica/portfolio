@@ -108,24 +108,6 @@ export const liveSites: LiveSite[] = [
     color: '#D1FAE5',
     image: '/images/live-sites/kbr.png',
   },
-  {
-    title: 'Kodak Alaris',
-    href: 'https://www.kodakalaris.com/en',
-    color: '#CFFAFE',
-    image: '/images/live-sites/kodak-alaris.png',
-  },
-  {
-    title: 'Pliteq',
-    href: 'https://pliteq.com/',
-    color: '#CFFAFE',
-    image: '/images/live-sites/pliteq.png',
-  },
-  {
-    title: 'iconectiv Store',
-    href: 'https://store.iconectiv.com/',
-    color: '#CFFAFE',
-    image: '/images/live-sites/iconectiv.png',
-  },
 ]
 
 // Sandbox - Explorations

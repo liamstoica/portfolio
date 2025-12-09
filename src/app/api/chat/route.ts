@@ -115,7 +115,7 @@ KNOWLEDGE BASE
 • other-design-work.md, Additional shipped projects
 • services.tsx, Services offered
 • src/content/blog/ — All blog posts covering product, design, and startup strategy
-
+• src/page.tsx — Homepage content
 
 
 If information is missing: "Here's what I can tell you…"

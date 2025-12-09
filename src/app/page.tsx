@@ -2,6 +2,7 @@ import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { IosTile } from '@/components/ui/ios-tile'
 import { WorkGridCard } from '@/components/ui/work-card'
 import { BlogCard } from '@/components/ui/blog-card'
+import { Testimonials } from '@/components/ui/testimonials'
 import { liveSites, sandbox } from '@/lib/data'
 import { getRecentPosts } from '@/lib/blog'
 import Image from "next/image"
@@ -79,11 +80,6 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Intro Paragraph */}
-      <p className="intro-text">
-        I believe design is the link between creativity and business. It makes ideas practical, systems clear, and brands trustworthy.
-      </p>
-
       {/* Work Section - 2×2 Grid */}
       <section className="content-section">
         <div className="section-heading">
@@ -154,6 +150,17 @@ export default function HomePage() {
         <Link href="/blog" className="blog-cta">
           Explore All Blog Posts →
         </Link>
+      </section>
+
+      {/* Divider */}
+      <div className="section-divider" />
+
+      {/* References Section */}
+      <section className="content-section">
+        <div className="section-heading">
+          <h2 className="section-header">References</h2>
+        </div>
+        <Testimonials />
       </section>
 
       {/* Divider */}
