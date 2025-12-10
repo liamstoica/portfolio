@@ -8,17 +8,40 @@ interface BlogCardProps {
   title: string
   subtitle?: string
   date: string
-  tags: string[]
+  category: string[]
+  industry: string[]
   image: string
   slug: string
   variant?: 'home'
+}
+
+// Scoped tag styles for blog cards only
+// Category: Gold/Yellow
+// Industry: Blue
+const categoryTagStyle: React.CSSProperties = {
+  fontSize: '11px',
+  padding: '3px 10px',
+  borderRadius: '12px',
+  backgroundColor: 'rgba(255, 200, 0, 0.15)',
+  color: '#D4A800',
+  fontWeight: 500,
+}
+
+const industryTagStyle: React.CSSProperties = {
+  fontSize: '11px',
+  padding: '3px 10px',
+  borderRadius: '12px',
+  backgroundColor: 'rgba(0, 170, 255, 0.15)',
+  color: '#0095E0',
+  fontWeight: 500,
 }
 
 export function BlogCard({
   title,
   subtitle,
   date,
-  tags,
+  category,
+  industry,
   image,
   slug,
   variant,
@@ -29,14 +52,9 @@ export function BlogCard({
     day: 'numeric',
   })
 
-  // Tag style - subtle grey (not white)
-  const tagStyle: React.CSSProperties = {
-    fontSize: '11px',
-    padding: '3px 10px',
-    borderRadius: '12px',
-    backgroundColor: 'rgba(86, 89, 123, 0.18)',
-    color: 'var(--blog-tag-color, #555)',
-  }
+  // Combine tags for display, limiting total shown
+  const categoryTags = category.slice(0, 2)
+  const industryTags = industry.slice(0, variant === 'home' ? 1 : 2)
 
   // Homepage variant: image LEFT, content RIGHT (vertical on mobile)
   if (variant === 'home') {
@@ -113,10 +131,15 @@ export function BlogCard({
               <Calendar size={14} />
               {formattedDate}
             </span>
-            <div style={{ display: 'flex', gap: '6px' }}>
-              {tags.slice(0, 2).map((tag) => (
-                <span key={tag} style={tagStyle}>
-                  {tag}
+            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+              {categoryTags.map((cat) => (
+                <span key={`cat-${cat}`} style={categoryTagStyle}>
+                  {cat}
+                </span>
+              ))}
+              {industryTags.map((ind) => (
+                <span key={`ind-${ind}`} style={industryTagStyle}>
+                  {ind}
                 </span>
               ))}
             </div>
@@ -195,11 +218,16 @@ export function BlogCard({
           <Calendar size={14} />
           {formattedDate}
         </span>
-        {/* Tags on separate line */}
+        {/* Tags on separate line - Category and Industry with different colors */}
         <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-          {tags.slice(0, 3).map((tag) => (
-            <span key={tag} style={tagStyle}>
-              {tag}
+          {categoryTags.map((cat) => (
+            <span key={`cat-${cat}`} style={categoryTagStyle}>
+              {cat}
+            </span>
+          ))}
+          {industryTags.map((ind) => (
+            <span key={`ind-${ind}`} style={industryTagStyle}>
+              {ind}
             </span>
           ))}
         </div>

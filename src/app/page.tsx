@@ -73,7 +73,7 @@ export default function HomePage() {
             <span className="hero-dot">·</span>
             <span className="hero-title">Designing for Growth</span>
           </h1>
-          <p className="hero-tagline">At the intersection of art, science and business.</p>
+          <p className="hero-tagline">Designing systems, simplifying complexity, and shaping connected experiences.</p>
           <Link href="/services" className="services-cta">
             Explore My Services →
           </Link>
@@ -131,7 +131,7 @@ export default function HomePage() {
       <section className="content-section">
         <div className="section-heading">
           <h2 className="section-header">My Perspectives</h2>
-          <p className="section-subtitle">Ideas and thoughts on product, design, and strategy.</p>
+          <p className="section-subtitle">My thoughts on product, design, and strategy shaped through my experiences.</p>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           {recentPosts.map((post) => (
@@ -141,7 +141,8 @@ export default function HomePage() {
               title={post.title}
               subtitle={post.subtitle}
               date={post.date}
-              tags={post.tags}
+              category={post.category}
+              industry={post.industry}
               image={post.headerImage || ''}
               variant="home"
             />

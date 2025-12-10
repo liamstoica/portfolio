@@ -1,16 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import type { BlogPost } from '@/types/blog'
 
-export interface BlogPost {
-  slug: string
-  title: string
-  subtitle?: string
-  date: string
-  tags: string[]
-  headerImage?: string
-  content: string
-}
+// Prevent Next.js from treating this as a Server Action
+export const runtime = 'nodejs';
+export const dynamic = 'force-static';
+
+// Re-export the type for server components
+export type { BlogPost }
 
 const blogDirectory = path.join(process.cwd(), 'src/content/blog')
 
@@ -33,7 +31,8 @@ export function getAllPosts(): BlogPost[] {
         title: data.title || '',
         subtitle: data.subtitle,
         date: data.date || '',
-        tags: data.tags || [],
+        category: data.category || [],
+        industry: data.industry || [],
         headerImage: data.headerImage || undefined,
         content,
       }
@@ -53,29 +52,45 @@ export function getRecentPosts(count: number = 3): BlogPost[] {
   return posts.slice(0, count)
 }
 
-export function getAllBlogTags(): string[] {
+export function getAllBlogCategories(): string[] {
   const posts = getAllPosts()
-  const tagSet = new Set<string>()
-  posts.forEach((p) => p.tags.forEach((tag) => tagSet.add(tag)))
-  return Array.from(tagSet).sort()
+  const categorySet = new Set<string>()
+  posts.forEach((p) => p.category.forEach((cat) => categorySet.add(cat)))
+  return Array.from(categorySet).sort()
 }
 
-// Case-insensitive tag filtering, sorted newest first
-export function getPostsByTag(tag: string): BlogPost[] {
+export function getAllBlogIndustries(): string[] {
   const posts = getAllPosts()
-  const tagLower = tag.toLowerCase()
+  const industrySet = new Set<string>()
+  posts.forEach((p) => p.industry.forEach((ind) => industrySet.add(ind)))
+  return Array.from(industrySet).sort()
+}
+
+// Filter posts by category (case-insensitive)
+export function getPostsByCategory(category: string): BlogPost[] {
+  const posts = getAllPosts()
+  const categoryLower = category.toLowerCase()
   return posts.filter((p) => 
-    p.tags.some((t) => t.toLowerCase() === tagLower)
+    p.category.some((c) => c.toLowerCase() === categoryLower)
   )
 }
 
-// Get posts matching "Startup" or "Startups" tag (case-insensitive)
+// Filter posts by industry (case-insensitive)
+export function getPostsByIndustry(industry: string): BlogPost[] {
+  const posts = getAllPosts()
+  const industryLower = industry.toLowerCase()
+  return posts.filter((p) => 
+    p.industry.some((i) => i.toLowerCase() === industryLower)
+  )
+}
+
+// Get posts matching "Startup" or "Startups" industry (case-insensitive)
 export function getStartupPosts(count?: number): BlogPost[] {
   const posts = getAllPosts()
   const startupPosts = posts.filter((p) =>
-    p.tags.some((t) => {
-      const tagLower = t.toLowerCase()
-      return tagLower === 'startup' || tagLower === 'startups'
+    p.industry.some((i) => {
+      const indLower = i.toLowerCase()
+      return indLower === 'startup' || indLower === 'startups'
     })
   )
   return count ? startupPosts.slice(0, count) : startupPosts

@@ -3,13 +3,14 @@ import BlogClient from './BlogClient'
 
 export const metadata = {
   title: 'Blog | Liam Stoica',
-  description: 'Ideas on product, design, and early-stage strategy.',
+  description: 'My perpsectives on product, design, and strategy shaped through my experiences.',
 }
 
 export default function BlogPage() {
   const posts = getAllPosts()
   return <BlogClient posts={posts} />
 }
+
 
 
 

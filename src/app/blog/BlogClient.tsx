@@ -1,38 +1,282 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { BlogCard } from '@/components/ui/blog-card'
-import { ArrowLeft } from 'lucide-react'
-import type { BlogPost } from '@/lib/blog'
+import { ArrowLeft, ChevronDown, Check, X } from 'lucide-react'
+import type { BlogPost } from '@/types/blog'
+import { CATEGORIES, INDUSTRIES } from '@/lib/blog-constants'
 
-const FILTER_TAGS = ['AI', 'Startups', 'Design Leadership', 'Ideas']
+// Sort arrays alphabetically for dropdown display
+const sortedCategories = [...CATEGORIES].sort((a, b) => a.localeCompare(b))
+const sortedIndustries = [...INDUSTRIES].sort((a, b) => a.localeCompare(b))
+
+interface MultiSelectDropdownProps {
+  label: string
+  options: readonly string[]
+  selected: string[]
+  onChange: (selected: string[]) => void
+}
+
+function MultiSelectDropdown({ label, options, selected, onChange }: MultiSelectDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [])
+
+  const toggleOption = (option: string) => {
+    if (selected.includes(option)) {
+      onChange(selected.filter((s) => s !== option))
+    } else {
+      onChange([...selected, option])
+    }
+  }
+
+  const displayLabel = selected.length > 0 
+    ? `${label} (${selected.length})` 
+    : `${label} (All)`
+
+  return (
+    <div ref={dropdownRef} className="blog-filter-dropdown">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="blog-filter-dropdown-trigger"
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+      >
+        <span>{displayLabel}</span>
+        <ChevronDown 
+          size={16} 
+          style={{ 
+            transition: 'transform 0.15s ease',
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+          }} 
+        />
+      </button>
+      {isOpen && (
+        <div className="blog-filter-dropdown-menu" role="listbox">
+          <div className="blog-filter-dropdown-options">
+            {options.map((option) => {
+              const isSelected = selected.includes(option)
+              return (
+                <button
+                  key={option}
+                  onClick={() => toggleOption(option)}
+                  className={`blog-filter-dropdown-item ${isSelected ? 'selected' : ''}`}
+                  role="option"
+                  aria-selected={isSelected}
+                >
+                  <span className="blog-filter-checkbox">
+                    {isSelected && <Check size={12} />}
+                  </span>
+                  <span>{option}</span>
+                </button>
+              )
+            })}
+          </div>
+          {/* Close button for mobile - full width at bottom */}
+          <button
+            className="blog-filter-dropdown-close"
+            onClick={() => setIsOpen(false)}
+          >
+            Close
+          </button>
+        </div>
+      )}
+      <style>{`
+        .blog-filter-dropdown {
+          position: relative;
+          flex: 1;
+          min-width: 0;
+        }
+        @media (min-width: 640px) {
+          .blog-filter-dropdown {
+            flex: none;
+            width: auto;
+            min-width: 180px;
+          }
+        }
+        .blog-filter-dropdown-trigger {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          width: 100%;
+          padding: 10px 14px;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          border: 1px solid var(--border-light);
+          background-color: var(--card-bg, #fff);
+          color: var(--text-primary, #333);
+        }
+        .blog-filter-dropdown-trigger:hover {
+          border-color: var(--text-muted);
+        }
+        /* Dropdown menu - fully opaque background */
+        .blog-filter-dropdown-menu {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 0;
+          right: 0;
+          z-index: 50;
+          background-color: #ffffff;
+          border: 1px solid var(--border-light);
+          border-radius: 10px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+          max-height: 320px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        :root.dark .blog-filter-dropdown-menu {
+          background-color: #1a1a1a;
+        }
+        .blog-filter-dropdown-options {
+          flex: 1;
+          overflow-y: auto;
+          padding: 6px;
+        }
+        /* Close button - full width at bottom, mobile only */
+        .blog-filter-dropdown-close {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 12px 16px;
+          border: none;
+          border-top: 1px solid var(--border-light);
+          background-color: rgba(0, 0, 0, 0.06);
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--text-primary, #333);
+          border-radius: 0 0 10px 10px;
+          transition: background-color 0.1s ease;
+        }
+        :root.dark .blog-filter-dropdown-close {
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+        .blog-filter-dropdown-close:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        :root.dark .blog-filter-dropdown-close:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+        @media (min-width: 640px) {
+          .blog-filter-dropdown-close {
+            display: none;
+          }
+          .blog-filter-dropdown-menu {
+            max-height: 280px;
+          }
+          .blog-filter-dropdown-options {
+            padding: 6px;
+          }
+        }
+        .blog-filter-dropdown-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          padding: 10px 12px;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          font-size: 14px;
+          text-align: left;
+          border-radius: 6px;
+          color: var(--text-primary, #333);
+          transition: background-color 0.1s ease;
+        }
+        .blog-filter-dropdown-item:hover {
+          background-color: rgba(0, 0, 0, 0.08);
+        }
+        :root.dark .blog-filter-dropdown-item:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        .blog-filter-dropdown-item.selected {
+          background-color: rgba(255, 165, 0, 0.15);
+        }
+        .blog-filter-dropdown-item.selected:hover {
+          background-color: rgba(255, 165, 0, 0.25);
+        }
+        /* Checkbox - light mode */
+        .blog-filter-checkbox {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 18px;
+          height: 18px;
+          border-radius: 4px;
+          border: 1.5px solid rgba(0, 0, 0, 0.4);
+          background-color: transparent;
+          flex-shrink: 0;
+          transition: all 0.1s ease;
+          color: #000;
+        }
+        /* Checkbox - dark mode */
+        :root.dark .blog-filter-checkbox {
+          border-color: rgba(255, 255, 255, 0.6);
+          color: #fff;
+        }
+        /* Selected checkbox - light mode */
+        .blog-filter-dropdown-item.selected .blog-filter-checkbox {
+          background-color: #FFA500;
+          border-color: #FFA500;
+          color: #000;
+        }
+        /* Selected checkbox - dark mode */
+        :root.dark .blog-filter-dropdown-item.selected .blog-filter-checkbox {
+          background-color: #FFA500;
+          border-color: #FFA500;
+          color: #000;
+        }
+      `}</style>
+    </div>
+  )
+}
 
 export default function BlogClient({ posts }: { posts: BlogPost[] }) {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+  const [selectedIndustries, setSelectedIndustries] = useState<string[]>([])
 
-  const filteredPosts = selectedTag
-    ? posts.filter((p) =>
-        p.tags.some(
-          (tag) =>
-            tag.toLowerCase().includes(selectedTag.toLowerCase()) ||
-            selectedTag.toLowerCase().includes(tag.toLowerCase())
-        )
-      )
-    : posts
+  const hasActiveFilters = selectedCategories.length > 0 || selectedIndustries.length > 0
 
-  // Filter button styles - Orange (#FFA500)
-  const getFilterStyle = (isActive: boolean): React.CSSProperties => ({
-    padding: '6px 16px',
-    borderRadius: '20px',
-    fontSize: '14px',
-    fontWeight: 500,
-    cursor: 'pointer',
-    transition: 'all 0.15s ease',
-    border: '1px solid #FFA500',
-    backgroundColor: isActive ? '#FFA500' : 'transparent',
-    color: isActive ? '#000' : '#FFA500',
+  const clearFilters = () => {
+    setSelectedCategories([])
+    setSelectedIndustries([])
+  }
+
+  // Filtering logic:
+  // - No filters = show all
+  // - Category selected = post must match at least one selected category
+  // - Industry selected = post must match at least one selected industry
+  // - Both selected = post must satisfy BOTH (AND logic between dimensions)
+  const filteredPosts = posts.filter((post) => {
+    const matchesCategory = selectedCategories.length === 0 || 
+      post.category.some((cat) => selectedCategories.includes(cat))
+    
+    const matchesIndustry = selectedIndustries.length === 0 || 
+      post.industry.some((ind) => selectedIndustries.includes(ind))
+    
+    return matchesCategory && matchesIndustry
   })
 
   return (
@@ -74,59 +318,111 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           color: 'var(--text-muted)', 
           margin: 0,
         }}>
-          Ideas on product, design, and early-stage strategy.
+          My thoughts on product, design, and strategy shaped through my experiences.
         </p>
       </header>
 
-      {/* Filter Bar - Orange Pills (#FFA500) */}
-      <div style={{ 
-        display: 'flex', 
-        gap: '10px', 
-        flexWrap: 'wrap',
-        padding: '16px 0',
-        marginBottom: '8px',
-      }}>
+      {/* Filter Bar - Two Dropdowns + Clear Button */}
+      <div className="blog-filter-bar">
+        <div className="blog-filter-dropdowns">
+          <MultiSelectDropdown
+            label="Category"
+            options={sortedCategories}
+            selected={selectedCategories}
+            onChange={setSelectedCategories}
+          />
+          <MultiSelectDropdown
+            label="Industry"
+            options={sortedIndustries}
+            selected={selectedIndustries}
+            onChange={setSelectedIndustries}
+          />
+        </div>
         <button
-          onClick={() => setSelectedTag(null)}
-          style={getFilterStyle(!selectedTag)}
-          onMouseEnter={(e) => {
-            if (selectedTag) {
-              e.currentTarget.style.backgroundColor = 'rgba(255, 165, 0, 0.15)'
-            }
-          }}
-          onMouseLeave={(e) => {
-            if (selectedTag) {
-              e.currentTarget.style.backgroundColor = 'transparent'
-            }
-          }}
+          onClick={clearFilters}
+          disabled={!hasActiveFilters}
+          className={`blog-filter-clear-btn ${hasActiveFilters ? 'active' : ''}`}
         >
-          All
+          <X size={14} />
+          <span>Clear Filters</span>
         </button>
-        {FILTER_TAGS.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-            style={getFilterStyle(selectedTag === tag)}
-            onMouseEnter={(e) => {
-              if (selectedTag !== tag) {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 165, 0, 0.15)'
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (selectedTag !== tag) {
-                e.currentTarget.style.backgroundColor = 'transparent'
-              }
-            }}
-          >
-            {tag}
-          </button>
-        ))}
+        <style>{`
+          .blog-filter-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 16px 0;
+            margin-bottom: 8px;
+          }
+          @media (min-width: 640px) {
+            .blog-filter-bar {
+              flex-direction: row;
+              align-items: center;
+              gap: 12px;
+            }
+          }
+          .blog-filter-dropdowns {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            width: 100%;
+          }
+          @media (min-width: 640px) {
+            .blog-filter-dropdowns {
+              width: auto;
+            }
+          }
+          .blog-filter-clear-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            border: 1px solid var(--border-light);
+            background-color: transparent;
+            color: var(--text-muted);
+            width: 100%;
+          }
+          @media (min-width: 640px) {
+            .blog-filter-clear-btn {
+              width: auto;
+            }
+          }
+          .blog-filter-clear-btn:not(:disabled):hover {
+            border-color: #FFA500;
+            color: #FFA500;
+            background-color: rgba(255, 165, 0, 0.08);
+          }
+          .blog-filter-clear-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+          }
+          /* Active state - when filters are applied */
+          .blog-filter-clear-btn.active {
+            color: #000;
+            border-color: rgba(0, 0, 0, 0.3);
+          }
+          :root.dark .blog-filter-clear-btn.active {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+          }
+          .blog-filter-clear-btn.active:hover {
+            border-color: #FFA500;
+            color: #FFA500;
+            background-color: rgba(255, 165, 0, 0.08);
+          }
+        `}</style>
       </div>
 
       {/* Blog Listing Grid - 3 cols desktop, 2 tablet, 1 mobile, 20px gap */}
       <div style={{ 
         display: 'grid',
-        gridTemplateColumns: 'repeat(1, 1fr)',
+        gridTemplateColumns: 'repeat(2, 1fr)',
         gap: '20px',
       }}
       className="blog-grid"
@@ -136,7 +432,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             .blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
           @media (min-width: 1024px) {
-            .blog-grid { grid-template-columns: repeat(3, 1fr) !important; }
+            .blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
         `}</style>
         {filteredPosts.map((post) => (
@@ -145,7 +441,8 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             slug={post.slug}
             title={post.title}
             date={post.date}
-            tags={post.tags}
+            category={post.category}
+            industry={post.industry}
             image={post.headerImage || ''}
           />
         ))}
@@ -153,10 +450,13 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
 
       {filteredPosts.length === 0 && (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>No posts found for this filter.</p>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '16px' }}>No posts found for these filters.</p>
           <button 
-            onClick={() => setSelectedTag(null)} 
+            onClick={clearFilters} 
             style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
               padding: '8px 20px',
               borderRadius: '20px',
               border: '1px solid #FFA500',
@@ -173,7 +473,8 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
               e.currentTarget.style.backgroundColor = 'transparent'
             }}
           >
-            Clear filter
+            <X size={14} />
+            Clear filters
           </button>
         </div>
       )}

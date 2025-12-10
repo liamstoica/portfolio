@@ -165,18 +165,34 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             {formattedDate}
           </span>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {post.tags.map((tag) => (
+            {post.category.map((cat) => (
               <span
-                key={tag}
+                key={`cat-${cat}`}
                 style={{
                   fontSize: '12px',
                   padding: '4px 12px',
                   borderRadius: '16px',
-                  backgroundColor: 'rgba(128, 128, 128, 0.12)',
-                  color: 'var(--text-muted)',
+                  backgroundColor: 'rgba(255, 200, 0, 0.15)',
+                  color: '#D4A800',
+                  fontWeight: 500,
                 }}
               >
-                {tag}
+                {cat}
+              </span>
+            ))}
+            {post.industry.map((ind) => (
+              <span
+                key={`ind-${ind}`}
+                style={{
+                  fontSize: '12px',
+                  padding: '4px 12px',
+                  borderRadius: '16px',
+                  backgroundColor: 'rgba(0, 170, 255, 0.15)',
+                  color: '#0095E0',
+                  fontWeight: 500,
+                }}
+              >
+                {ind}
               </span>
             ))}
           </div>
@@ -252,7 +268,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   slug={p.slug}
                   title={p.title}
                   date={p.date}
-                  tags={p.tags}
+                  category={p.category}
+                  industry={p.industry}
                   image={p.headerImage || ''}
                 />
               ))}
