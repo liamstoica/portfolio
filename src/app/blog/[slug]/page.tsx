@@ -91,9 +91,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   })
 
   const cleanedContent = stripDuplicateTitleFromContent(
-    post.content,
-    post.title,
-    post.subtitle
+    post.content ?? '',
+    post.title ?? '',
+    post.subtitle ?? ''
   )
 
   return (

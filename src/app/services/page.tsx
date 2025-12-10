@@ -146,7 +146,8 @@ export default function ServicesPage() {
                   title={post.title}
                   subtitle={post.subtitle}
                   date={post.date}
-                  tags={post.tags}
+                  category={post.category || []}
+                  industry={post.industry || []}
                   image={post.headerImage || ''}
                   variant="home"
                 />
