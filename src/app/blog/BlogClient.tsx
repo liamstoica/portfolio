@@ -422,7 +422,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
       {/* Blog Listing Grid - 3 cols desktop, 2 tablet, 1 mobile, 20px gap */}
       <div style={{ 
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateColumns: 'repeat(1, 1fr)',
         gap: '20px',
       }}
       className="blog-grid"
