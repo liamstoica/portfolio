@@ -48,7 +48,7 @@ export function WorkGridCard({ slug, title, sentence, tags, year, image }: WorkG
         
         <div className="work-grid-card-footer">
           <div className="work-grid-card-tags">
-            {tags.map((tag) => (
+            {tags.slice(0, 2).map((tag) => (
               <span 
                 key={tag} 
                 className="work-grid-card-tag"

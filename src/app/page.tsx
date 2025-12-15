@@ -8,7 +8,7 @@ import { getRecentPosts } from '@/lib/blog'
 import Image from "next/image"
 import Link from "next/link"
 
-// Work projects data for 2×2 grid
+// Work projects data - showing first 2 on homepage
 const workProjects = [
   {
     slug: 'hard-rock-web',
@@ -25,22 +25,6 @@ const workProjects = [
     tags: ['iOS', 'Mobile'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
-  },
-  {
-    slug: 'hp-ai',
-    title: 'HP — AI Assistant',
-    sentence: 'Designed HP\'s internal AI assistant to make daily workflows faster and more reliable.',
-    tags: ['AI', 'Internal Tool'],
-    year: '2024',
-    image: '/images/hp-ai/hp-hero.png',
-  },
-  {
-    slug: 'track-tennis',
-    title: 'Track.Tennis',
-    sentence: 'Complete redesign across product, brand, and value.',
-    tags: ['Web', 'Sports'],
-    year: '2021—2022',
-    image: '/images/track-tennis/track-tennis-hero.png',
   },
 ]
 
@@ -77,7 +61,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Work Section - 2×2 Grid */}
+      {/* Work Section - 2 Project Cards */}
       <section className="content-section">
         <div className="section-heading">
           <h2 className="section-header">Selected Work</h2>
@@ -95,6 +79,9 @@ export default function HomePage() {
             />
           ))}
         </div>
+        <Link href="/projects" className="blog-cta">
+          See All Projects →
+        </Link>
       </section>
 
       {/* Divider */}
