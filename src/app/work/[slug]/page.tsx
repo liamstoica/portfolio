@@ -24,7 +24,7 @@ import {
 const hpAiContent = {
   overview: {
     title: 'From idea to AI assistant in 8 weeks.',
-    copy: 'We built a custom, locally hosted AI tool for an HP executive to streamline workflows, summarize internal data, and stay ahead of the rapid evolution of AI. Designed, coded, and shipped on an HP Z box in under two months, the assistant balanced performance, privacy, and practicality.\n\nI led design, testing, and prompt engineering, moving from Figma into Replit as the project evolved. What began as a design handoff became an opportunity to learn vibe coding and build real product UI directly in code.',
+    copy: 'We built a custom, locally hosted AI tool for an HP executive to streamline workflows, summarize internal data, and stay ahead of the rapid evolution of AI. Designed, coded, and shipped on an HP Z box in under two months, the assistant balanced performance, privacy, and practicality.\n\nI led design, testing, and prompt engineering, moving from Figma into Replit as the project evolved. What began as a design handoff evolved into direct product building, requiring me to design, prototype, and implement UI directly in code.',
     image: '/images/hp-ai/highlight-overview.png',
   },
   results: {
@@ -135,15 +135,16 @@ const hpAiContent = {
   },
   hypothesis: {
     title: 'The faster we can design, the sooner we can test the real thing.',
-    copy: 'With a two person team, strict firewalls, and a tight timeline, Figma alone would slow us down. We believed that if we designed and coded in parallel using vibe coding tools like Replit, we could test UI behavior, LLM responses, and workflows at the same time. This would skip heavy handoff cycles and accelerate learning.',
+    copy: 'With a two person team, strict firewalls, and a tight timeline, Figma alone would slow us down. Given the constraints, we chose to design and code in parallel using vibe coding tools like Replit to validate UI behavior, LLM responses, and workflows simultaneously. This would skip heavy handoff cycles and accelerate learning.',
   },
   process: {
     title: 'Process Highlights',
+    heroImage: '/images/hp-ai/figma-replit.png',
     cards: [
-      { image: '/images/hp-ai/process-wireframe.png', title: 'Initial Wireframes', copy: 'The executive initially asked for a ChatGPT style interface, so we started with a familiar chat layout.' },
-      { image: '/images/hp-ai/process-initial.gif', title: 'Initial Designs', copy: 'We designed key interactions and flows using the HP design system as a base.' },
-      { image: '/images/hp-ai/process-agentic.png', title: 'Understanding Agentic AI', copy: 'We began experimenting with newly released open source agents to support deeper, context aware conversations.' },
-      { image: '/images/hp-ai/process-replit.gif', title: 'Shifting to Replit', copy: 'We moved from Figma into Replit, which shifted my role into vibe coding and prompt engineering.' },
+      { image: '/images/hp-ai/process-wireframe.png', title: 'Starting In Figma', copy: 'The executive initially asked for a ChatGPT style interface, so we started with a familiar chat layout.' },
+      { image: '/images/hp-ai/process-initial.gif', title: 'Initial Styling & Prototyping', copy: 'We designed key interactions and flows using the HP design system as a base.' },
+      { image: '/images/hp-ai/process-agentic.png', title: 'Understanding Agentic AI', copy: 'We evaluated newly released open-source agents to support deeper, context-aware conversations without external APIs.' },
+      { image: '/images/hp-ai/process-replit.gif', title: 'Shifting to Replit', copy: 'Moving from Figma into Replit collapsed the design–build loop, shifting my role into direct UI implementation and prompt engineering.' },
       { image: '/images/hp-ai/process-design.png', title: 'Visual Design Changes', copy: 'We explored a more futuristic and innovative look that still felt grounded in HP.' },
       { image: '/images/hp-ai/process-llama.png', title: 'Prompt Precision', copy: 'We fine tuned temperature, uncertainty, and tone to generate consistent, executive ready outputs.' },
       { image: '/images/hp-ai/process-box.png', title: 'Local Solution', copy: 'We hosted the assistant on an HP Z box to keep all data local and under HP control.' },
@@ -172,17 +173,17 @@ const hpAiContent = {
       },
       {
         title: 'Vibe Coding Constraints',
-        copy: 'Vibe coding in Replit created new constraints. Saves were unstable, backend options were limited, and prompts had to be extremely precise to avoid memory overload. Each issue revealed how powerful and fragile early AI build tools can be at the same time.',
+        copy: 'Vibe coding in Replit created new constraints. Saves were unstable, backend options were limited, and prompts had to be extremely precise to avoid memory overload. This reinforced the need for clearer guardrails and tooling maturity when building production-grade AI experiences.',
       },
     ],
   },
   delivered: {
     title: 'A locally hosted AI assistant built by two people for one executive and his team.',
     copy: 'We shipped a secure, locally hosted AI tool running on an HP Z box. The product featured a clean HP branded UI inspired by NotebookLM, built in access to team knowledge, and dual knowledge bases. One conversational, one system wide.\n\nThe assistant could recognize reminders, summarize files, and respond in the executive concise tone. Powered by Ollama and Llama 3.2, every interaction stayed private, fast, and fully inside HP infrastructure.',
+    heroImage: '/images/hp-ai/highlight-11.png',
     images: [
       '/images/hp-ai/highlight-9.png',
       '/images/hp-ai/highlight-8.png',
-      '/images/hp-ai/highlight-3.png',
       '/images/hp-ai/highlight-5.png',
       '/images/hp-ai/highlight-6.png',
     ],
@@ -192,7 +193,7 @@ const hpAiContent = {
     items: [
       'This project was as much about learning as it was about shipping. It was my first time using vibe coding as a core part of the design process.',
       'I learned how model choice, temperature, and prompt phrasing could completely change the experience, and how important it was to define constraints clearly.',
-      'Next time: I would refine prompts outside the build tool first, testing them in standalone environments before moving into Replit. That would keep the build cleaner and reduce wasted cycles.',
+      'Next time, I would validate prompts in isolated environments before integrating them into the build to reduce iteration cost.',
       'Next steps: Collaborate with a developer to create personal AI agents for key team members so they can tap into each other domain knowledge without extra email. Explore a secure mobile extension of the assistant for the executive on the go.',
     ],
   },
@@ -336,15 +337,16 @@ const trackTennisContent = {
   },
   hypothesis: {
     title: 'Move from consumer app to cloud B2B to scale and eliminate mobile and setup friction.',
-    copy: 'Shifting product strategy can remove mobile friction, allow facilities to manage recordings, and open the door for expansion into padel and pickleball; sports that many clubs were already building into their offerings/facilities. This pivot can help align business goals with actual user behaviors and reduced operational barriers, taking us into a new blue ocean instead of directly competing with SwingVision.',
+    copy: 'We shifted from a consumer mobile app to a cloud-based B2B platform to eliminate setup friction, enable facility-level control, and unlock expansion into padel and pickleball. This pivot can help align business goals with actual user behaviors and reduced operational barriers, taking us into a new blue ocean instead of directly competing with SwingVision.',
   },
   process: {
     title: 'Process Highlights',
+    heroImage: '/images/track-tennis/process-player.png',
     cards: [
-      { image: '/images/track-tennis/process-5.png', title: 'Initial App Designs', copy: 'Redesigned screens to uplift the experience before the strategic pivot.' },
-      { image: '/images/track-tennis/process-6.png', title: 'Initial Design System', copy: 'Created the product\'s first design system.' },
-      { image: '/images/track-tennis/process-7.png', title: 'Mapping User Flows', copy: 'Multi layer flows helped reveal the need for a pivot.' },
-      { image: '/images/track-tennis/process-8.png', title: 'Wireframing', copy: 'Began wireframing desktop flows for a web based platform.' },
+      { image: '/images/track-tennis/process-5.png', title: 'Initial App Designs', copy: 'Early redesign work exposed systemic friction, reinforcing the need for a strategic pivot rather than incremental UI improvement.' },
+      { image: '/images/track-tennis/process-6.png', title: 'Initial Design System', copy: 'Created the product\'s first design system using the existing brand identity.' },
+      { image: '/images/track-tennis/process-7.png', title: 'Mapping ICP & Key Flows', copy: 'Mapping multi-layer user flows revealed structural friction that couldn’t be solved within a consumer mobile model.' },
+      { image: '/images/track-tennis/process-8.png', title: 'Wireframing the First Experience', copy: 'Began wireframing desktop flows for a web based platform, visualizing the ideas and allowing early stakeholder feedback.' },
     ],
     tabs: [
       {
@@ -353,7 +355,7 @@ const trackTennisContent = {
         subtitle: 'Core Strategy Pillars',
         goal: 'Goal: Make the experience simple for every stakeholder and help players grow with ease.',
         cards: [
-          { image: '/images/track-tennis/strat-1.png', title: 'Simplify Access', copy: 'Integrate with club management systems and reduce mobile dependency.' },
+          { image: '/images/track-tennis/strat-1.png', title: 'Simplify Access', copy: 'Reducing operational overhead for clubs and friction for players.' },
           { image: '/images/track-tennis/strat-2.png', title: 'Expand Beyond Tennis', copy: 'Introduce padel and pickleball to future proof the platform.' },
           { image: '/images/track-tennis/strat-3.png', title: 'Modernize the Brand', copy: 'Shift from orange to a vibrant green for a performance driven identity.' },
           { image: '/images/track-tennis/strat-4.png', title: 'Personalize the Platform', copy: 'Offer customizable branding for clubs, colleges, and facilities.' },
@@ -366,15 +368,15 @@ const trackTennisContent = {
     items: [
       {
         title: 'Strategic Pivot Validation',
-        copy: 'A startup pivot requires clear strategy and strong evidence. Research and interviews validated the shift from consumer to B2B and aligned the business model with actual demand.',
+        copy: 'Driving a startup pivot required aligning research, business viability, and product feasibility to build conviction across stakeholders. Research and interviews validated the shift from consumer to B2B and aligned the business model with actual demand.',
       },
     ],
   },
   delivered: {
     title: 'A new identity, product offering, and strategy for all racket sports.',
-    copy: 'We rebuilt Track.Tennis with a clearer position, a modern identity, and a cloud based product ecosystem. Players can now reserve courts, record matches, and receive analyzed videos automatically, while facilities gained a simple way to offer premium, automated recording as a service.',
+    copy: 'We rebuilt Track.Tennis around a cloud-based B2B model, aligning brand, product, and revenue around facilities rather than individual players. Players can now reserve courts, record matches, and receive analyzed videos automatically, while facilities gained a simple way to offer premium, automated recording as a service.',
+    heroImage: '/images/track-tennis/deliver-1.png',
     images: [
-      '/images/track-tennis/deliver-1.png',
       '/images/track-tennis/deliver-2.png',
       '/images/track-tennis/deliver-3.png',
       '/images/track-tennis/deliver-4.png',
@@ -395,20 +397,20 @@ const trackTennisContent = {
 const hardRockAppContent = {
   overview: {
     title: 'One brand. Many worlds. One lifestyle app.',
-    copy: 'Hard Rock needed to evolve from a casino-driven loyalty app into a connected lifestyle platform for every guest. The Hard Rock Experience app brings hotels, cafes, concerts, retail, and gaming together in one seamless digital journey. My role was to support UX and UI design across key features, align the app with the new web platform, and help shape a unified ecosystem ahead of the 2027 Las Vegas flagship launch.',
+    copy: 'Hard Rock needed to evolve from a casino-driven loyalty app into a connected lifestyle platform for every guest. The Hard Rock Experience app brings hotels, cafes, concerts, retail, and gaming together in one seamless digital journey. My role focused on UX and UI design across key features, aligning the app with the new web platform, and helping shape a unified ecosystem ahead of the 2027 Las Vegas flagship launch.',
     image: '/images/hard-rock-app/hard-rock-hero3.png',
   },
   results: {
     title: 'Key Results',
     stats: [
-      { stat: '1', label: 'connected loyalty and experience ecosystem' },
+      { stat: '1', label: 'connected loyalty ecosystem spanning experiences' },
       { stat: '30+', label: 'properties integrating into one platform' },
       { stat: '5+', label: 'lines of business unified under a single design system' },
       { stat: '+45%', label: 'higher engagement vs baseline Unity app tests' },
     ],
   },
   highlights: {
-    title: 'A lifestyle ecosystem built for discovery, loyalty, and connection.',
+    title: 'A lifestyle ecosystem designed to expand loyalty beyond gaming and drive everyday engagement.',
     copy: 'The HRX app elevates how users experience Hard Rock every day. Guests can browse moments, book stays, explore cafes, discover shows, track rewards, and connect with every part of the brand.',
     items: [
       {
@@ -422,14 +424,6 @@ const hardRockAppContent = {
       {
         image: '/images/hard-rock-app/highlight-moments3.png',
         title: 'Moments Categories',
-      },
-      {
-        image: '/images/hard-rock-app/highlight-status.gif',
-        title: 'New Status Celebration',
-      },
-      {
-        image: '/images/hard-rock-app/highlight-tier.webp',
-        title: 'Tier Status',
       },
     ],
   },
@@ -509,17 +503,19 @@ const hardRockAppContent = {
     ],
   },
   hypothesis: {
-    title: 'A connected ecosystem drives deeper engagement.',
-    copy: 'If we evolve Hard Rock loyalty into a connected digital ecosystem, users will explore more, book more, and deepen their relationship with the brand. Linking hotels, dining, retail, and entertainment into one experience will strengthen engagement and drive value for every customer segment.',
+    title: 'A connected, personalized ecosystem drives deeper engagement.',
+    copy: 'If we evolve Hard Rock loyalty into a connected digital ecosystem that understands it\'s customers, users will explore more, book more, and deepen their relationship with the brand. Linking hotels, dining, retail, and entertainment into one experience will strengthen engagement and drive value for every customer segment.',
   },
   process: {
     title: 'Process Highlights',
+    heroImage: '/images/hard-rock-app/positioning-strategy1.png',
     cards: [
-      { image: '/images/hard-rock-app/process-brainstorm.jpg', title: 'Brainstorming', copy: 'Understanding segment motivations for download and return' },
-      { image: '/images/hard-rock-app/process-flows.jpg', title: 'Key Flows', copy: 'Mapping ideal booking and loyalty journeys' },
-      { image: '/images/hard-rock-app/process-og.jpeg', title: 'Initial Designs', copy: 'Initially optimizing existing design systems leaning away from different lob styles' },
-      { image: '/images/hard-rock-app/process-ideate.jpeg', title: 'Feature Development', copy: 'Hackathons to ideate and prototype initial features for V1' },
-      { image: '/images/hard-rock-app/process-demo.jpg', title: 'Property Prototypes', copy: 'Testing with stakeholders and guests at key properties for V1 launch' },
+      { image: '/images/hard-rock-app/process-brainstorm.jpg', title: 'Stakeholder Workshops', copy: 'Collaborating to under segment motivations for download and return.' },
+      { image: '/images/hard-rock-app/process-flows.jpg', title: 'Mapping Key Ideas', copy: 'Visualizing key flows we envisioned for V1.' },
+      { image: '/images/hard-rock-app/positioning-strategy-1.png', title: 'Validating Our Omnichannel Strategy', copy: 'It was important to use data to validate our conviction.' },
+      { image: '/images/hard-rock-app/process-og.jpeg', title: 'Trialing Our Initial Designs', copy: 'Audited and simplified existing design systems to reduce LOB-specific divergence and enable reuse.' },
+      { image: '/images/hard-rock-app/process-ideate.jpeg', title: 'Feature Development', copy: 'Conducted multiple hackathons to ideate and prototype initial features for V1.' },
+      { image: '/images/hard-rock-app/process-demo.jpg', title: 'Property Prototypes', copy: 'Testing with stakeholders and guests at key properties for our MVP.' },
     ],
     tabs: [
       {
@@ -528,11 +524,12 @@ const hardRockAppContent = {
         subtitle: 'Key Micro-Interactions',
         goal: 'Goal: Create delightful, memorable moments throughout the app.',
         cards: [
+          { image: '/images/hard-rock-app/highlight-status.gif', title: 'New Status Celebration', copy: 'Emotive full-screen animation' },
+          { image: '/images/hard-rock-app/highlight-tier.webp', title: 'Tier Status', copy: 'Micro-interaction in the tier card' },
           { image: '/images/hard-rock-app/interaction-moments.webp', title: 'Moments', copy: 'Lifestyle exploration' },
           { image: '/images/hard-rock-app/interaction-momentsshare.webp', title: 'Moments Share', copy: 'Share with friends and family' },
           { image: '/images/hard-rock-app/interaction-offercal.webp', title: 'Offer Calendar', copy: 'Exploring offer options and dates' },
           { image: '/images/hard-rock-app/interaction-offerfilter.webp', title: 'Offer Filter', copy: 'Filter offers through locations and preferences' },
-          { image: '/images/hard-rock-app/interaction-modify.webp', title: 'Modify Reservation', copy: 'Modify existing reservations and offers' },
           { image: '/images/hard-rock-app/interaction-location.webp', title: 'Notification Permissions', copy: 'Contextual permission requests' },
         ],
       },
@@ -543,19 +540,21 @@ const hardRockAppContent = {
     items: [
       {
         title: 'Different Systems',
-        copy: 'Each line of business had different systems, workflows, and user behaviors.',
+        copy: 'Each line of business had different systems, workflows, and user behaviors. Clarifying the techstack for each proved to be difficult, and required a lot of back and forth with stakeholders.',
       },
       {
         title: 'Independent Properties',
-        copy: 'Every property operated independently. Balancing global consistency with local flexibility became a core design challenge.',
+        copy: 'Every property operated independently. Balancing global consistency with local flexibility required defining which elements were non-negotiable versus property-owned.',
       },
     ],
   },
   delivered: {
     title: 'A connected lifestyle app for every kind of Hard Rock fan.',
-    copy: 'We designed the foundation for a unified experience linking users across every property, line of business, and loyalty tier. HRX shifts Hard Rock from a transactional loyalty app into a global lifestyle platform.\n\nThe app is in development with phased rollouts planned ahead of the 2027 flagship launch.',
+    copy: 'We designed the foundation for a unified experience linking users across every property, line of business, and loyalty tier. HRX shifts Hard Rock from a transactional loyalty app into a global lifestyle platform, establishing a foundation for future features, integrations, and partner experiences.\n\nThe app is in development with phased rollouts planned ahead of the 2027 flagship launch.',
+    heroImage: '/images/hard-rock-app/highlight-experiences.png',
     images: [
-      '/images/hard-rock-app/highlight-experiences.png',
+      '/images/hard-rock-app/positioning-strategy-3.png',
+      '/images/hard-rock-app/hrx-hero1.png',
       '/images/hard-rock-app/highlight-experiences-1.png',
       '/images/hard-rock-app/highlight-hrx.png',
       '/images/hard-rock-app/highlight-vegas.jpg',
@@ -576,11 +575,11 @@ const hardRockAppContent = {
 const hardRockWebContent = {
   overview: {
     title: 'One brand. Five lines of business. Thirty+ properties. One seamless experience.',
-    copy: 'Hard Rock’s web presence had grown into a maze of legacy microsites, outdated patterns, and inconsistent journeys. My role was to turn a fragmented, text-heavy “newspaper” web into a modern, conversion-focused ecosystem—built to scale globally and feel unified locally. We didn’t just migrate content. We rebuilt how millions experience Hard Rock online.',
+    copy: 'Hard Rock’s web presence had grown into a maze of legacy microsites, outdated patterns, and inconsistent journeys. My role was to turn a fragmented, text-heavy “newspaper” web into a modern, conversion-focused ecosystem: built to scale globally and feel unified locally. We didn’t just migrate content. We rebuilt how millions experience Hard Rock online.',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   results: {
-    title: 'Key Results',
+    title: 'Key outcomes',
     stats: [
       { stat: '100M+', label: 'annual visits guided through one cohesive experience' },
       { stat: '30+', label: 'brands unified under one design system' },
@@ -589,7 +588,7 @@ const hardRockWebContent = {
     ],
   },
   highlights: {
-    title: 'A Systemic Ecosystem Designed to Convert and Scale.',
+    title: 'Designing a system that aligned scale, conversion, and brand trust.',
     copy: 'The redesign elevated how millions (75% mobile) interact with the Hard Rock brand globally, delivering faster performance, stronger conversions, and a scalable foundation for every future launch.',
     items: [
       {
@@ -603,14 +602,6 @@ const hardRockWebContent = {
       {
         image: '/images/hard-rock-web/strat-arch2.webp',
         title: 'Location Switcher',
-      },
-      {
-        image: '/images/hard-rock-web/highlight-system.png',
-        title: 'Atomic Design System & Component Library',
-      },
-      {
-        image: '/images/hard-rock-web/highlight-social.png',
-        title: 'Social Proof in Motion',
       },
     ],
   },
@@ -698,11 +689,12 @@ const hardRockWebContent = {
   },
   process: {
     title: 'Process Highlights',
+    heroImage: '/images/hard-rock-web/process-hero1.png',
     cards: [
-      { image: '/images/hard-rock-web/process-flows.png', title: 'User Flows', copy: 'Mapping key journeys across all lines of business.' },
-      { image: '/images/hard-rock-web/process-wireframes.png', title: 'Wireframing', copy: 'Quick concepting for early solutions.' },
-      { image: '/images/hard-rock-web/process-copy.png', title: 'Copy & Messaging', copy: 'Minimal, impactful copy.' },
-      { image: '/images/hard-rock-web/process-lobs.png', title: 'LOBs Connect', copy: 'How might we interconnect service lines?' },
+      { image: '/images/hard-rock-web/process-flows.png', title: 'Understanding Key Flows', copy: 'Mapping critical journeys to identify where fragmentation broke trust and conversion.' },
+      { image: '/images/hard-rock-web/process-wireframes.png', title: 'Wireframing & Reiterating', copy: 'Quick concepting for early solutions.' },
+      { image: '/images/hard-rock-web/process-copy.png', title: 'Repositioning Copy', copy: 'Intentionally reducing “Rock” language to let clarity and conversion lead, not branding noise.' },
+      { image: '/images/hard-rock-web/process-lobs.png', title: 'LOBs Connect', copy: 'How might we interconnect service lines and show omnichannel pathways?' },
       { image: '/images/hard-rock-web/process-menu.png', title: 'Mega Menu Design', copy: 'Navigating global discovery based on MGM patterns.' },
     ],
     tabs: [
@@ -749,17 +741,18 @@ const hardRockWebContent = {
     items: [
       {
         title: 'Stakeholder Alignment',
-        copy: 'Managing competing needs and earning long-term trust.',
+        copy: 'Managing competing needs and earning long-term trust. We aligned stakeholders early by creating visible decision moments and shared ownership, which reduced downstream resistance.',
       },
       {
         title: 'Migration & Project Uncertainty',
-        copy: 'Working around mid-migration technical limitations.',
+        copy: 'Working around mid-migration technical limitations and poor product inheritance. We had to be patient and work with the limitations we had.',
       },
     ],
   },
   delivered: {
     title: 'A Hard Rock ecosystem connecting every experience.',
-    copy: 'This project aligned corporate and property-level stakeholders around a shared digital vision. While still in pre-development, it has already made major internal impact and set the foundation for the future ecosystem.',
+    copy: 'This project aligned corporate and property-level stakeholders around a shared digital vision. By sharing the same system and CMS as the app, the web platform established a reference architecture for all future internal and external products.',
+    heroImage: '/images/hard-rock-web/deliver-hero3.png',
     images: [
       '/images/hard-rock-web/del1.png',
       '/images/hard-rock-web/del2.png',
@@ -774,7 +767,7 @@ const hardRockWebContent = {
     items: [
       'Scaling design is as much about people as pixels.',
       'Aligning stakeholders is a core design skill.',
-      'Next time, integrate analytics earlier (LogRocket).',
+      'Next time, integrate analytics earlier (LogRocket) to validate our varying hypotheses.',
       'Future priority: redesign booking and member experiences.',
     ],
   },
@@ -988,6 +981,18 @@ export default function ProjectPage() {
 
               {/* 7. Process */}
               <SectionWrapper id="process" pill="Process" title={content.process.title}>
+                {content.process.heroImage && (
+                  <div className="hero-image-wrapper" style={{ marginBottom: '32px' }}>
+                    <ExpandableImage 
+                      src={content.process.heroImage} 
+                      alt="Process overview"
+                      width={1920}
+                      height={1400}
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+                  </div>
+                )}
                 <ProcessCarousel cards={content.process.cards} />
                 <div style={{ marginTop: '48px' }}>
                   <h3 className="strategy-section-title">
@@ -1007,6 +1012,19 @@ export default function ProjectPage() {
               {/* 9. Delivered */}
               <SectionWrapper id="delivered" pill="Delivered" title={content.delivered.title}>
                 <p className="section-copy">{content.delivered.copy}</p>
+                {content.delivered.heroImage && (
+  <div className="hero-image-wrapper" style={{ marginBottom: '32px' }}>
+    <ExpandableImage 
+      src={content.delivered.heroImage} 
+      alt="Delivered overview"
+      width={1920}
+      height={1400}
+      sizes="(max-width: 768px) 100vw, 800px"
+      style={{ width: '100%', height: 'auto' }}
+    />
+  </div>
+)}
+
                 {content.delivered.images.length > 0 ? (
                   <ImageGallery images={content.delivered.images} />
                 ) : (

@@ -2073,6 +2073,12 @@ t.ios-tile {
   margin: 0;
 }
 
+/* Image-only highlight card - maintains same height without title */
+.highlight-card-image-only .highlight-card-image-vertical {
+  aspect-ratio: 4/3;
+  border-radius: 14px;
+}
+
 @media (max-width: 768px) {
   .highlight-row-two {
     grid-template-columns: 1fr;

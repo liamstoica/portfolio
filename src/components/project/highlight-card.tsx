@@ -11,7 +11,7 @@ interface HighlightCardProps {
 
 export function HighlightCard({ image, title, isFullWidth }: HighlightCardProps) {
   return (
-    <div className={`highlight-card-vertical ${isFullWidth ? 'highlight-card-full' : ''}`}>
+    <div className={`highlight-card-vertical highlight-card-image-only ${isFullWidth ? 'highlight-card-full' : ''}`}>
       <div className="highlight-card-image-vertical">
         {image ? (
           <ExpandableImage 
@@ -24,7 +24,6 @@ export function HighlightCard({ image, title, isFullWidth }: HighlightCardProps)
           <div className="highlight-image-placeholder" />
         )}
       </div>
-      <h3 className="highlight-card-title-centered">{title}</h3>
     </div>
   )
 }
