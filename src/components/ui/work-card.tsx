@@ -29,7 +29,7 @@ function getTagColor(tag: string): string {
 
 export function WorkGridCard({ slug, title, sentence, tags, year, image }: WorkGridCardProps) {
   return (
-    <Link href={`/work/${slug}`} className="work-grid-card">
+    <Link href={`/projects/${slug}`} className="work-grid-card">
       {/* Image on top */}
       <div className="work-grid-card-image">
         <Image

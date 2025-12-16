@@ -64,7 +64,7 @@ export function MoreProjects({ currentSlug }: MoreProjectsProps) {
     <div className="more-projects">
       <div className="more-projects-grid">
         {otherProjects.map((project) => (
-          <Link key={project.slug} href={`/work/${project.slug}`} className="more-project-card">
+          <Link key={project.slug} href={`/projects/${project.slug}`} className="more-project-card">
             <div className="more-project-card-image">
               <Image
                 src={project.image}
