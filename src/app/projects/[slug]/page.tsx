@@ -1042,6 +1042,7 @@ export default function ProjectPage() {
               </SectionWrapper>
 
               {/* 11. More Projects */}
+              <div className="section-divider" />
               <SectionWrapper id="more" title="More Projects">
                 <MoreProjects currentSlug={slug} />
               </SectionWrapper>
@@ -1099,6 +1100,7 @@ export default function ProjectPage() {
                 <p className="section-copy">Key takeaways and lessons learned.</p>
               </SectionWrapper>
 
+              <div className="section-divider" />
               <SectionWrapper id="more" title="More Projects">
                 <MoreProjects currentSlug={slug} />
               </SectionWrapper>

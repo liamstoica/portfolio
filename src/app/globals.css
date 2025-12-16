@@ -2684,10 +2684,13 @@ t.ios-tile {
 
 /* More Projects */
 .more-projects {
-  border-top: 1px solid var(--border-light);
-  padding-top: 40px;
-  margin-top: 24px;
   max-width: 100%;
+}
+
+.more-projects .blog-cta {
+  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .more-projects-grid {
