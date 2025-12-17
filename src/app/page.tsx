@@ -9,10 +9,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Work projects data - showing first 2 on homepage
+// Ordered by year descending (2025, 2025, 2024, 2023, 2022)
 const workProjects = [
   {
     slug: 'hard-rock-web',
-    title: 'Hard Rock: Global Web Platform',
+    title: 'Hard Rock — Global Web Platform',
     sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
     tags: ['Web', 'Design System'],
     year: '2025—Ongoing',
@@ -20,7 +21,7 @@ const workProjects = [
   },
   {
     slug: 'hard-rock-app',
-    title: 'Hard Rock: Experience App',
+    title: 'Hard Rock Experience App',
     sentence: 'Rebuilt the loyalty experience for members across all lines of business.',
     tags: ['iOS', 'Mobile'],
     year: '2025—Ongoing',

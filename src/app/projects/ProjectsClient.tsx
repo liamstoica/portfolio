@@ -8,7 +8,7 @@ import { ArrowLeft, ChevronDown, Check, X } from 'lucide-react'
 
 // Filter options
 const PLATFORMS = ['Web', 'iOS', 'SaaS', 'Metaverse'] as const
-const FOCUSES = ['Systems', 'E-Comm.', 'AI', 'Data'] as const
+const FOCUSES = ['Systems', 'E-Comm.', 'AI', 'Data', 'Strategy'] as const
 const CONTEXTS = ['Enterprise', 'B2B', '0 → 1', 'Physical'] as const
 
 interface Project {

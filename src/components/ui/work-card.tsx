@@ -21,6 +21,9 @@ const tagColors: Record<string, string> = {
   'AI': '#c7d2fe',
   'Internal Tool': '#e5e7eb',
   'Sports': '#fed7aa',
+  'Strategy': '#e0e7ff',
+  'Metaverse': '#ddd6fe',
+  'Research': '#fef3c7',
 }
 
 function getTagColor(tag: string): string {
@@ -32,13 +35,30 @@ export function WorkGridCard({ slug, title, sentence, tags, year, image }: WorkG
     <Link href={`/projects/${slug}`} className="work-grid-card">
       {/* Image on top */}
       <div className="work-grid-card-image">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 640px) 100vw, 50vw"
-          className="work-grid-card-img"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw"
+            className="work-grid-card-img"
+          />
+        ) : (
+          <div 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              backgroundColor: 'var(--tile-bg, #f3f4f6)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--text-muted)',
+              fontSize: '14px',
+            }}
+          >
+            Strategy Case Study
+          </div>
+        )}
       </div>
       
       {/* Content below */}

@@ -393,6 +393,177 @@ const trackTennisContent = {
   },
 }
 
+// BMW Metaverse Strategy content
+const bmwMetaverseContent = {
+  overview: {
+    title: 'From a Fortnite activation to a future-facing digital ecosystem.',
+    copy: 'BMW’s innovation team initially asked us to design a transition that would move users from Fortnite into BMW’s future, internal Metaverse platform. At the time, BMW was actively exploring new digital growth avenues during the post-COVID surge in virtual engagement and experimentation. Early in the project, BMW launched Hypnopolis, a branded world inside Fortnite. However, early performance data and engagement signals showed the experience was not resonating as expected. Rather than optimizing the transition itself, we reframed the challenge: before users could transition, BMW needed to earn engagement, relevance, and emotional connection across a broader digital ecosystem.',
+    image: '/images/bmw/hero-31.png', // Strategy project - no hero image
+  },
+  results: {
+    title: 'Key outcomes',
+    stats: [
+      { stat: '3x', label: 'increase in partnership initiatives between BMW and SCADpro' },
+      { stat: '40%+', label: 'reduction in early engagement drop-off scenarios' },
+      { stat: '3', label: 'phase ecosystem strategy replacing a single, transition-only solution' },
+      { stat: '1', label: 'strategic roadmap for the future of BMW\'s metaverse presence' },
+    ],
+  },
+  highlights: {
+    title: 'Designing engagement before conversion.',
+    copy: 'Rather than forcing users through a linear funnel from Fortnite into a future platform, the strategy reframed BMW’s digital presence around engagement, narrative continuity, and long-term relevance. Research revealed that focusing solely on Fortnite gamers would artificially limit BMW’s cultural reach, so the work emphasized platform-agnostic thinking, social-first discovery, and personality-driven storytelling. By recognizing the metaverse as a network of touchpoints across gaming, social platforms, and digital identities, the strategy positioned BMW to earn Gen Z attention today and build brand affinity for the future, rather than optimizing for short-term traffic or conversion.',
+    items: [{
+      image: '/images/bmw/hero-1.gif',
+      title: 'Cloud Based Platform',
+    },
+    {
+      image: '/images/bmw/interior-concert.gif',
+      title: 'Cloud Based Platform',
+    },
+    {
+      image: '/images/bmw/hero-2.gif',
+      title: 'Cloud Based Platform',
+    },
+  ],
+  },
+  context: {
+    title: 'BMW entered the metaverse, but users didn\'t stay.',
+    copy: 'Hypnopolis saw high drop-off due to mismatched gameplay expectations and an unclear value proposition for BMW\'s VXP. Overreliance on Fortnite limited reach, while the absence of a retention strategy reduced long-term impact and limited BMW’s ability to build sustained digital brand equity.',
+    items: [
+      {
+        image: '/images/bmw/context-2.jpg',
+        title: 'Shooting vs. Driving Gameplay',
+        copy: 'Fortnite gameplay expectations conflicted with BMW’s experience design of driving gameplay.',
+      },
+      {
+        image: '/images/bmw/context-1.webp',
+        title: 'Unclear Positioning',
+        copy: 'The VXP value proposition was unclear to users and did not align with their expectations.',
+      },
+      {
+        image: '/images/bmw/context-3.jpg',
+        title: 'Limited Target Audience Reach',
+        copy: 'Relying solely on Fortnite limited reach to a narrow segment of Gen Z.',
+      },
+      {
+        image: '/images/bmw/context-4.jpg',
+        title: 'High Drop Off Rates Ensued',
+        copy: 'Retention had not been designed into the experience as users did not have reason to return.',
+      },
+    ],
+  },
+  research: {
+    title: 'Understanding BMW’s true digital audience.',
+    subtitle: 'Fortnite gamers were not interested in moving directly from a shooter environment into a driving-first experience: the mechanics, pacing, and motivation were too disconnected. Additionally, focusing exclusively on gaming Gen Z would artificially cap BMW’s cultural reach and exclude adjacent audiences already engaging with digital culture through social platforms and influencers..',
+    cards: [
+      {
+        title: 'Fortnite Gamers',
+        bullets: [
+          'Expected fast-paced, shooter-based mechanics',
+          'Low tolerance for abrupt gameplay shifts',
+          'Disengaged quickly when expectations weren’t met',
+        ],
+      },
+      {
+        title: 'Gen Z',
+        bullets: [
+          'Not a monolith — gaming-only Gen Z is a narrow subset',
+          'Highly attuned to authenticity, narrative, and cultural relevance',
+          'Follow personalities, not platforms',
+          'Crave experiences over tangible products',
+        ],
+      },
+      {
+        title: 'Millennials',
+        bullets: [
+          'Interested in digital experiences tied to real-world value',
+          'Less motivated by novelty alone',
+        ],
+      },
+      {
+        title: 'BMW Fans',
+        bullets: [
+          'Emotionally connected to brand values',
+          'Curious about innovation, but skeptical of gimmicks',
+        ],
+      },
+      {
+        title: 'Digital Culture Followers',
+        bullets: [
+          'Engage through social media, influencers, and storytelling',
+          'Comfortable with virtual personas and hybrid identities',
+        ],
+      },
+    ],
+  },
+
+  hypothesis: {
+    title: 'Engagement first. Transition second. Retention always.',
+    copy: 'If BMW designed a progressive, narrative-driven ecosystem aligned with audience expectations and distributed across gaming, social, and cultural channels, users would engage more deeply, build emotional brand affinity, and remain connected: regardless of platform.',
+  },
+
+  process: {
+    title: 'Process highlights',
+    heroImage: '/images/bmw/presentation-2.jpg',
+    cards: [
+      { image: '/images/bmw/workshop-1.jpg', title: 'Identifying Our ICP', copy: 'Digging deep into BMW\'s digital audience to understand their needs and motivations.' },
+      { image: '/images/bmw/workshop-7.png', title: 'Analyzing & Synthesizing Research', copy: 'Using Lextant Research Methods, we identified key problems + ICP & opportunities.' },
+      { image: '/images/bmw/workshop-2.jpg', title: 'Ideation Workshops', copy: 'I led each design team through Crazy 8 & 30 Second Pitch workshops to identify solutions.' },
+      { image: '/images/bmw/workshop-4.jpg', title: 'Which Concepts Would Be Successful?', copy: 'With hundreds of ideas, we narrowed down to the top 5 concepts to test and prototype.' },
+      { image: '/images/bmw/user-journeys.png', title: 'Clarifying Key Journeys', copy: 'Before diving into building prototypes of the experience, we clarified the key journeys we wanted to test and validate.' },
+      { image: '/images/bmw/storyboards-1.jpg', title: 'VIsualizing For Early Testing', copy: 'With the key journeys in mind, we created storyboards to visualize the experience for early stakeholder feedback.' },
+    ],
+    tabs: [
+      {
+        id: 'strategy',
+        label: 'Our Proposition',
+        subtitle: 'Strategic Phases',
+        goal: 'Goal: Create a cohesive, multi-phase digital ecosystem designed to engage Gen Z and build long-term brand affinity.',
+        cards: [
+          { image: '/images/bmw/phase-1-1.jpg', title: 'Phase 1: Initiation', copy: 'Align gameplay expectations with familiar mechanics, ease users from shooting to driving experiences, and introduce BMW’s brand narrative through Julia.' },
+          { image: '/images/bmw/phase-2.jpg', title: 'Phase 2: Transition', copy: 'Create narrative bridges that guide users toward deeper brand engagement, Social-first content and influencer-driven discovery, and real-world rewards tied to participation.' },
+          { image: '/images/bmw/phase-3.jpg', title: 'Phase 3: Retention', copy: 'Competitive digital experiences and live events, ongoing content drops and cultural relevance, and position BMW as a participant in digital culture, not just a sponsor' },
+        ],
+      },
+    ],
+  },
+
+  challenges: {
+    title: 'Designing in an undefined future.',
+    items: [
+      {
+        title: 'Internal Turmoil Disrupts Creativity',
+        copy: 'Our team initially faced leadership turmoil and a lack of clarity around the project. Naturally, uncertainty initially impacted collaboration, which was overcome through internal dialogue and restructuring.',
+      },
+      {
+        title: 'Platform Constraints',
+        copy: 'Technical and creative limitations within Fortnite required working within strict boundaries, creating the need to think beyond the platform and into the broader ecosystem.',
+      },
+    ],
+  },
+  delivered: {
+    title: 'A strategic blueprint for BMW\'s digital future.',
+    copy: 'We delivered a clear vision, strategic roadmap, and phased ecosystem model that helped BMW shift from isolated metaverse experimentation toward a scalable, cross-platform engagement strategy. Central to this approach was elevating Hypnopolis’ narrative anchor, Julia, into a digital persona capable of extending beyond Fortnite and into broader cultural and social contexts. This thinking influenced BMW’s exploration of social-first campaigns and AI-driven digital personalities, including the subsequent partnership featuring Lil Miquela, validating the direction and reinforcing the opportunity to engage audiences through narrative and identity rather than destination-based experiences. Midway through the project, I transitioned into a UX Design Lead role, leading client presentations and aligning strategy, storytelling, and execution across a 15+ person multidisciplinary team and giving BMW a repeatable framework for future digital experimentation beyond a single platform.',
+    heroImage: '/images/bmw/phases-strategy.png',
+    images: [
+      '/images/bmw/hero-4.gif',
+      '/images/bmw/exterior-concert.gif',
+      '/images/bmw/deliver-1.jpg',
+      '/images/bmw/deliver-2.jpg',
+      '/images/bmw/presentation-1.jpg',
+    ],
+  },
+  learnings: {
+    title: 'Strategy earns trust when grounded in insight.',
+    items: [
+      'Retention must be designed from day one.',
+      'Research reframes problems faster than optimization.',
+      'Digital ecosystems outperform single-platform bets.',
+      'Strong storytelling accelerates stakeholder alignment.',
+    ],
+  },
+}
+
 // Hard Rock Experience App content
 const hardRockAppContent = {
   overview: {
@@ -861,9 +1032,11 @@ export default function ProjectPage() {
       ? hardRockAppContent 
       : slug === 'hp-ai'
         ? hpAiContent
-        : slug === 'track-tennis'
-          ? trackTennisContent
-          : null
+        : slug === 'bmw-metaverse'
+          ? bmwMetaverseContent
+          : slug === 'track-tennis'
+            ? trackTennisContent
+            : null
 
   return (
     <div className="card-container">
@@ -893,6 +1066,9 @@ export default function ProjectPage() {
           )}
           {slug === 'hp-ai' && (
             <span className="project-hero-timeline">Sep 2024 to Nov 2024</span>
+          )}
+          {slug === 'bmw-metaverse' && (
+            <span className="project-hero-timeline">2023</span>
           )}
           {slug === 'track-tennis' && (
             <span className="project-hero-timeline">Feb 2021 to Jan 2022</span>
