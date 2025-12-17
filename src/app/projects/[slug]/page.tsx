@@ -19,6 +19,8 @@ import {
   ChallengeGrid,
   MoreProjects,
 } from '@/components/project'
+import type { ResearchCard } from '@/components/project/research-carousel'
+
 
 // HP AI Assistant content
 const hpAiContent = {
@@ -458,6 +460,7 @@ const bmwMetaverseContent = {
     cards: [
       {
         title: 'Fortnite Gamers',
+        copy: 'Core players with strong expectations around pacing, mechanics, and familiar shooter-driven gameplay.',
         bullets: [
           'Expected fast-paced, shooter-based mechanics',
           'Low tolerance for abrupt gameplay shifts',
@@ -466,6 +469,7 @@ const bmwMetaverseContent = {
       },
       {
         title: 'Gen Z',
+        copy: 'A diverse, culture-driven audience that values authenticity, narrative, and identity over platforms or products.',
         bullets: [
           'Not a monolith — gaming-only Gen Z is a narrow subset',
           'Highly attuned to authenticity, narrative, and cultural relevance',
@@ -475,6 +479,7 @@ const bmwMetaverseContent = {
       },
       {
         title: 'Millennials',
+        copy: 'Experience-oriented users motivated by utility and real-world value rather than digital novelty alone.',
         bullets: [
           'Interested in digital experiences tied to real-world value',
           'Less motivated by novelty alone',
@@ -482,6 +487,7 @@ const bmwMetaverseContent = {
       },
       {
         title: 'BMW Fans',
+        copy: 'Brand-loyal users interested in innovation, but cautious of experiences that feel promotional or gimmicky.',
         bullets: [
           'Emotionally connected to brand values',
           'Curious about innovation, but skeptical of gimmicks',
@@ -489,6 +495,7 @@ const bmwMetaverseContent = {
       },
       {
         title: 'Digital Culture Followers',
+        copy: 'Social-first audiences who engage through influencers, storytelling, and evolving digital identities.',
         bullets: [
           'Engage through social media, influencers, and storytelling',
           'Comfortable with virtual personas and hybrid identities',
@@ -1037,6 +1044,8 @@ export default function ProjectPage() {
           : slug === 'track-tennis'
             ? trackTennisContent
             : null
+            if (!content) return null
+
 
   return (
     <div className="card-container">
@@ -1147,7 +1156,7 @@ export default function ProjectPage() {
               {/* 5. Research */}
               <SectionWrapper id="research" pill="Research" title={content.research.title}>
                 <p className="section-copy" style={{ marginBottom: '8px' }}>{content.research.subtitle}</p>
-                <ResearchCarousel cards={content.research.cards} />
+                <ResearchCarousel cards={content.research.cards as ResearchCard[]} />
               </SectionWrapper>
 
               {/* 6. Hypothesis */}

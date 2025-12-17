@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-interface ResearchCard {
+export interface ResearchCard {
   title: string
   copy: string
   bullets: string[]

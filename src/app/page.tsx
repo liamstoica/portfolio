@@ -58,7 +58,7 @@ export default function HomePage() {
             <span className="hero-dot">·</span>
             <span className="hero-title">Designing for Growth</span>
           </h1>
-          <p className="hero-tagline">At the intersection of technology, strategy, and human experience.</p>
+          <p className="hero-tagline">I design scalable digital products rooted in strategy and human experience.</p>
         </div>
       </header>
 
