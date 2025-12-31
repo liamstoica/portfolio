@@ -440,7 +440,7 @@ h2, h3 {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   background: transparent;
   cursor: pointer;
   transition: border-color 0.15s ease, opacity 0.15s ease;
@@ -448,7 +448,7 @@ h2, h3 {
 }
 
 .hero-cta-icon-btn:hover {
-  border-color: rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.65);
   opacity: 0.8;
 }
 
@@ -459,11 +459,11 @@ h2, h3 {
 }
 
 .dark .hero-cta-icon-btn {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.40);
 }
 
 .dark .hero-cta-icon-btn:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.75);
 }
 
 .dark .hero-cta-icon-btn svg {
