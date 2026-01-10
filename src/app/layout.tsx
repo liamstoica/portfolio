@@ -32,6 +32,19 @@ export const metadata: Metadata = {
     'At the intersection of art, science and business. Product designer building digital experiences that feel human, intentional, and impactful.',
   keywords: ['product design', 'growth design', 'UX design', 'portfolio', 'digital experience'],
   authors: [{ name: 'Liam Stoica' }],
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-snippet': 0,
+      'max-image-preview': 'none',
+      'max-video-preview': 0,
+    },
+  },
   openGraph: {
     title: 'Liam Stoica — Growth Designer',
     description: 'At the intersection of art, science and business.',
