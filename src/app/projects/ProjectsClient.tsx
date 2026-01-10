@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { WorkGridCard } from '@/components/ui/work-card'
 import { ArrowLeft, ChevronDown, Check, X } from 'lucide-react'
 
@@ -298,9 +297,9 @@ export default function ProjectsClient({ projects }: { projects: Project[] }) {
 
   return (
     <div className="card-container">
-      {/* Header - Theme toggle aligned right, matching project detail pages */}
+      {/* Header */}
       <header style={{ marginBottom: '32px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+        <div style={{ marginBottom: '24px' }}>
           <Link 
             href="/" 
             className="back-link"
@@ -318,7 +317,6 @@ export default function ProjectsClient({ projects }: { projects: Project[] }) {
             <ArrowLeft size={18} />
             <span>Back</span>
           </Link>
-          <ThemeToggle />
         </div>
         {/* Large title matching project detail typography */}
         <h1 style={{ 

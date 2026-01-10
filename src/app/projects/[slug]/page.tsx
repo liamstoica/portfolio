@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { ExpandableImage } from '@/components/ui/expandable-image'
 import { getProjectBySlug, type Project } from '@/lib/data'
 import { ArrowLeft } from 'lucide-react'
@@ -1050,7 +1049,7 @@ export default function ProjectPage() {
   return (
     <div className="card-container">
       {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+      <header style={{ marginBottom: '32px' }}>
         <Link
           href="/"
           style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: 'var(--text-muted)', textDecoration: 'none' }}
@@ -1058,7 +1057,6 @@ export default function ProjectPage() {
           <ArrowLeft size={16} />
           <span>Back</span>
         </Link>
-        <ThemeToggle />
       </header>
 
       {/* Project Title Section */}

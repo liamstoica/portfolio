@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/components/theme-provider'
 import { ChatProvider } from '@/components/chat/chat-provider'
 import { ChatInputPill } from '@/components/chat/chat-input-pill'
 import { ChatPanel } from '@/components/chat/chat-panel'
@@ -64,25 +63,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body className={advercase.variable}>
-        <ThemeProvider>
-          <ChatProvider>
-            {/* Atmospheric Background */}
-            <div className="page-bg" aria-hidden="true" />
+        <ChatProvider>
+          {/* Atmospheric Background */}
+          <div className="page-bg" aria-hidden="true" />
 
-            {/* Page Content */}
-            <div className="relative min-h-screen py-8 md:py-12 pb-32">
-              {children}
-            </div>
+          {/* Page Content */}
+          <div className="relative min-h-screen py-8 md:py-12 pb-32">
+            {children}
+          </div>
 
-            {/* Floating Chat Input */}
-            <ChatInputPill />
+          {/* Floating Chat Input */}
+          <ChatInputPill />
 
-            {/* Full Chat Panel */}
-            <ChatPanel />
-          </ChatProvider>
-        </ThemeProvider>
+          {/* Full Chat Panel */}
+          <ChatPanel />
+        </ChatProvider>
       </body>
     </html>
   )

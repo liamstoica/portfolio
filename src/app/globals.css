@@ -334,7 +334,7 @@ h2, h3 {
 }
 
 /* =====================================================
-   HERO HEADER - Profile + Toggle on top row
+   HERO HEADER
    ===================================================== */
 
 .hero-header {
@@ -343,10 +343,9 @@ h2, h3 {
   padding-left: 4px;
 }
 
-/* Top row: Profile photo left, theme toggle right */
+/* Profile photo row */
 .hero-top-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -628,108 +627,6 @@ a:hover {
 
 ::selection {
   background: var(--accent-soft);
-}
-
-/* =====================================================
-   THEME TOGGLE
-   ===================================================== */
-
-/* Theme Toggle with Sun/Moon Icons */
-.theme-toggle-btn {
-  position: relative;
-  width: 56px;
-  height: 28px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-/* Light mode: warm sun glow */
-.theme-toggle-btn.light {
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
-  box-shadow: 
-    0 2px 8px rgba(251, 191, 36, 0.3),
-    inset 0 1px 2px rgba(255, 255, 255, 0.5);
-}
-
-/* Dark mode: cool night glow */
-.theme-toggle-btn.dark {
-  background: linear-gradient(135deg, #312e81 0%, #4338ca 50%, #6366f1 100%);
-  box-shadow: 
-    0 2px 8px rgba(99, 102, 241, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-
-/* Icon containers */
-.theme-toggle-icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-}
-
-/* Sun icon positioning */
-.theme-toggle-icon.sun {
-  left: 8px;
-  color: #b45309;
-  opacity: 1;
-}
-
-.theme-toggle-btn.dark .theme-toggle-icon.sun {
-  opacity: 0;
-  transform: translateY(-50%) scale(0.5);
-}
-
-/* Moon icon positioning */
-.theme-toggle-icon.moon {
-  right: 8px;
-  color: #c7d2fe;
-  opacity: 0;
-  transform: translateY(-50%) scale(0.5);
-}
-
-.theme-toggle-btn.dark .theme-toggle-icon.moon {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
-}
-
-/* Slider thumb */
-.theme-toggle-slider {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 22px;
-  height: 22px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2;
-}
-
-.theme-toggle-btn.dark .theme-toggle-slider {
-  transform: translateX(28px);
-}
-
-/* Hover effects */
-.theme-toggle-btn:hover {
-  transform: scale(1.02);
-}
-
-.theme-toggle-btn:active {
-  transform: scale(0.98);
-}
-
-/* Focus state */
-.theme-toggle-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
 }
 
 /* =====================================================
@@ -1828,19 +1725,6 @@ a:hover {
   box-shadow: 
     0 2px 12px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Light mode jumpnav - slightly different treatment */
-[data-theme="light"] .jumpnav {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.85)
-  );
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 
-    0 2px 12px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .jumpnav-inner {

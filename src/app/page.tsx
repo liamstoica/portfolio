@@ -1,4 +1,3 @@
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { IosTile } from '@/components/ui/ios-tile'
 import { WorkGridCard } from '@/components/ui/work-card'
 import { Testimonials } from '@/components/ui/testimonials'
@@ -33,7 +32,7 @@ export default function HomePage() {
     <div className="card-container">
       {/* Hero Header */}
       <header className="hero-header">
-        {/* Top Row: Profile Photo + Theme Toggle */}
+        {/* Profile Photo */}
         <div className="hero-top-row">
           <div className="profile-photo">
             <Image
@@ -45,7 +44,6 @@ export default function HomePage() {
               className="profile-photo-img"
             />
           </div>
-          <ThemeToggle />
         </div>
         
         {/* Name + Subtitle in One Row (Felix-style) */}
