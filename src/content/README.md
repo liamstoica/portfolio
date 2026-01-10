@@ -14,8 +14,6 @@ content/
 │   └── exploration-1.md
 ├── linkedin-posts/     # LinkedIn post archives
 │   └── ...
-├── blog/              # Optional blog content
-│   └── ...
 └── context.md         # Additional context about Liam
 ```
 

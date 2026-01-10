@@ -4,8 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
- * Felix Lee–Inspired Design System
+/*
  * Soft, editorial, atmospheric
  */
 
@@ -878,7 +877,7 @@ a:hover {
   }
 }
 
-t.ios-tile {
+.ios-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2731,11 +2730,7 @@ t.ios-tile {
   max-width: 100%;
 }
 
-.more-projects .blog-cta {
-  display: inline-block;
-  margin-top: 24px;
-  margin-bottom: 0;
-}
+
 
 .more-projects-grid {
   display: grid;
@@ -2957,45 +2952,10 @@ t.ios-tile {
   font-weight: 600;
 }
 
-/* Blog CTA Button */
-.blog-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 20px;
-  color: #CC7A00; /* Darker orange for light mode legibility */
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
-  position: relative;
-  cursor: pointer;
-}
-.blog-cta::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #CC7A00;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.blog-cta:hover {
-  opacity: 0.85;
-}
-.blog-cta:hover::after {
-  opacity: 0.5;
-}
 
-/* Dark mode: restore original bright orange */
-.dark .blog-cta {
-  color: #FFA500;
-}
-.dark .blog-cta::after {
-  background: #FFA500;
-}
+
+
+
 
 /* Services CTA Button */
 .services-cta {

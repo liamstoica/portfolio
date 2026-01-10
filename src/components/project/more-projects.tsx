@@ -121,9 +121,6 @@ export function MoreProjects({ currentSlug }: MoreProjectsProps) {
           </Link>
         ))}
       </div>
-      <Link href="/projects" className="blog-cta">
-        See All Projects →
-      </Link>
     </div>
   )
 }

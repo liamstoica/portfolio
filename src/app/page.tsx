@@ -1,10 +1,8 @@
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { IosTile } from '@/components/ui/ios-tile'
 import { WorkGridCard } from '@/components/ui/work-card'
-import { BlogCard } from '@/components/ui/blog-card'
 import { Testimonials } from '@/components/ui/testimonials'
 import { liveSites, sandbox } from '@/lib/data'
-import { getRecentPosts } from '@/lib/blog'
 import Image from "next/image"
 import Link from "next/link"
 
@@ -30,7 +28,6 @@ const workProjects = [
 ]
 
 export default function HomePage() {
-  const recentPosts = getRecentPosts(3)
 
   return (
     <div className="card-container">
@@ -103,9 +100,6 @@ export default function HomePage() {
             />
           ))}
         </div>
-        <Link href="/projects" className="blog-cta">
-          See All Projects →
-        </Link>
       </section>
 
       {/* Divider */}
@@ -131,35 +125,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="section-divider" />
-
-      {/* Blog Section */}
-      <section className="content-section">
-        <div className="section-heading">
-          <h2 className="section-header">My Perspectives</h2>
-          <p className="section-subtitle">My thoughts on product, design, and strategy shaped through my experiences.</p>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {recentPosts.map((post) => (
-            <BlogCard
-              key={post.slug}
-              slug={post.slug}
-              title={post.title}
-              subtitle={post.subtitle}
-              date={post.date}
-              category={post.category}
-              industry={post.industry}
-              image={post.headerImage || ''}
-              variant="home"
-            />
-          ))}
-        </div>
-        <Link href="/blog" className="blog-cta">
-          Explore All Blog Posts →
-        </Link>
-      </section>
+      
 
       {/* Divider */}
       <div className="section-divider" />
