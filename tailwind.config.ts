@@ -27,11 +27,4 @@ const config: Config = {
   plugins: [],
 }
 
-extend: {
-  fontFamily: {
-    serif: ['var(--font-serif)', 'serif']
-  }
-}
-
-
 export default config

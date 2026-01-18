@@ -66,13 +66,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={advercase.variable}>
         <ChatProvider>
-          {/* Atmospheric Background */}
-          <div className="page-bg" aria-hidden="true" />
-
-          {/* Page Content */}
-          <div className="relative min-h-screen py-8 md:py-12 pb-32">
-            {children}
-          </div>
+          {/* Page Content - layouts in route groups handle page-bg and containers */}
+          {children}
 
           {/* Floating Chat Input */}
           <ChatInputPill />
