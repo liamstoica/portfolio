@@ -529,7 +529,7 @@ const trackTennisSections: CaseStudySection[] = [
     id: 'content-focus',
     type: 'content-image',
     title: 'From consumer app to performance platform',
-    body: 'Track.Tennis did not suffer from lack of ambition. It suffered from lack of focus. By narrowing the audience to competitive players, coaches, and facilities, the product shifted from novelty to necessity. Leading this change, I asked the question: "Do amateur players even want to record their matches/practices for analysis?" The redesign reframed Track.Tennis as infrastructure for performance rather than a casual recording tool.',
+    body: 'Track.Tennis did not suffer from lack of ambition. It suffered from lack of focus. By narrowing the audience to competitive players, coaches, and facilities, the product shifted from novelty to necessity. Leading this change, I asked a fundamental question: do amateur players actually want to analyze their matches?',
     imageSrc: '/images/track-tennis/highlight2.webp',
     imageAlt: 'Track.Tennis strategic focus',
   },
@@ -558,7 +558,7 @@ const trackTennisSections: CaseStudySection[] = [
       {
         imageSrc: '/images/track-tennis/app3.png',
         title: 'Web over app dependency',
-        description: 'Cloud delivery removed storage limits, improved performance, and enabled access across devices while limiting app dependency.',
+        description: 'Cloud delivery removed storage limits, improved performance, and enabled access across devices without relying on a native app.',
       },
       {
         imageSrc: '/images/track-tennis/strat-2.png',
@@ -568,7 +568,7 @@ const trackTennisSections: CaseStudySection[] = [
       {
         imageSrc: '/images/track-tennis/track-personalize.png',
         title: 'Flexible by design',
-        description: 'Designed to support the realities of college and facility operations, not one-size-fits-all use cases.',
+        description: 'Built to support the realities of college and facility operations, not one-size-fits-all workflows.',
       },
     ],
   },
@@ -577,7 +577,7 @@ const trackTennisSections: CaseStudySection[] = [
   {
     id: 'content-uncertainty',
     type: 'content-image',
-    title: 'Conviction requires evidence in data',
+    title: 'Conviction requires evidence',
     body: 'Shifting product direction in an early-stage startup required conviction backed by evidence. While my experience in competitive tennis helped identify the opportunity, research with players, coaches, and facilities validated the B2B pivot and clarified real operational needs. Progress depended on sequencing strategy before execution and aligning stakeholders around a sharper vision.',
     imageSrc: '/images/track-tennis/tennis-me.jpg',
     imageAlt: 'Track.Tennis design process',
@@ -590,9 +590,9 @@ const trackTennisSections: CaseStudySection[] = [
     title: 'Some early results',
     stats: [
       { value: 'ITA Partner', label: 'official video platform for national collegiate tennis' },
-      { value: '40k+ users', label: 'active across tennis, padel, and pickleball' },
+      { value: '40k+ Users', label: 'active across tennis, padel, and pickleball' },
       { value: '1,500+ Cameras', label: 'installed in facilities across the US' },
-      { value: '8K+ events', label: 'streamed in real time in the US' },
+      { value: '8K+ Events', label: 'streamed in real time in the US' },
     ],
   },
 
