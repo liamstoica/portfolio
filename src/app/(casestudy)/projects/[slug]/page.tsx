@@ -600,7 +600,7 @@ const trackTennisSections: CaseStudySection[] = [
   {
     id: 'tabs-details',
     type: 'tabbed',
-    title: 'Dig into some of the features',
+    title: 'Dig deeper into the product',
     tabs: [
       {
         id: 'features',
