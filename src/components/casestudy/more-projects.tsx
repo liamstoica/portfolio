@@ -12,9 +12,6 @@ interface MoreProjectsProps {
 // Project images mapping
 const projectImages: Record<string, string> = {
   'hard-rock-web': '/images/hard-rock-web/hard-rock-hero.jpg',
-  'hard-rock-app': '/images/hard-rock-app/hrx-hero.png',
-  'hp-ai': '/images/hp-ai/hp-hero.png',
-  'bmw-metaverse': '/images/bmw/hero-3.jpg',
   'track-tennis': '/images/track-tennis/track-tennis-hero.png',
 }
 

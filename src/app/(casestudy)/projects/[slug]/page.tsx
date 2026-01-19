@@ -352,7 +352,7 @@ const hardRockSections: CaseStudySection[] = [
         description: 'Mobile first speed and responsiveness made the platform feel modern, reliable, and easier to trust.',
       },
       {
-        imageSrc: '/images/hard-rock-web/strat5.png',
+        imageSrc: '/images/hard-rock-web/global-map.png',
         title: 'Designed for global discovery',
         description: 'Maps, navigation, and hierarchy make it easy to explore across destinations and experiences from the start.',
       },
@@ -463,6 +463,175 @@ const hardRockSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   TRACK.TENNIS PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const trackTennisSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/track-tennis/track-hero.png',
+    alt: 'Track.Tennis Web Platform',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: "A performance product shouldn't slow players down",
+    subtitle: "Track.Tennis began as a broad consumer app for every type of tennis player. What it needed was focus. When I joined, the experience was fragmented, setup-heavy, and constrained by a mobile-first model that created friction for players, coaches, and facilities alike.",
+    date: '2021—2022',
+    collaborators: 'Lead Product Designer',
+    align: 'center',
+  },
+
+  // 3. STANDARD IMAGE SECTION (16:9)
+  {
+    id: 'image-platform',
+    type: 'image-block',
+    src: '/images/track-tennis/highlight1.webp',
+    alt: 'Track.Tennis platform overview',
+  },
+
+  // 4. PISO - Problem / Strategy / Outcomes / Impact
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "Track.Tennis tried to serve everyone and ended up serving no one exceptionally well. The product required manual setup, QR codes, and staff intervention just to start recording. Mobile storage limits slowed performance, and facilities offering multiple racket sports had no scalable way to manage or monetize recordings. This wasn't a feature gap. It was a focus and delivery problem.",
+      },
+      {
+        label: 'Strategy',
+        content: 'Narrow the audience, simplify access, and remove operational friction. Shift from a consumer app to a cloud-based B2B platform where facilities manage recording, players access performance data anywhere, and the system scales beyond tennis into padel and pickleball. Design the experience around competitive use cases where accuracy, speed, and reliability matter most.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'Track.Tennis evolved into a web-based SaaS platform used by clubs, colleges, and competitive programs. The product eliminated app dependency, reduced setup friction, and expanded support for emerging racket sports. A unified design system and modernized brand positioned the company for institutional partnerships and long-term growth.',
+      },
+      {
+        label: 'Impact',
+        content: 'The pivot aligned the product with real facility and athlete workflows, unlocked new revenue models, and future-proofed the platform for multi-sport expansion. The redesigned system supported Track.Tennis becoming the official video partner of the Intercollegiate Tennis Association.',
+      },
+    ],
+  },
+
+  // 5. CONTENT + IMAGE SECTION #1
+  {
+    id: 'content-focus',
+    type: 'content-image',
+    title: 'From consumer app to performance platform',
+    body: 'Track.Tennis did not suffer from lack of ambition. It suffered from lack of focus. By narrowing the audience to competitive players, coaches, and facilities, the product shifted from novelty to necessity. Leading this change, I asked the question: "Do amateur players even want to record their matches/practices for analysis?" The redesign reframed Track.Tennis as infrastructure for performance rather than a casual recording tool.',
+    imageSrc: '/images/track-tennis/highlight2.webp',
+    imageAlt: 'Track.Tennis strategic focus',
+  },
+
+  // 6. CONTENT + IMAGE SECTION #2
+  {
+    id: 'content-friction',
+    type: 'content-image',
+    title: 'Remove friction, unlock adoption',
+    body: "Players didn't want to configure technology before every match. Facilities didn't want staff overhead. The new platform removed QR codes and manual setup, allowing matches to be recorded automatically and delivered through the cloud. The experience faded into the background so performance could take center stage.",
+    imageSrc: '/images/track-tennis/track-webapp.png',
+    imageAlt: 'Track.Tennis friction removal',
+  },
+
+  // 7. CARD SECTION (4 cards)
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Strategic bets that shaped the product',
+    cards: [
+      {
+        imageSrc: '/images/track-tennis/details-6.png',
+        title: 'Focus beats reach',
+        description: 'Serving competitive players and facilities created a clearer product, stronger value, and better adoption.',
+      },
+      {
+        imageSrc: '/images/track-tennis/app3.png',
+        title: 'Web over app dependency',
+        description: 'Cloud delivery removed storage limits, improved performance, and enabled access across devices while limiting app dependency.',
+      },
+      {
+        imageSrc: '/images/track-tennis/strat-2.png',
+        title: 'Designed for multi-sport growth',
+        description: "Supporting padel and pickleball anticipated facility trends and expanded the platform's market.",
+      },
+      {
+        imageSrc: '/images/track-tennis/track-personalize.png',
+        title: 'Flexible by design',
+        description: 'Designed to support the realities of college and facility operations, not one-size-fits-all use cases.',
+      },
+    ],
+  },
+
+  // 8. CONTENT + IMAGE SECTION #3
+  {
+    id: 'content-uncertainty',
+    type: 'content-image',
+    title: 'Conviction requires evidence in data',
+    body: 'Shifting product direction in an early-stage startup required conviction backed by evidence. While my experience in competitive tennis helped identify the opportunity, research with players, coaches, and facilities validated the B2B pivot and clarified real operational needs. Progress depended on sequencing strategy before execution and aligning stakeholders around a sharper vision.',
+    imageSrc: '/images/track-tennis/tennis-me.jpg',
+    imageAlt: 'Track.Tennis design process',
+  },
+
+  // 9. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Some early results',
+    stats: [
+      { value: 'ITA Partner', label: 'official video platform for national collegiate tennis' },
+      { value: '40k+ users', label: 'active across tennis, padel, and pickleball' },
+      { value: '1,500+ Cameras', label: 'installed in facilities across the US' },
+      { value: '8K+ events', label: 'streamed in real time in the US' },
+    ],
+  },
+
+  // 10. TABBED SECTION - Details
+  {
+    id: 'tabs-details',
+    type: 'tabbed',
+    title: 'Dig into some of the features',
+    tabs: [
+      {
+        id: 'features',
+        label: 'More features',
+        images: [
+          { src: '/images/track-tennis/details-3.png', caption: 'Create, cut, and download highlights for social media, coaching and analysis.' },
+          { src: '/images/track-tennis/details-2.png', caption: 'Sync fitness data overlays with video for in-depth performance analysis.' },
+          { src: '/images/track-tennis/details-4.png', caption: 'Access advanced match analytics and detailed reports from our partners.' },
+        ],
+      },
+    ],
+  },
+
+  // 11. CONTENT + IMAGE SECTION #4 - Retrospective
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'This project reinforced that experience can spark insight, but data builds conviction. Narrowing focus unlocked clarity across product, brand, and business. If revisiting this work, I would validate the platform shift even earlier before exploring interface redesigns. Next steps include AI-driven highlight generation and automated insights that turn hours of footage into immediate, actionable moments.',
+    imageSrc: '/images/track-tennis/track-partnership.png',
+    imageAlt: 'Track.Tennis retrospective',
+  },
+
+  // 12. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -501,6 +670,21 @@ export default function ProjectPage() {
 
         {/* Render sections from array */}
         {hardRockSections.map((section) => renderSection(section, slug))}
+      </div>
+    )
+  }
+
+  // ==========================================
+  // TRACK.TENNIS PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'track-tennis') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="Track.Tennis" />
+
+        {/* Render sections from array */}
+        {trackTennisSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

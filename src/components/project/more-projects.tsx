@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Work projects data matching homepage
-// Ordered by year descending: hard-rock-web (2025), hard-rock-app (2025), hp-ai (2024), bmw-metaverse (2023), track-tennis (2022)
+// Ordered by year descending: hard-rock-web (2025), track-tennis (2022)
 const workProjectsData = [
   {
     slug: 'hard-rock-web',
@@ -12,27 +12,6 @@ const workProjectsData = [
     tags: ['Web', 'Design System'],
     year: '2025',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
-  },
-  {
-    slug: 'hard-rock-app',
-    title: 'Hard Rock Experience App',
-    tags: ['iOS', 'Mobile'],
-    year: '2025',
-    image: '/images/hard-rock-app/hrx-hero.png',
-  },
-  {
-    slug: 'hp-ai',
-    title: 'HP — AI Assistant',
-    tags: ['AI', 'Internal Tool'],
-    year: '2024',
-    image: '/images/hp-ai/hp-hero.png',
-  },
-  {
-    slug: 'bmw-metaverse',
-    title: 'BMW Metaverse Strategy',
-    tags: ['Strategy', 'Metaverse'],
-    year: '2023',
-    image: '',
   },
   {
     slug: 'track-tennis',
@@ -47,13 +26,7 @@ const workProjectsData = [
 const tagColors: Record<string, string> = {
   'Web': '#dbeafe',
   'Design System': '#fef3c7',
-  'iOS': '#fce7f3',
-  'Mobile': '#cffafe',
-  'AI': '#c7d2fe',
-  'Internal Tool': '#e5e7eb',
   'Sports': '#fed7aa',
-  'Strategy': '#e0e7ff',
-  'Metaverse': '#ddd6fe',
 }
 
 function getTagColor(tag: string): string {

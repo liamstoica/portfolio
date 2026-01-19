@@ -54,3 +54,5 @@ export function HeroText({ title, subtitle, date, collaborators }: HeroTextProps
 
 
 
+
+

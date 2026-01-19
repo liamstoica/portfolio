@@ -5,8 +5,8 @@ import { liveSites, sandbox } from '@/lib/data'
 import Image from "next/image"
 import Link from "next/link"
 
-// Work projects data - showing first 2 on homepage
-// Ordered by year descending (2025, 2025, 2024, 2023, 2022)
+// Work projects data - showing 2 on homepage
+// Ordered by year descending: hard-rock-web (2025), track-tennis (2022)
 const workProjects = [
   {
     slug: 'hard-rock-web',
@@ -17,12 +17,12 @@ const workProjects = [
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   {
-    slug: 'hard-rock-app',
-    title: 'Hard Rock Experience App',
-    sentence: 'Rebuilt the loyalty experience for members across all lines of business.',
-    tags: ['iOS', 'Mobile'],
-    year: '2025—Ongoing',
-    image: '/images/hard-rock-app/hrx-hero.png',
+    slug: 'track-tennis',
+    title: 'Track.Tennis',
+    sentence: 'Leading a strategic pivot from consumer app to scalable B2B sports platform.',
+    tags: ['SaaS', 'Sports', 'Data'],
+    year: '2021—2022',
+    image: '/images/track-tennis/track-tennis-hero.png',
   },
 ]
 

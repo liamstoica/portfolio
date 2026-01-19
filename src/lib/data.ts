@@ -32,7 +32,7 @@ export interface SandboxItem {
 }
 
 // Featured Work - Case Studies (Approved Projects Only)
-// Ordered by year descending: hard-rock-web (2025), hard-rock-app (2025), hp-ai (2024), bmw-metaverse (2023), track-tennis (2022)
+// Ordered by year descending: hard-rock-web (2025), track-tennis (2022)
 export const projects: Project[] = [
   {
     slug: 'hard-rock-web',
@@ -40,28 +40,6 @@ export const projects: Project[] = [
     description: 'Designing a unified digital ecosystem for 100M+ annual visitors across resorts, casinos, cafes, entertainment, and retail.',
     role: 'Lead UX/UI Designer',
     color: '#FEF3C7',
-  },
-  {
-    slug: 'hard-rock-app',
-    title: 'Hard Rock Experience App',
-    description: 'Designing a unified lifestyle platform for millions of guests across hotels, casinos, cafes, entertainment, and retail.',
-    role: 'UX/UI Designer',
-    color: '#FCE7F3',
-  },
-  {
-    slug: 'hp-ai',
-    title: 'HP Business Intelligence',
-    description:
-      'Design engineering a custom AI assistant for an HP executive\'s team to streamline workflows, communication, and innovation.',
-    role: 'Design Engineer',
-    color: '#DBEAFE',
-  },
-  {
-    slug: 'bmw-metaverse',
-    title: 'BMW Metaverse Strategy',
-    description: 'Defining a multi-phase digital ecosystem to engage Gen Z beyond a single platform.',
-    role: 'UX Design Lead',
-    color: '#E0E7FF',
   },
   {
     slug: 'track-tennis',
