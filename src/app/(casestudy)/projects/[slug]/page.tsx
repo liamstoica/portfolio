@@ -579,7 +579,7 @@ const trackTennisSections: CaseStudySection[] = [
     type: 'content-image',
     title: 'Conviction requires evidence',
     body: 'Shifting product direction in an early-stage startup required conviction backed by evidence. While my experience in competitive tennis helped identify the opportunity, research with players, coaches, and facilities validated the B2B pivot and clarified real operational needs. Progress depended on sequencing strategy before execution and aligning stakeholders around a sharper vision.',
-    imageSrc: '/images/track-tennis/tennis-me.jpg',
+    imageSrc: '/images/track-tennis/liam-tennis.png',
     imageAlt: 'Track.Tennis design process',
   },
 
