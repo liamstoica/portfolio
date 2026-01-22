@@ -5,15 +5,23 @@ import { liveSites, sandbox } from '@/lib/data'
 import Image from "next/image"
 import Link from "next/link"
 
-// Work projects data - showing 2 on homepage
-// Ordered by year descending: hard-rock-web (2025), track-tennis (2022)
+// Work projects data - showing on homepage
+// Ordered by year descending: hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 const workProjects = [
   {
+    slug: 'hrx-experiences-webviews',
+    title: 'HRX App: Experiences + Webviews',
+    sentence: 'Designing app-to-web booking journeys that preserve trust, context, and conversion.',
+    tags: ['Mobile', 'App'],
+    year: '2025—Ongoing',
+    image: '/images/hard-rock-app/hrx-hero.png',
+  },
+  {
     slug: 'hard-rock-web',
-    title: 'Hard Rock — Global Web Platform',
+    title: 'Hard Rock: Global Web Platform',
     sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
     tags: ['Web', 'Design System'],
-    year: '2025—Ongoing',
+    year: '2024—Ongoing',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   {

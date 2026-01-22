@@ -632,6 +632,157 @@ const trackTennisSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   HRX EXPERIENCES + WEBVIEWS PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hrxExperiencesWebviewsSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hrx-webviews/experiences-hero2.png',
+    alt: 'HRX App Experiences + WebViews',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: "Booking shouldn’t feel like a handoff",
+    subtitle: "The Hard Rock Experience (HRX) app’s Experiences tab was built to be the fastest way for members to book hotels, dining, shows, and on-property experiences. The challenge was that every booking ultimately lived on the web. My role was to design a system where app and web worked together as one continuous experience, so members could book with confidence without losing context or momentum.",
+    date: '2025 — Present',
+    collaborators: 'Product Designer',
+    align: 'center',
+  },
+
+  // 3. STANDARD IMAGE SECTION (16:9)
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hrx-webviews/exp-highlight.webp',
+    alt: 'HRX App Experiences overview',
+  },
+
+  // 4. PISO - Problem / Strategy / Outcomes / Impact
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "Booking experiences in the HRX app required users to move between native app screens and web pages at the most critical moment. Without clear context, location relevance, or continuity, these transitions risked breaking trust and hurting conversion. At the same time, the app was launching in beta with only a limited set of properties live, creating tension between being useful today and representing a global brand. This was a continuity and conversion problem that needed to be validated ahead of the Las Vegas flagship launch.",
+      },
+      {
+        label: 'Strategy',
+        content: 'Treat Experiences as a booking layer, not a content feature. Surface relevant, location-specific actions early, guide users intentionally into booking flows, and make web content feel like a natural extension of the app. Design the system to support a limited beta while clearly signaling the scale of the global Hard Rock ecosystem.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'The Experiences tab became a centralized entry point for booking hotels, dining, shows, and on-property offerings. Location-aware content, focused calls to action, and optimized WebViews reduced friction and preserved momentum through the highest-intent flows in the app.',
+      },
+      {
+        label: 'Impact',
+        content: 'The system established a scalable foundation for app-to-web booking across properties, aligning product, design, and engineering around a shared conversion strategy. Early testing and launches with Hollywood and Tampa validated the approach and created a clear blueprint for onboarding additional properties.',
+      },
+    ],
+  },
+
+  // 5. CONTENT + IMAGE SECTION #1 - Designing Experiences as a booking layer
+  {
+    id: 'content-booking-layer',
+    type: 'content-image',
+    title: 'Designing Experiences as a booking layer',
+    body: 'The Experiences tab was designed around action, not browsing. Clear paths to book hotels, dining, shows, spa, cabanas, promotions, and retail adapted dynamically to the selected location, so members only saw what was actually available. When no location was selected, experiences routed to broader, global entry points, supporting exploration without sacrificing clarity or conversion.',
+    imageSrc: '/images/hrx-webviews/exp-locations.png',
+    imageAlt: 'HRX App booking layer design',
+  },
+
+  // 7. CONTENT + IMAGE SECTION #3 - Transparency
+  {
+    id: 'content-transparency',
+    type: 'content-image',
+    title: 'WebViews as part of the product',
+    body: 'Once members entered a WebView, the goal shifted to focus and momentum. Headers, footers, and unnecessary navigation were removed. App-aware layouts preserved context, kept booking actions visible, and ensured users always knew how to return without losing their place. Web content adapted to in-app constraints instead of forcing desktop patterns into a mobile shell.',
+    imageSrc: '/images/hrx-webviews/webviews-shows3.webp',
+    imageAlt: 'HRX App webviews design',
+  },
+
+  // 8. CARD SECTION - Strategic bets
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Strategic bets that shaped the experience',
+    cards: [
+      {
+        imageSrc: '/images/hrx-webviews/exp-booking.png',
+        title: 'Relevance before breadth',
+        description: 'Only surface experiences that can actually be booked for the selected location.',
+      },
+      {
+        imageSrc: '/images/hrx-webviews/location-filter.webp',
+        title: 'Transparency without disappointment',
+        description: 'Because the beta launched with only select properties live, unavailable locations were clearly marked as “Coming Soon” to signal scale without creating dead ends.',
+      },
+      {
+        imageSrc: '/images/hrx-webviews/webviews-system.png',
+        title: 'WebViews shouldn\'t distract from booking',
+        description: 'App and web needed to feel like one system, not a redirect. WebViews were designed to feel like a continuation of the app by sharing layout patterns, spacing, and visual language.',
+      },
+      {
+        imageSrc: '/images/hrx-webviews/pricing-comp.png',
+        title: 'Driving transparency and conversion before the handoff',
+        description: 'For hotel bookings, an intermediary screen allowed members to select dates, guests, and see pricing or comped indicators before entering the full booking engine, reinforcing value earlier in the journey.',
+      },
+    ],
+  },
+
+  // 11. CONTENT + IMAGE SECTION #6 - Designing within constraints
+  {
+    id: 'content-constraints',
+    type: 'content-image',
+    title: 'Proving the model across fragmented property systems',
+    body: 'Each property operated on different backends, pricing systems, and technical capabilities. Rather than waiting for full alignment, the experience was designed to represent the ideal state and validated with launch properties. Proving conversion impact was our goal to create leverage to bring additional properties into the same model over time. This required close coordination across product, engineering, and property teams, with design acting as the connective tissue.',
+    imageSrc: '/images/hrx-webviews/exp-backend.png',
+    imageAlt: 'HRX App design constraints',
+  },
+
+  // 12. RESULTS STATS - Experience outcome
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Experience outcome',
+    stats: [
+      { value: '~15%', label: 'projected increase in booking entry taps' },
+      { value: '~20%', label: 'projected reduction in app-to-web drop-off' },
+      { value: '3', label: 'flagship properties validating the rollout' },
+      { value: '1', label: 'shared design system across app and web' },
+    ],
+  },
+
+  // 13. CONTENT + IMAGE SECTION #7 - Retrospective
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'This project reinforced that the most important design work often lives in transitions. Treating WebViews as first-class product surfaces, not technical necessities, made the difference between friction and flow. If revisiting this work, our team should push earlier alignment on backend consistency to accelerate global rollout. The next step is expanding this system across more properties and deeper member-specific personalization.',
+    imageSrc: '/images/hrx-webviews/exp-retro.png',
+    imageAlt: 'HRX App retrospective',
+  },
+
+  // 14. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -655,6 +806,21 @@ export default function ProjectPage() {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
         <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HRX EXPERIENCES + WEBVIEWS PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hrx-experiences-webviews') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HRX App: Experiences + Webviews" />
+
+        {/* Render sections from array */}
+        {hrxExperiencesWebviewsSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

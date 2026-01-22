@@ -15,6 +15,11 @@ const nextConfig = {
         destination: '/projects/:slug',
         permanent: true,
       },
+      {
+        source: '/projects/hrx-app',
+        destination: '/projects/hrx-experiences-webviews',
+        permanent: true,
+      },
     ];
   },
   async headers() {

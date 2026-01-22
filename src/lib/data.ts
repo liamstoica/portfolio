@@ -32,8 +32,15 @@ export interface SandboxItem {
 }
 
 // Featured Work - Case Studies (Approved Projects Only)
-// Ordered by year descending: hard-rock-web (2025), track-tennis (2022)
+// Ordered by year descending: hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 export const projects: Project[] = [
+  {
+    slug: 'hrx-experiences-webviews',
+    title: 'HRX App: Experiences + Webviews',
+    description: 'Designing app-to-web booking journeys that preserve trust, context, and conversion across platforms.',
+    role: 'Lead Product Designer',
+    color: '#E0E7FF',
+  },
   {
     slug: 'hard-rock-web',
     title: 'Hard Rock — Global Web Platform',
