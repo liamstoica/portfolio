@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     'At the intersection of art, science and business. Product designer building digital experiences that feel human, intentional, and impactful.',
   keywords: ['product design', 'growth design', 'UX design', 'portfolio', 'digital experience'],
   authors: [{ name: 'Liam Stoica' }],
+  verification: {
+    google: "tGDPEJAvkph55Lez10XzMsbOlLsr3z5tZze2vAHeA50",
+  },  
   robots: {
     index: false,
     follow: false,
