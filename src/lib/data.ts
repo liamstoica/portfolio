@@ -32,8 +32,15 @@ export interface SandboxItem {
 }
 
 // Featured Work - Case Studies (Approved Projects Only)
-// Ordered by year descending: hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 export const projects: Project[] = [
+  {
+    slug: 'hrx-app-moments',
+    title: 'HRX App: Moments',
+    description: 'Designing a discovery engine that turns inspiration into bookings through immersive video and clear calls to action.',
+    role: 'Product Designer',
+    color: '#E0E7FF',
+  },
   {
     slug: 'hrx-experiences-webviews',
     title: 'HRX App: Experiences + Webviews',

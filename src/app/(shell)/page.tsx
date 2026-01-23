@@ -6,8 +6,16 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Work projects data - showing on homepage
-// Ordered by year descending: hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 const workProjects = [
+  {
+    slug: 'hrx-app-moments',
+    title: 'HRX App: Moments',
+    sentence: 'Designing a discovery engine that turns inspiration into bookings.',
+    tags: ['Mobile', 'App'],
+    year: '2025—Ongoing',
+    image: '/images/hrx-moments/moments-hero6.png',
+  },
   {
     slug: 'hrx-experiences-webviews',
     title: 'HRX App: Experiences + Webviews',

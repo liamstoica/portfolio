@@ -26,7 +26,7 @@ const advercase = localFont({
 
 
 export const metadata: Metadata = {
-  title: 'Liam Stoica — Growth Designer',
+  title: 'Liam Stoica | Design & Strategy',
   description:
     'At the intersection of art, science and business. Product designer building digital experiences that feel human, intentional, and impactful.',
   keywords: ['product design', 'growth design', 'UX design', 'portfolio', 'digital experience'],

@@ -783,6 +783,157 @@ const hrxExperiencesWebviewsSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   HRX APP: MOMENTS PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hrxAppMomentsSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hrx-moments/moments-hero4.png',
+    alt: 'HRX App Moments',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: 'Inspiration should lead to action',
+    subtitle: "Moments was introduced as part of the HRX Lifestyle upgrade to give Hard Rock properties a new way to showcase experiences and turn inspiration into bookings. Instead of static promotions or fragmented content, Moments brings real, timely experiences to life through immersive video and clear calls to action. My role was to design a net-new system that felt familiar, effortless, and intentional. One that maximized fun while quietly driving discovery and conversion across the ecosystem.",
+    date: '2025 — Present',
+    collaborators: 'Product Designer',
+    align: 'center',
+  },
+
+  // 3. STANDARD IMAGE SECTION
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hrx-moments/moments-scroll.webp',
+    alt: 'HRX App Moments overview',
+  },
+
+  // 4. PISO - Problem / Strategy / Outcomes / Impact
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "As part of the HRX Lifestyle upgrade, Hard Rock needed a way for properties to actively surface experiences inside the app. While the brand offers hotels, casinos, dining, shows, and entertainment worldwide, there was no dedicated surface to inspire guests, showcase what was happening now, or encourage cross-line-of-business discovery. Opening the app often meant checking points or offers, not discovering what to do next. It was a discovery and conversion problem.",
+      },
+      {
+        label: 'Strategy',
+        content: 'Design Moments as a discovery engine, not a feed. Introduce a net-new, immersive surface that leverages familiar social behaviors to reduce friction, highlight real property experiences, and create natural paths into booking flows. The goal was simple: increase discovery, maximize fun, and make action feel effortless.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'Moments launched as a new, dynamic surface inside the HRX app where properties could actively showcase experiences through video. Guests could browse what’s happening, filter by interest, and move seamlessly from inspiration to booking without leaving the flow.',
+      },
+      {
+        label: 'Impact',
+        content: 'The system created a scalable foundation for increasing session frequency, cross-property discovery, and conversion through content. It gave properties a new merchandising surface and positioned HRX for future personalization and UGC (user-generated content).',
+      },
+    ],
+  },
+
+  // 5. CONTENT + IMAGE SECTION - Designing Moments as a discovery engine
+  {
+    id: 'content-discovery-engine',
+    type: 'content-image',
+    title: 'Designing Moments as a discovery engine',
+    body: 'Moments was built from the ground up to feel immediately familiar. A global header anchors the experience, while category chips let guests quickly filter content by interest. From there, a vertically scrolling, full-screen video feed delivers immersive content tied directly to real properties and experiences. Each moment is intentional. When relevant, videos include clear calls to action that lead directly into booking flows.',
+    imageSrc: '/images/hrx-moments/moments-discovery.webp',
+    imageAlt: 'Main Moments feed with category filters and full-screen video cards',
+  },
+
+  // 6. CONTENT + IMAGE SECTION - Familiar patterns
+  {
+    id: 'content-familiar-patterns',
+    type: 'content-image',
+    title: 'Familiar patterns, tailored for Hard Rock',
+    body: 'Interaction behaviors intentionally mirror platforms guests already understand. Swiping advances content, tapping controls audio, and double-tap expresses interest. Nothing new to learn. Nothing unexpected. Where social platforms optimize for endless consumption, Moments optimizes for relevance. Content is curated, finite, and grounded in real destinations, events, and experiences guests can actually book.',
+    imageSrc: '/images/hrx-moments/moments-patterns.webp',
+    imageAlt: 'Swipe interactions, mute states, and focus-mode transitions',
+  },
+
+  // 10. CARD SECTION - Strategic bets
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Strategic bets that shaped the experience',
+    cards: [
+      {
+        imageSrc: '/images/hrx-moments/moments-filters.png',
+        title: 'Content that adapts to intent',
+        description: 'Selecting a category reshapes the feed around a single theme, while an always-visible "Home" option makes it easy to reset and explore again.',
+      },
+      {
+        imageSrc: '/images/hrx-moments/moments-actions.png',
+        title: 'Discovery with direction',
+        description: 'Inspiration should always point toward a next step, not a dead end.',
+      },
+      {
+        imageSrc: '/images/hrx-moments/moments-share.webp',
+        title: 'Engagement beyond the app',
+        description: 'Built-in sharing allows Moments to extend beyond HRX, increasing reach and discovery.',
+      },
+      {
+        imageSrc: '/images/hrx-moments/moments-loading.webp',
+        title: 'Design for when systems are down',
+        description: 'Moments also had to work when things went wrong. Loading states, no-connection messaging, and retry paths were designed to be clear and calm, preserving trust even when content couldn\'t load immediately.',
+      },
+    ],
+  },
+
+  // 9. CONTENT + IMAGE SECTION - Reliability
+  {
+    id: 'content-reliability',
+    type: 'content-image',
+    title: 'Sound that works by default',
+    body: "Moments was designed so audio is clear, consistent, and always under the user’s control. Sound can be quickly turned on or off from both the feed and focus mode, without disrupting the viewing experience.",
+    imageSrc: '/images/hrx-moments/moments-sound.webp',
+    imageAlt: 'Error, offline, and retry states across feed and focus mode',
+  },
+
+  // 11. RESULTS STATS - Experience outcome
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Experience outcome',
+    stats: [
+      { value: 'New', label: 'discovery surface introduced as part of the HRX Lifestyle upgrade' },
+      { value: '+15–25%', label: 'projected increase in session frequency driven by dynamic content' },
+      { value: '+10–18%', label: 'projected lift in cross-line-of-business discovery' },
+      { value: '1', label: 'scalable content system for properties, personalization, and UGC' },
+    ],
+  },
+
+  // 12. CONTENT + IMAGE SECTION - Retrospective
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'The core challenge moving forward is content consistency. Designing the system was only part of the work. Sustaining value depends on partnering with properties to create and refresh content on a regular cadence. Generating quality content, especially video, remains a shared challenge across the ecosystem and will ultimately determine how far Moments can scale.',
+    imageSrc: '/images/hrx-moments/moments-retro.png',
+    imageAlt: 'HRX App Moments retrospective',
+  },
+
+  // 13. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -806,6 +957,21 @@ export default function ProjectPage() {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
         <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HRX APP: MOMENTS PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hrx-app-moments') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HRX App: Moments" />
+
+        {/* Render sections from array */}
+        {hrxAppMomentsSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

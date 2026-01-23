@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Optional: keep bots from indexing even if they find a link
+Noindex: /

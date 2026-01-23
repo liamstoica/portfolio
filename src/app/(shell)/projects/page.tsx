@@ -6,8 +6,19 @@ export const metadata = {
 }
 
 // All projects data with filter metadata
-// Ordered by year descending: hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 const allProjects = [
+  {
+    slug: 'hrx-app-moments',
+    title: 'HRX App: Moments',
+    sentence: 'Designing a discovery engine that turns inspiration into bookings.',
+    tags: ['Mobile', 'App', 'Enterprise'],
+    year: '2025—Ongoing',
+    image: '/images/hrx-moments/moments-hero6.png',
+    platform: ['IOS'],
+    focus: ['Social Media', 'Mobile'],
+    context: ['Enterprise'],
+  },
   {
     slug: 'hrx-experiences-webviews',
     title: 'HRX App: Experiences + Webviews',
