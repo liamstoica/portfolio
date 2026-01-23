@@ -9,6 +9,14 @@ import Link from "next/link"
 // Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 const workProjects = [
   {
+    slug: 'hard-rock-web',
+    title: 'Hard Rock: Global Web Platform',
+    sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
+    tags: ['Web', 'Design System'],
+    year: '2025—Ongoing',
+    image: '/images/hard-rock-web/hard-rock-hero.jpg',
+  },
+  {
     slug: 'hrx-app-moments',
     title: 'HRX App: Moments',
     sentence: 'Designing a discovery engine that turns inspiration into bookings.',
@@ -23,14 +31,6 @@ const workProjects = [
     tags: ['Mobile', 'App'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
-  },
-  {
-    slug: 'hard-rock-web',
-    title: 'Hard Rock: Global Web Platform',
-    sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
-    tags: ['Web', 'Design System'],
-    year: '2024—Ongoing',
-    image: '/images/hard-rock-web/hard-rock-hero.jpg',
   },
   {
     slug: 'track-tennis',

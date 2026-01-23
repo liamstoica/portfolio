@@ -9,6 +9,17 @@ export const metadata = {
 // Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
 const allProjects = [
   {
+    slug: 'hard-rock-web',
+    title: 'Hard Rock: Global Web Platform',
+    sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
+    tags: ['Web', 'Design System', 'Enterprise'],
+    year: '2024—Ongoing',
+    image: '/images/hard-rock-web/hard-rock-hero.jpg',
+    platform: ['Web'],
+    focus: ['Systems', 'E-Comm.'],
+    context: ['Enterprise'],
+  },
+  {
     slug: 'hrx-app-moments',
     title: 'HRX App: Moments',
     sentence: 'Designing a discovery engine that turns inspiration into bookings.',
@@ -27,17 +38,6 @@ const allProjects = [
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
     platform: ['Web', 'SaaS'],
-    focus: ['Systems', 'E-Comm.'],
-    context: ['Enterprise'],
-  },
-  {
-    slug: 'hard-rock-web',
-    title: 'Hard Rock: Global Web Platform',
-    sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
-    tags: ['Web', 'Design System', 'Enterprise'],
-    year: '2024—Ongoing',
-    image: '/images/hard-rock-web/hard-rock-hero.jpg',
-    platform: ['Web'],
     focus: ['Systems', 'E-Comm.'],
     context: ['Enterprise'],
   },
