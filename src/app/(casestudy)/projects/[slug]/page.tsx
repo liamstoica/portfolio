@@ -273,100 +273,10 @@ const hardRockSections: CaseStudySection[] = [
     id: 'header-content',
     type: 'header-content',
     title: "One brand shouldn't feel like thirty websites",
-    subtitle: "Hard Rock’s digital presence had become a patchwork of legacy microsites, siloed lines of business, and outdated patterns. What should have felt like a single global brand instead felt fragmented, text heavy, and difficult to navigate, especially on mobile.",
+    subtitle: "Hard Rock’s digital presence had become a patchwork of legacy microsites and siloed business lines. What should have felt like a single global brand instead felt fragmented, text heavy, and difficult to navigate, especially on mobile. The cost was not just inconsistency. Fragmentation reduced discovery, buried high intent actions, and limited cross property exploration. This quietly constrained conversion, repeat engagement, and long term value.",
     date: 'Apr 2024 - Present',
     collaborators: 'Lead UX/UI Designer',
     align: 'center',
-  },
-
-  // 3. STANDARD IMAGE SECTION (16:9)
-  {
-    id: 'image-ecosystem',
-    type: 'image-block',
-    src: '/images/hard-rock-web/mockup-ui4.png',
-    alt: 'Hard Rock mockup',
-  },
-
-  // 4. PISO - Problem / Impact / Strategy / Outcome
-  {
-    id: 'piso',
-    type: 'piso',
-    items: [
-      {
-        label: 'Problem',
-        content: "Hard Rock’s web ecosystem evolved in isolation across resorts, casinos, cafes, entertainment, and retail. Local optimization came at the cost of the global journey. Navigation buried high intent actions, property discovery broke across domains, and inconsistency eroded trust at scale. This was not a visual problem. It was a systems problem.",
-      },
-      {
-        label: 'Strategy',
-        content: 'Unify the ecosystem without flattening local identity. Build a shared architecture that simplifies discovery, supports cross property movement, and surfaces key actions where attention naturally lands. Reduce brand noise where it interferes with clarity and conversion.',
-      },
-      {
-        label: 'Outcomes',
-        content: 'A single, scalable platform now supports 30 plus brands and more than 100M annual visits through one cohesive experience. Navigation, performance, and clarity improved across mobile first journeys.',
-      },
-      {
-        label: 'Impact',
-        content: 'The platform establishes a reference architecture for all future launches, including the Las Vegas flagship. It aligns corporate and property teams, reduces long term design debt, and enables Hard Rock to scale digitally without redesigning itself each time it grows.',
-      },
-    ],
-  },
-
-  // 5. CONTENT + IMAGE SECTION #1
-  {
-    id: 'content-unified',
-    type: 'content-image',
-    title: 'From silos to a shared ecosystem',
-    body: 'Hard Rock did not lack content. It lacked cohesion. Independent systems forced users to re learn navigation patterns and hierarchy at every step. The redesign stitched experiences together through shared patterns, consistent structure, and a common navigation language that works globally while still supporting local expression.',
-    imageSrc: '/images/hard-rock-web/silo-unify.png',
-    imageAlt: 'Hard Rock ecosystem overview',
-  },
-  // 5. CONTENT + IMAGE SECTION #1
-  {
-    id: 'content-unified',
-    type: 'content-image',
-    title: 'Orientation builds trust',
-    body: 'Users needed to understand where they were, what they could do, and what mattered most within seconds. Layouts and navigation were restructured to surface essential cues earlier, reduce cognitive load, and make movement across properties feel deliberate rather than accidental.',
-    imageSrc: '/images/hard-rock-web/strat-arch2.webp',
-    imageAlt: 'Hard Rock ecosystem overview',
-  },
-
-  // 6. CARD SECTION (4 cards)
-  {
-    id: 'cards-features',
-    type: 'card-section',
-    title: 'Strategic bets that shaped the platform',
-    cards: [
-      {
-        imageSrc: '/images/hard-rock-web/strat-arch1.webp',
-        title: 'One global architecture',
-        description: "Users should move fluidly across resorts, casinos, cafes, entertainment, retail and properties without re-learning the interface.",
-      },
-      {
-        imageSrc: '/images/hard-rock-web/strat-arch6.png',
-        title: 'Visibility beats volume',
-        description: 'Key actions needed to surface where attention naturally lands, not buried in content density but appearing at certain anchors as sticky actions.',
-      },
-      {
-        imageSrc: '/images/hard-rock-web/hero1.png',
-        title: 'Performance is part of the experience',
-        description: 'Mobile first speed and responsiveness made the platform feel modern, reliable, and easier to trust.',
-      },
-      {
-        imageSrc: '/images/hard-rock-web/global-map.png',
-        title: 'Designed for global discovery',
-        description: 'Maps, navigation, and hierarchy make it easy to explore across destinations and experiences from the start.',
-      },
-    ],
-  },
-
-  // 7. CONTENT + IMAGE SECTION #2
-  {
-    id: 'content-discovery',
-    type: 'content-image',
-    title: 'Designing through constant complexity',
-    body: 'This work required balancing corporate vision with property level priorities while operating within an active CMS migration and inherited technical constraints. Progress depended less on perfect solutions and more on alignment. Trust was built by making decisions visible, framing tradeoffs clearly, and aligning stakeholders around shared principles rather than preferences.',
-    imageSrc: '/images/hard-rock-web/retrospective3.png',
-    imageAlt: 'Hard Rock navigation system',
   },
 
   // 9. RESULTS STATS
@@ -380,6 +290,96 @@ const hardRockSections: CaseStudySection[] = [
       { value: '3x', label: 'Projected increase in experiences per guest' },
       { value: '+22%', label: 'Projected lift in direct bookings' },
     ],
+  },
+
+  // 3. STANDARD IMAGE SECTION (16:9)
+  {
+    id: 'image-ecosystem',
+    type: 'image-block',
+    src: '/images/hard-rock-web/mockup-ui6.png',
+    alt: 'Hard Rock mockup',
+  },
+
+  // 4. PISO - Problem / Impact / Strategy / Outcome
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "Hard Rock’s web ecosystem evolved independently across resorts, casinos, cafes, entertainment, and retail. Each property optimized locally, but the global journey broke down. As a result, users struggled to discover multiple experiences within a single trip. High intent actions were buried beneath dense navigation. Cross property movement dropped, limiting upsell opportunities and repeat engagement. This was not a visual issue. It was a systems issue that capped revenue opportunity at scale.",
+      },
+      {
+        label: 'Strategy',
+        content: 'Unify the ecosystem without flattening local identity. Build a shared architecture that simplifies discovery, supports cross property movement, and surfaces key actions where attention naturally lands. Reduce brand noise where it interferes with clarity and conversion.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'A single, scalable platform now supports 30 plus brands and more than 100M annual visits through one cohesive experience. Navigation, performance, and clarity improved across mobile first journeys.',
+      },
+      {
+        label: 'Impact',
+        content: 'The platform now serves as the reference architecture for all future launches, including the Las Vegas flagship. It aligns corporate and property teams, reduces long term design debt, and enables Hard Rock to scale digitally without resetting its ecosystem each time it grows.',
+      },
+    ],
+  },
+
+  // 5. CONTENT + IMAGE SECTION #1
+  {
+    id: 'content-unified',
+    type: 'content-image',
+    title: 'From silos to a shared ecosystem',
+    body: 'Hard Rock did not lack content. It lacked cohesion. Independent systems forced users to restart their journey at every touchpoint, reducing confidence and shortening sessions. The redesign connected experiences through shared patterns, consistent hierarchy, and a common navigation language. Discovery now compounds instead of resetting.',
+    imageSrc: '/images/hard-rock-web/silo-unify.png',
+    imageAlt: 'Hard Rock ecosystem overview',
+  },
+  // 5. CONTENT + IMAGE SECTION #1
+  {
+    id: 'content-unified',
+    type: 'content-image',
+    title: 'Orientation builds trust',
+    body: 'Users needed to understand where they were, what mattered, and what they could do next within seconds. Navigation and layout were restructured to surface primary actions earlier, reduce cognitive load on mobile, and make movement across properties feel intentional. Clarity became the growth lever.',
+    imageSrc: '/images/hard-rock-web/strat-arch2.webp',
+    imageAlt: 'Hard Rock ecosystem overview',
+  },
+
+  // 6. CARD SECTION (4 cards)
+  {
+    id: 'cards-features',
+    type: 'card-section',
+    title: 'Strategic bets that shaped the platform',
+    cards: [
+      {
+        imageSrc: '/images/hard-rock-web/strat-arch1.webp',
+        title: 'One global architecture',
+        description: "Fluid movement across resorts, casinos, cafes, entertainment, and retail increases exposure to adjacent experiences and expands trip value.",
+      },
+      {
+        imageSrc: '/images/hard-rock-web/strat-arch7.png',
+        title: 'Visibility beats volume',
+        description: 'Key actions surface at decision moments rather than being buried in dense content, supporting faster and more confident choices. Primary CTA\'s match across all sites to reinforce brand consistency, and alignment to the right proved increase click through rates.',
+      },
+      {
+        imageSrc: '/images/hard-rock-web/hero1.png',
+        title: 'Performance is part of the experience',
+        description: 'A fast and reliable interface signals trust. Trust improves conversion.',
+      },
+      {
+        imageSrc: '/images/hard-rock-web/global-map.png',
+        title: 'Designed for global discovery',
+        description: 'Maps, navigation, and hierarchy work together to make exploration easy from the first interaction.',
+      },
+    ],
+  },
+
+  // 7. CONTENT + IMAGE SECTION #2
+  {
+    id: 'content-discovery',
+    type: 'content-image',
+    title: 'Designing through constant complexity',
+    body: 'This work required balancing corporate vision with property level priorities while operating within an active CMS migration and inherited technical constraints. Progress depended less on perfect solutions and more on alignment. Trust was built by making decisions visible, framing tradeoffs clearly, and aligning stakeholders around shared principles rather than preferences.',
+    imageSrc: '/images/hard-rock-web/retrospective3.png',
+    imageAlt: 'Hard Rock navigation system',
   },
 
   // 11. TABBED SECTION - Process
@@ -450,7 +450,7 @@ const hardRockSections: CaseStudySection[] = [
     id: 'content-discovery',
     type: 'content-image',
     title: 'My retrospective',
-    body: 'This project reinforced that architecture decisions outlive visual ones and that stakeholder alignment is a core design skill. Scaling design required clarity, patience, and shared ownership. If revisiting this work, analytics would be integrated earlier to validate directional bets faster. The next focus is redesigning booking flows and member experiences on top of the foundation established here.',
+    body: 'This project reinforced that architecture decisions outlive visual ones and that stakeholder alignment is a core design skill. If revisiting this work, analytics would be integrated earlier to validate directional bets faster. The next focus is redesigning booking flows and member experiences on top of the foundation established here.',
     imageSrc: '/images/hard-rock-web/booking2.png',
     imageAlt: 'Hard Rock navigation system',
   },
@@ -486,10 +486,23 @@ const trackTennisSections: CaseStudySection[] = [
     id: 'header-content',
     type: 'header-content',
     title: "A performance product shouldn't slow players down",
-    subtitle: "Track.Tennis began as a broad consumer app for every type of tennis player. What it needed was focus. When I joined, the experience was fragmented, setup-heavy, and constrained by a mobile-first model that created friction for players, coaches, and facilities alike.",
+    subtitle: "Track.Tennis began as a broad consumer app built for every type of tennis player. What it needed was focus. When I joined, the experience was fragmented, setup heavy, and constrained by a mobile first model. Starting a recording required QR codes, manual configuration, and staff intervention. What should have supported performance instead introduced friction for players, coaches, and facilities. The cost was adoption. Operational overhead slowed usage, limited scalability, and made it difficult for facilities to reliably monetize or expand beyond tennis.",
     date: '2021—2022',
     collaborators: 'Lead Product Designer',
     align: 'center',
+  },
+
+  // 9. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Results following our work',
+    stats: [
+      { value: 'ITA Partner', label: 'official video platform for national collegiate tennis' },
+      { value: '40k+ Users', label: 'active across tennis, padel, and pickleball' },
+      { value: '1,500+ Cameras', label: 'installed in facilities across the US' },
+      { value: '8K+ Events', label: 'streamed in real time in the US' },
+    ],
   },
 
   // 3. STANDARD IMAGE SECTION (16:9)
@@ -507,7 +520,7 @@ const trackTennisSections: CaseStudySection[] = [
     items: [
       {
         label: 'Problem',
-        content: "Track.Tennis tried to serve everyone and ended up serving no one exceptionally well. The product required manual setup, QR codes, and staff intervention just to start recording. Mobile storage limits slowed performance, and facilities offering multiple racket sports had no scalable way to manage or monetize recordings. This wasn't a feature gap. It was a focus and delivery problem.",
+        content: "Track.Tennis tried to serve everyone and ended up serving no one exceptionally well. The product required manual setup, QR codes, and staff intervention just to start recording. Mobile storage limits slowed performance, and facilities offering multiple racket sports had no scalable way to manage or monetize recordings. This was not a feature gap. It was a focus and delivery problem that limited growth.",
       },
       {
         label: 'Strategy',
@@ -515,7 +528,7 @@ const trackTennisSections: CaseStudySection[] = [
       },
       {
         label: 'Outcomes',
-        content: 'Track.Tennis evolved into a web-based SaaS platform used by clubs, colleges, and competitive programs. The product eliminated app dependency, reduced setup friction, and expanded support for emerging racket sports. A unified design system and modernized brand positioned the company for institutional partnerships and long-term growth.',
+        content: 'Track.Tennis evolved into a web-based SaaS platform used by clubs, colleges, and competitive programs. The product eliminated app dependency, reduced setup friction, and expanded support for emerging racket sports. A unified design system and modernized brand positioned the company for institutional partnerships and long term growth.',
       },
       {
         label: 'Impact',
@@ -529,7 +542,7 @@ const trackTennisSections: CaseStudySection[] = [
     id: 'content-focus',
     type: 'content-image',
     title: 'From consumer app to performance platform',
-    body: 'Track.Tennis did not suffer from lack of ambition. It suffered from lack of focus. By narrowing the audience to competitive players, coaches, and facilities, the product shifted from novelty to necessity. Leading this change, I asked a fundamental question: do amateur players actually want to analyze their matches?',
+    body: 'Track.Tennis did not suffer from lack of ambition. It suffered from lack of focus. By narrowing the audience to competitive players, coaches, and facilities, the product shifted from novelty to necessity. Leading this change required asking a hard question early: do amateur players actually want to analyze their matches at this depth? The answer shaped everything that followed.',
     imageSrc: '/images/track-tennis/highlight2.webp',
     imageAlt: 'Track.Tennis strategic focus',
   },
@@ -581,19 +594,6 @@ const trackTennisSections: CaseStudySection[] = [
     body: 'Shifting product direction in an early-stage startup required conviction backed by evidence. While my experience in competitive tennis helped identify the opportunity, research with players, coaches, and facilities validated the B2B pivot and clarified real operational needs. Progress depended on sequencing strategy before execution and aligning stakeholders around a sharper vision.',
     imageSrc: '/images/track-tennis/liam-tennis.png',
     imageAlt: 'Track.Tennis design process',
-  },
-
-  // 9. RESULTS STATS
-  {
-    id: 'results',
-    type: 'results-stats',
-    title: 'Some early results',
-    stats: [
-      { value: 'ITA Partner', label: 'official video platform for national collegiate tennis' },
-      { value: '40k+ Users', label: 'active across tennis, padel, and pickleball' },
-      { value: '1,500+ Cameras', label: 'installed in facilities across the US' },
-      { value: '8K+ Events', label: 'streamed in real time in the US' },
-    ],
   },
 
   // 10. TABBED SECTION - Details
@@ -655,10 +655,23 @@ const hrxExperiencesWebviewsSections: CaseStudySection[] = [
     id: 'header-content',
     type: 'header-content',
     title: "Booking shouldn’t feel like a handoff",
-    subtitle: "The Hard Rock Experience (HRX) app’s Experiences tab was built to be the fastest way for members to book hotels, dining, shows, and on-property experiences. The challenge was that every booking ultimately lived on the web. My role was to design a system where app and web worked together as one continuous experience, so members could book with confidence without losing context or momentum.",
+    subtitle: "The Hard Rock Experience app’s Experiences tab was intended to be the fastest way for members to book hotels, dining, shows, and on property experiences. The challenge was structural. Every booking ultimately lived on the web. My role was to design a system where app and web worked together as one continuous experience, so members could book with confidence without losing context or momentum. Getting this right mattered ahead of the Las Vegas flagship launch, where booking performance and trust would be under a spotlight.",
     date: '2025 — Present',
     collaborators: 'Product Designer',
     align: 'center',
+  },
+
+   // 12. RESULTS STATS - Experience outcome
+   {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Experience outcome',
+    stats: [
+      { value: '~15%', label: 'projected increase in booking entry taps' },
+      { value: '~20%', label: 'projected reduction in app-to-web drop-off' },
+      { value: '3', label: 'flagship properties validating the rollout' },
+      { value: '1', label: 'shared design system across app and web' },
+    ],
   },
 
   // 3. STANDARD IMAGE SECTION (16:9)
@@ -676,7 +689,7 @@ const hrxExperiencesWebviewsSections: CaseStudySection[] = [
     items: [
       {
         label: 'Problem',
-        content: "Booking experiences in the HRX app required users to move between native app screens and web pages at the most critical moment. Without clear context, location relevance, or continuity, these transitions risked breaking trust and hurting conversion. At the same time, the app was launching in beta with only a limited set of properties live, creating tension between being useful today and representing a global brand. This was a continuity and conversion problem that needed to be validated ahead of the Las Vegas flagship launch.",
+        content: "Booking experiences in the HRX app required users to move between native app screens and web pages at the most critical moment. Without clear context, location relevance, or continuity, these transitions risked breaking trust and hurting conversion. At the same time, the app was launching in beta with only a limited set of properties live, creating tension between being useful today and representing a global brand. This was not a UI issue. It was a continuity and conversion problem that needed validation before scaling.",
       },
       {
         label: 'Strategy',
@@ -752,19 +765,6 @@ const hrxExperiencesWebviewsSections: CaseStudySection[] = [
     imageAlt: 'HRX App design constraints',
   },
 
-  // 12. RESULTS STATS - Experience outcome
-  {
-    id: 'results',
-    type: 'results-stats',
-    title: 'Experience outcome',
-    stats: [
-      { value: '~15%', label: 'projected increase in booking entry taps' },
-      { value: '~20%', label: 'projected reduction in app-to-web drop-off' },
-      { value: '3', label: 'flagship properties validating the rollout' },
-      { value: '1', label: 'shared design system across app and web' },
-    ],
-  },
-
   // 13. CONTENT + IMAGE SECTION #7 - Retrospective
   {
     id: 'content-retrospective',
@@ -812,6 +812,19 @@ const hrxAppMomentsSections: CaseStudySection[] = [
     align: 'center',
   },
 
+  // 11. RESULTS STATS - Experience outcome
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Experience outcomes and impact',
+    stats: [
+      { value: 'New', label: 'discovery surface introduced as part of the HRX Lifestyle upgrade' },
+      { value: '+15–25%', label: 'projected increase in session frequency driven by dynamic content' },
+      { value: '+10–18%', label: 'projected lift in cross-line-of-business discovery' },
+      { value: '1', label: 'scalable content system for properties, personalization, and UGC' },
+    ],
+  },
+
   // 3. STANDARD IMAGE SECTION
   {
     id: 'image-overview',
@@ -827,7 +840,7 @@ const hrxAppMomentsSections: CaseStudySection[] = [
     items: [
       {
         label: 'Problem',
-        content: "As part of the HRX Lifestyle upgrade, Hard Rock needed a way for properties to actively surface experiences inside the app. While the brand offers hotels, casinos, dining, shows, and entertainment worldwide, there was no dedicated surface to inspire guests, showcase what was happening now, or encourage cross-line-of-business discovery. Opening the app often meant checking points or offers, not discovering what to do next. It was a discovery and conversion problem.",
+        content: "As part of the HRX Lifestyle upgrade, Hard Rock needed a way for properties to actively surface experiences inside the app. While the brand spans hotels, casinos, dining, shows, and entertainment worldwide, there was no dedicated surface to inspire guests, highlight what was happening now, or encourage cross line of business exploration. Opening the app often meant checking points or offers, not discovering what to do next. This limited discovery, reduced session depth, and constrained downstream conversion. It was a discovery and conversion problem.",
       },
       {
         label: 'Strategy',
@@ -839,7 +852,7 @@ const hrxAppMomentsSections: CaseStudySection[] = [
       },
       {
         label: 'Impact',
-        content: 'The system created a scalable foundation for increasing session frequency, cross-property discovery, and conversion through content. It gave properties a new merchandising surface and positioned HRX for future personalization and UGC (user-generated content).',
+        content: 'The system created a scalable foundation for increasing session frequency, cross-property discovery, and conversion through content. It gave properties a new merchandising surface and positioned HRX for future personalization and UGC user-generated content.',
       },
     ],
   },
@@ -860,7 +873,7 @@ const hrxAppMomentsSections: CaseStudySection[] = [
     type: 'content-image',
     title: 'Familiar patterns, tailored for Hard Rock',
     body: 'Interaction behaviors intentionally mirror platforms guests already understand. Swiping advances content, tapping controls audio, and double-tap expresses interest. Nothing new to learn. Nothing unexpected. Where social platforms optimize for endless consumption, Moments optimizes for relevance. Content is curated, finite, and grounded in real destinations, events, and experiences guests can actually book.',
-    imageSrc: '/images/hrx-moments/moments-patterns.webp',
+    imageSrc: '/images/hrx-moments/mockup-ui.png',
     imageAlt: 'Swipe interactions, mute states, and focus-mode transitions',
   },
 
@@ -903,18 +916,6 @@ const hrxAppMomentsSections: CaseStudySection[] = [
     imageAlt: 'Error, offline, and retry states across feed and focus mode',
   },
 
-  // 11. RESULTS STATS - Experience outcome
-  {
-    id: 'results',
-    type: 'results-stats',
-    title: 'Experience outcome',
-    stats: [
-      { value: 'New', label: 'discovery surface introduced as part of the HRX Lifestyle upgrade' },
-      { value: '+15–25%', label: 'projected increase in session frequency driven by dynamic content' },
-      { value: '+10–18%', label: 'projected lift in cross-line-of-business discovery' },
-      { value: '1', label: 'scalable content system for properties, personalization, and UGC' },
-    ],
-  },
 
   // 12. CONTENT + IMAGE SECTION - Retrospective
   {

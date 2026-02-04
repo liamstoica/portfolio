@@ -67,7 +67,7 @@ export default function HomePage() {
           <h1 className="hero-name-row">
             <span className="hero-name">Liam Stoica</span>
             <span className="hero-dot">·</span>
-            <span className="hero-title">Designing for Growth</span>
+            <span className="hero-title">Growth Designer</span>
           </h1>
           <p className="hero-tagline">I design scalable digital products rooted in strategy and human experience.</p>
           <div className="hero-cta-icons">
@@ -175,7 +175,7 @@ export default function HomePage() {
       <section className="content-section">
         <h2 className="section-header">About Me</h2>
         <p className="body-text prose-block">
-        I grew up competing in tennis and represented New Zealand throughout my junior years. Coaching at the <strong>Rafa Nadal Academy</strong> taught me patience, leadership, and how to help people perform at their best. Outside of design I love cooking, painting, traveling, and learning about history. The world used to feel beautifully complex, and I enjoy exploring the stories that shaped it.
+        I grew up competing in tennis and represented New Zealand throughout my junior years. Coaching at the <strong>Rafa Nadal Academy</strong> shaped how I think about discipline, patience, and helping others perform at their best.         Outside of design, I enjoy cooking, painting, traveling, and studying history. I’m drawn to complex systems, whether they’re products, cultures, or the stories that shaped the world.
         </p>
       </section>
 
@@ -186,7 +186,7 @@ export default function HomePage() {
       <section className="content-section">
         <h2 className="section-header">Contact</h2>
         <p className="body-text" style={{ marginBottom: '16px' }}>
-          Let&apos;s connect if you care about design, impact, or building things that matter.
+          Let&apos;s connect if you want to talk about design, impact, or building things that matter.
         </p>
         <div className="contact-links">
           <a href="mailto:liamstoica@gmail.com">
