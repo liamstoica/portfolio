@@ -71,6 +71,16 @@ export const projects: Project[] = [
   },
 ]
 
+// Shipped Apps - Apps and side projects
+export const shippedApps: LiveSite[] = [
+  {
+    title: 'Compound Daily',
+    href: 'https://apps.apple.com/us/app/compound-daily-plans/id6758353444', // placeholder
+    color: '#D1FAE5',
+    image: '/images/compound-daily.png', // placeholder
+  },
+]
+
 // Live Sites - External Links (Approved Projects Only)
 export const liveSites: LiveSite[] = [
   {

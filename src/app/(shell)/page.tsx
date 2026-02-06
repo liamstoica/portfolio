@@ -1,7 +1,7 @@
 import { IosTile } from '@/components/ui/ios-tile'
 import { WorkGridCard } from '@/components/ui/work-card'
 import { Testimonials } from '@/components/ui/testimonials'
-import { liveSites, sandbox } from '@/lib/data'
+import { liveSites, shippedApps, sandbox } from '@/lib/data'
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from 'lucide-react'
@@ -133,6 +133,29 @@ export default function HomePage() {
       {/* Divider */}
       <div className="section-divider" />
 
+      {/* Built & Shipped by me */}
+      <section className="content-section">
+        <div className="section-heading">
+          <h2 className="section-header">Built & Shipped by me</h2>
+          <p className="section-subtitle">Apps and side projects I've worked on and shipped end to end.</p>
+        </div>
+        <div className="tile-grid">
+          {shippedApps.map((app, index) => (
+            <IosTile
+              key={index}
+              href={app.href}
+              label={app.title}
+              image={app.image}
+              isExternal
+              color={app.color}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="section-divider" />
+
       {/* Live Web Work - Keep iOS tiles */}
       <section className="content-section">
         <div className="section-heading">
@@ -153,7 +176,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      
 
       {/* Divider */}
       <div className="section-divider" />
