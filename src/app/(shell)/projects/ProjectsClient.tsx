@@ -6,9 +6,9 @@ import { WorkGridCard } from '@/components/ui/work-card'
 import { ArrowLeft, ChevronDown, Check, X } from 'lucide-react'
 
 // Filter options
-const PLATFORMS = ['Web', 'SaaS'] as const
-const FOCUSES = ['Systems', 'E-Comm.', 'Data'] as const
-const CONTEXTS = ['Enterprise', 'B2B', '0 → 1'] as const
+const PLATFORMS = ['Web', 'SaaS', 'Mobile App'] as const
+const FOCUSES = ['Systems', 'Data', 'AI', 'Social Media', 'Conversion', 'Architecture'] as const
+const CONTEXTS = ['Enterprise', 'Startup', 'B2B', '0 → 1', 'D2C'] as const
 
 interface Project {
   slug: string

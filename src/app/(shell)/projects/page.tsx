@@ -16,8 +16,8 @@ const allProjects = [
     year: '2024—Ongoing',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
     platform: ['Web'],
-    focus: ['Systems', 'Architecture'],
-    context: ['Enterprise'],
+    focus: ['Systems', 'Conversion', 'Architecture'],
+    context: ['Enterprise', 'D2C'],
   },
   {
     slug: 'hrx-app-moments',
@@ -26,9 +26,9 @@ const allProjects = [
     tags: ['Mobile', 'App', 'Enterprise'],
     year: '2025—Ongoing',
     image: '/images/hrx-moments/moments-hero6.png',
-    platform: ['IOS'],
-    focus: ['Social Media', 'Mobile'],
-    context: ['Enterprise'],
+    platform: ['Mobile App'],
+    focus: ['Social Media', 'Conversion'],
+    context: ['Enterprise', 'D2C'],
   },
   {
     slug: 'hrx-experiences-webviews',
@@ -38,8 +38,8 @@ const allProjects = [
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
     platform: ['IOS'],
-    focus: ['Systems', 'Web'],
-    context: ['Enterprise'],
+    focus: ['Systems', 'Conversion'],
+    context: ['Enterprise', 'D2C'],
   },
   {
     slug: 'hp-internal-ai',
@@ -50,7 +50,7 @@ const allProjects = [
     image: '/images/hp-ai/hero-mockup2.png',
     platform: ['SaaS'],
     focus: ['AI'],
-    context: ['Enterprise', 'B2B'],
+    context: ['Enterprise', '0 → 1'],
   },
   {
     slug: 'track-tennis',
@@ -60,8 +60,8 @@ const allProjects = [
     year: '2021—2022',
     image: '/images/track-tennis/track-tennis-hero.png',
     platform: ['SaaS'],
-    focus: ['Sports'],
-    context: ['Startup', '0 → 1'],
+    focus: ['Systems'],
+    context: ['Startup', '0 → 1', 'B2B'],
   },
 ]
 

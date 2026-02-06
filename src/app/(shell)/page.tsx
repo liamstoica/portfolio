@@ -4,6 +4,7 @@ import { Testimonials } from '@/components/ui/testimonials'
 import { liveSites, sandbox } from '@/lib/data'
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowRight } from 'lucide-react'
 
 // Work projects data - showing on homepage
 // Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hp-internal-ai (2024), hard-rock-web (2024), track-tennis (2022)
@@ -104,13 +105,13 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Work Section - 2 Project Cards */}
+      {/* Work Section - 4 Project Cards */}
       <section className="content-section">
         <div className="section-heading">
           <h2 className="section-header">Selected Work</h2>
         </div>
         <div className="work-grid">
-          {workProjects.map((project) => (
+          {workProjects.slice(0, 4).map((project) => (
             <WorkGridCard
               key={project.slug}
               slug={project.slug}
@@ -121,6 +122,11 @@ export default function HomePage() {
               image={project.image}
             />
           ))}
+        </div>
+        <div className="contact-links" style={{ justifyContent: 'center', marginTop: '24px' }}>
+          <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+            See all projects <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
 
