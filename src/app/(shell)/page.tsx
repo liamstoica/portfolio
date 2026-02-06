@@ -137,7 +137,7 @@ export default function HomePage() {
       <section className="content-section">
         <div className="section-heading">
           <h2 className="section-header">Built & Shipped by me</h2>
-          <p className="section-subtitle">Apps and side projects I've worked on and shipped end to end.</p>
+          <p className="section-subtitle">Apps and side projects I worked on and shipped end to end.</p>
         </div>
         <div className="tile-grid">
           {shippedApps.map((app, index) => (
