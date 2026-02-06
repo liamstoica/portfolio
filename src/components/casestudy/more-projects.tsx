@@ -11,9 +11,10 @@ interface MoreProjectsProps {
 
 // Project images mapping
 const projectImages: Record<string, string> = {
-  'hrx-experiences-webviews': '/images/hard-rock-app/hrx-hero.png',
+    'hard-rock-web': '/images/hard-rock-web/hard-rock-hero.jpg',
+    'hrx-experiences-webviews': '/images/hard-rock-app/hrx-hero.png',
   'hrx-app-moments': '/images/hrx-moments/moments-hero4.png',
-  'hard-rock-web': '/images/hard-rock-web/hard-rock-hero.jpg',
+  'hp-internal-ai': '/images/hp-ai/hero-mockup2.png',
   'track-tennis': '/images/track-tennis/track-tennis-hero.png',
 }
 

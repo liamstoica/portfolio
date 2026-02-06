@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Work projects data - showing on homepage
-// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hp-internal-ai (2024), hard-rock-web (2024), track-tennis (2022)
 const workProjects = [
   {
     slug: 'hard-rock-web',
@@ -31,6 +31,14 @@ const workProjects = [
     tags: ['Mobile', 'App'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
+  },
+  {
+    slug: 'hp-internal-ai',
+    title: 'HP Internal AI Assistant',
+    sentence: 'Designing a secure, locally hosted AI assistant for an HP executive.',
+    tags: ['AI', 'Enterprise'],
+    year: '2024',
+    image: '/images/hp-ai/hero-mockup2.png',
   },
   {
     slug: 'track-tennis',

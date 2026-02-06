@@ -6,7 +6,7 @@ export const metadata = {
 }
 
 // All projects data with filter metadata
-// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hp-internal-ai (2024), hard-rock-web (2024), track-tennis (2022)
 const allProjects = [
   {
     slug: 'hard-rock-web',
@@ -16,7 +16,7 @@ const allProjects = [
     year: '2024—Ongoing',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
     platform: ['Web'],
-    focus: ['Systems', 'E-Comm.'],
+    focus: ['Systems', 'Architecture'],
     context: ['Enterprise'],
   },
   {
@@ -37,20 +37,31 @@ const allProjects = [
     tags: ['Mobile', 'App', 'Enterprise'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
-    platform: ['Web', 'SaaS'],
-    focus: ['Systems', 'E-Comm.'],
+    platform: ['IOS'],
+    focus: ['Systems', 'Web'],
     context: ['Enterprise'],
+  },
+  {
+    slug: 'hp-internal-ai',
+    title: 'HP Internal AI Assistant',
+    sentence: 'Designing a secure, locally hosted AI assistant for an HP executive.',
+    tags: ['AI', 'Enterprise'],
+    year: '2024',
+    image: '/images/hp-ai/hero-mockup2.png',
+    platform: ['SaaS'],
+    focus: ['AI'],
+    context: ['Enterprise', 'B2B'],
   },
   {
     slug: 'track-tennis',
     title: 'Track.Tennis',
     sentence: 'Leading a strategic pivot from consumer app to scalable B2B sports platform.',
-    tags: ['Web', 'Sports', 'Data', '0 → 1'],
+    tags: ['Startup', 'SaaS', 'Data', '0 → 1'],
     year: '2021—2022',
     image: '/images/track-tennis/track-tennis-hero.png',
     platform: ['SaaS'],
     focus: ['Sports'],
-    context: ['B2B', '0 → 1'],
+    context: ['Startup', '0 → 1'],
   },
 ]
 

@@ -935,6 +935,158 @@ const hrxAppMomentsSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   HP INTERNAL AI PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hpInternalAiSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Placeholder
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hp-ai/hero-mockup3.png',
+    alt: 'HP Internal AI Assistant',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: "Efficiency & Productivity Without Compromising Security",
+    subtitle: "In 2024, as public AI tools rapidly emerged, HP enforced a company wide block on their use to protect proprietary data. An HP executive still needed a way to get answers in the moment across specialists, teams, and decisions. The real challenge was time. Knowledge lived with specialists, generalists relied on follow ups, and conversations rarely turned into action. I designed and helped build a locally hosted AI assistant that bridged this gap and turned internal knowledge into clear, actionable output entirely within HP’s environment.",
+    date: '2024 (12 Weeks)',
+    collaborators: 'Product Designer, Prompt Engineer',
+    align: 'center',
+  },
+
+  // 3. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Experience outcomes and impact',
+    stats: [
+      { value: '12 weeks', label: 'From concept to a working, locally hosted executive tool' },
+      { value: '4', label: 'Strategic pivots to align with HP infrastructure and security constraints' },
+      { value: '10+', label: 'Team members actively using the assistant in daily workflows' },
+      { value: '~35%', label: 'Reduced time spent searching, clarifying ownership, and following up' },
+    ],
+  },
+
+  // 4. IMAGE BLOCK - Placeholder
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hp-ai/chat-mockup2.png',
+    alt: 'HP AI assistant overview image or UI screenshot',
+  },
+
+  // 5. PISO - Problem / Strategy / Outcomes / Impact
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "Public AI tools were blocked across HP in 2024, leaving executives without fast ways to access internal knowledge. Specialists held critical context, but that context did not travel. Generalists relied on meetings and email to get answers. Information lived across PDFs, spreadsheets, and disconnected systems, slowing decisions and turning conversations into follow up work rather than action.",
+      },
+      {
+        label: 'Strategy',
+        content: "Build a private AI assistant for one executive and his team that lived entirely inside HP’s environment. The system needed to bridge specialists and generalists, mirror the executive’s concise style, and convert conversations into next steps. Speed and trust mattered more than feature breadth.",
+      },
+      {
+        label: 'Outcomes',
+        content: "We delivered a locally hosted AI assistant that provided fast, trusted answers, surfaced reminders and priorities, and reduced back and forth across teams while keeping all data secure.",
+      },
+      {
+        label: 'Impact',
+        content: "The tool became a daily utility, improving decision speed without introducing security risk or operational overhead.",
+      },
+    ],
+  },
+
+  // 7. CONTENT + IMAGE - Designing for secure, real world use
+  {
+    id: 'content-secure-design',
+    type: 'content-image',
+    title: 'Building an assistant for real use cases',
+    body: "The assistant used a deliberate three column layout inspired by NotebookLM rather than a generic chat. Inputs set context, chat focused on questions, and outputs surfaced reminders, tables, and files. This made intent clear and kept conversations action oriented.",
+    imageSrc: '/images/hp-ai/chat-columns.png',
+    imageAlt: 'Knowledge base or chat UI',
+  },
+
+  // 6. CONTENT + IMAGE - Led design and rapid build execution
+  {
+    id: 'content-design-lead',
+    type: 'content-image',
+    title: 'Working within AI limits',
+    body: "HP data quickly pushed model limits, with spreadsheets exceeding eighty thousand rows and many PDFs poorly structured. Loading everything into one conversation was not viable. The system separated deep, conversation specific inputs from broader reference knowledge so answers stayed precise rather than speculative.",
+    imageSrc: '/images/hp-ai/2-knowledgebase.png',
+    imageAlt: 'Early UI or flow diagram',
+  },
+
+  // 8. CARD SECTION - Strategic bets
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Strategic bets that shaped the product',
+    cards: [
+      {
+        imageSrc: '/images/hp-ai/strat-bet-1.png',
+        title: 'Agents mapped to real roles',
+        description: 'Agent behavior mirrored real specialist and industry roles while remaining invisible in the interface.',
+      },
+      {
+        imageSrc: '/images/hp-ai/strat-bet-3.png',
+        title: 'User controlled knowledge structure',
+        description: 'Giving the users the ability to structure knowledge in a way that matched how they thought.',
+      },
+      {
+        imageSrc: '/images/hp-ai/strat-bet-2.png',
+        title: 'Actionable output over summaries',
+        description: 'Conversations ended with reminders, priorities, or next steps rather than summaries.',
+      },
+      {
+        imageSrc: '/images/hp-ai/context-knowledge.png',
+        title: 'Bridging specialists and generalists',
+        description: 'The chat adapted output format using concise language, tables, and resources to feel supportive and intelligent.',
+      },
+    ],
+  },
+
+  // 9. CONTENT + IMAGE - Pivoting under real constraints
+  {
+    id: 'content-pivot',
+    type: 'content-image',
+    title: 'Pivoting under real constraints',
+    body: "We began the project modelling ChatGPT in Figma before recognizing a quicker need to deliver a working solution. After moving to Replit, firewall and document access limitations forced a temporary pivot to Microsoft Copilot due to HP’s infrastructure. After testing, it proved too limiting. We returned to a local solution, updated the stack, and refocused on the core problem.",
+    imageSrc: '/images/hp-ai/pivot-mockup.png',
+    imageAlt: 'Iteration or pivot artifact',
+  },
+
+
+  // 12. CONTENT + IMAGE - My retrospective
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: "Designing with AI for AI introduced a steep learning curve where small prompt changes had outsized impact on usability, cost, and trust. Tooling shifted mid project, requiring constant adaptation in both interface and system behavior. Next steps include secure mobile access and personal agents per team member so others can query expertise directly and reduce email driven delays.",
+    imageSrc: '/images/hp-ai/highlight-6.png',
+    imageAlt: 'Reflection or final UI',
+  },
+
+  // 13. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -973,6 +1125,21 @@ export default function ProjectPage() {
 
         {/* Render sections from array */}
         {hrxAppMomentsSections.map((section) => renderSection(section, slug))}
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HP INTERNAL AI PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hp-internal-ai') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HP Internal AI" />
+
+        {/* Render sections from array */}
+        {hpInternalAiSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

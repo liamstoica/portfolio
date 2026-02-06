@@ -32,7 +32,7 @@ export interface SandboxItem {
 }
 
 // Featured Work - Case Studies (Approved Projects Only)
-// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hard-rock-web (2024), track-tennis (2022)
+// Ordered by year descending: hrx-app-moments (2025), hrx-experiences-webviews (2025), hp-internal-ai (2024), hard-rock-web (2024), track-tennis (2022)
 export const projects: Project[] = [
   {
     slug: 'hrx-app-moments',
@@ -47,6 +47,13 @@ export const projects: Project[] = [
     description: 'Designing app-to-web booking journeys that preserve trust, context, and conversion across platforms.',
     role: 'Lead Product Designer',
     color: '#E0E7FF',
+  },
+  {
+    slug: 'hp-internal-ai',
+    title: 'HP Internal AI',
+    description: 'Designing a secure, locally hosted AI assistant for an HP executive to turn internal knowledge into actionable output.',
+    role: 'Product Designer',
+    color: '#DBEAFE',
   },
   {
     slug: 'hard-rock-web',
