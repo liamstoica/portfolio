@@ -1087,6 +1087,157 @@ const hpInternalAiSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   HRX APP ONBOARDING / SIGN UP PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hrxAppOnboardingSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hrx-onboarding/mockup-hero2.png',
+    alt: 'HRX App Onboarding and Sign Up Flow',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: 'Trust is earned in the first 60 seconds',
+    subtitle: "The HRX onboarding experience defines a guest's first interaction with the brand inside the app. From account creation to permissions, validation, and recovery flows, every step needed to feel secure, clear, and friction-aware. My role was to design a resilient onboarding system that reduced drop-off, handled errors gracefully, and balanced business needs with user trust.",
+    date: '2025',
+    collaborators: 'Product Designer',
+    align: 'center',
+  },
+
+  // 3. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Activation outcomes and impact',
+    stats: [
+      { value: '-18–25%', label: 'projected reduction in onboarding drop-off through validation and clarity improvements' },
+      { value: '+12–20%', label: 'projected increase in completed registrations' },
+      { value: '0', label: 'duplicate form submissions through controlled state handling' },
+      { value: '1', label: 'unified error system across sign up, login, and recovery flows' },
+    ],
+  },
+
+  // 4. IMAGE OVERVIEW
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hrx-onboarding/app-open.webp',
+    alt: 'HRX onboarding flow overview including account creation and permissions',
+  },
+
+  // 5. PISO
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: "The HRX app plans to launch as a new platform for millions of existing Unity members while also supporting new users joining through sweepstakes and promotional campaigns. Onboarding needed to serve both groups at once. Returning members required fast, low-friction access. New users needed clear guidance and trust from the first interaction. The challenge was designing a single system that handled migration, acquisition, and compliance without slowing either audience down.",
+      },
+      {
+        label: 'Strategy',
+        content: 'Design onboarding as a trust-building system. Reduce friction through real-time validation. Prevent avoidable errors before submission. Sequence permission requests intentionally. Make every message clear, actionable, and calm.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'The onboarding flow became a cohesive system spanning account creation, password logic, phone validation, legal consent, personalization, biometric enablement, and recovery paths.',
+      },
+      {
+        label: 'Impact',
+        content: 'Improved activation quality directly supports loyalty growth, personalized marketing, and cross-line-of-business engagement. A smoother first experience increases the likelihood of return sessions and downstream bookings.',
+      },
+    ],
+  },
+
+  // 6. CONTENT + IMAGE
+  {
+    id: 'content-validation',
+    type: 'content-image',
+    title: 'Removing friction for existing members',
+    body: 'Returning Unity members can log in by scanning their physical card instead of typing an account number or email. Using the camera reduces input friction, speeds up access, and lowers failed login attempts. For high-intent users, the fastest path increases successful authentication and improves re-engagement.',
+    imageSrc: '/images/hrx-onboarding/camera-scan.png',
+    imageAlt: 'Real-time password validation indicators and inline error messaging',
+  },
+
+  // 7. CONTENT + IMAGE
+  {
+    id: 'content-password',
+    type: 'content-image',
+    title: 'Personalization from the first tap',
+    body: 'Before entering the core experience, users select the Hard Rock moments that matter most to them. Hotels, Casinos, Live Events, Cafes and Shop. These preferences shape home content, offer visibility, and promotional emphasis from the first session. Aligning the app to intent increases relevance, engagement, lifetime value, and cross-line-of-business discovery.',
+    imageSrc: '/images/hrx-onboarding/favorite-moment.webp',
+    imageAlt: 'Hard Rock Moment selection flow',
+  },
+
+  // 11. CARD SECTION
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Key decisions that reduced drop-off',
+    cards: [
+      {
+        imageSrc: '/images/hrx-onboarding/permissions.png',
+        title: 'Permission timing with context',
+        description: 'Explain the value first, then request access. This reduces denial rates and protects trust.',
+      },
+      {
+        imageSrc: '/images/hrx-onboarding/error-states.png',
+        title: 'One error system, everywhere',
+        description: 'Consistent patterns across sign up, sign in, and recovery makes issues faster to understand and fix with support one click away.',
+      },
+      {
+        imageSrc: '/images/hrx-onboarding/biometrics.png',
+        title: 'Biometrics after verification',
+        description: 'Prompting at the right time reinforces security and improves opt-in without adding early friction.',
+      },
+      {
+        imageSrc: '/images/hrx-onboarding/global-scale.png',
+        title: 'Built for scale across properties',
+        description: 'Onboarding was designed as a reusable system, not a one-off flow. Validation, messaging, and permission patterns were standardized so new properties and markets could launch without redesigning the experience.',
+      },
+    ],
+  },
+
+  // 12. CONTENT + IMAGE
+  {
+    id: 'content-errors',
+    type: 'content-image',
+    title: 'Guest Mode as a lower-friction entry',
+    body: 'Guest Mode gives users a way to enter the app without creating an account, widening reach and reducing early drop-off. Users can explore key surfaces and get a feel for the experience, but when an action requires membership, we gate the flow with a clear sign up prompt. This keeps the first session moving, builds intent, and converts users when value is proven.',
+    imageSrc: '/images/hrx-onboarding/guest-mode.png',
+    imageAlt: 'Error states across onboarding including network and validation errors',
+  },
+
+  // 13. RETROSPECTIVE
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'Onboarding is often treated as a checklist of fields. In reality, it is a conversion surface and a trust moment. The strongest improvement opportunity moving forward is measuring drop-off by micro step and continuously refining copy and sequencing. Small friction compounds quickly at scale.',
+    imageSrc: '/images/hrx-onboarding/retro.png',
+    imageAlt: 'HRX onboarding system reflection',
+  },
+
+  // 14. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -1155,6 +1306,21 @@ export default function ProjectPage() {
 
         {/* Render sections from array */}
         {hrxExperiencesWebviewsSections.map((section) => renderSection(section, slug))}
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HRX APP ONBOARDING / SIGN UP PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hrx-app-onboarding') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HRX App Onboarding / Sign Up" />
+
+        {/* Render sections from array */}
+        {hrxAppOnboardingSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

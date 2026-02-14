@@ -12,7 +12,7 @@ const workProjects = [
   {
     slug: 'hard-rock-web',
     title: 'Hard Rock: Global Web Platform',
-    sentence: 'Designing a unified digital ecosystem for 100M+ annual visitors.',
+    sentence: 'Building a unified digital ecosystem for 100M+ annual visitors.',
     tags: ['Web', 'Design System'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-web/hard-rock-hero.jpg',
@@ -28,10 +28,18 @@ const workProjects = [
   {
     slug: 'hrx-experiences-webviews',
     title: 'HRX App: Experiences + Webviews',
-    sentence: 'Designing app-to-web booking journeys that preserve trust, context, and conversion.',
+    sentence: 'Creating app-to-web booking journeys that preserve trust, context, and conversion.',
     tags: ['Mobile', 'App'],
     year: '2025—Ongoing',
     image: '/images/hard-rock-app/hrx-hero.png',
+  },
+  {
+    slug: 'hrx-app-onboarding',
+    title: 'HRX App: Onboarding + Sign Up',
+    sentence: 'Designing trust where it\'s earned in the first 60 seconds.',
+    tags: ['Mobile', 'App'],
+    year: '2025',
+    image: '/images/hrx-onboarding/mockup-hero.png',
   },
   {
     slug: 'hp-internal-ai',
