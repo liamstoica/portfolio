@@ -1238,6 +1238,158 @@ const hrxAppOnboardingSections: CaseStudySection[] = [
 ]
 
 /* ============================================
+   HRX: OFFERS PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hrxOffersSections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hrx-offers/offer-hero5.png',
+    alt: 'HRX Offers',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: 'The incentive engine of the HRX ecosystem',
+    subtitle: 'The Offers tab is one of the highest engagement surfaces in the HRX app. It connects personalized incentives to real-world action across casinos, hotels, dining, entertainment, retail, and partners. I designed a flexible offers system that manages dynamic inventory, multiple booking methods, and real-time states while keeping action clear and immediate.',
+    date: '2025',
+    collaborators: 'Product Designer',
+    align: 'center',
+  },
+
+  // 3. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Revenue-driving outcomes',
+    stats: [
+      { value: '+22–35%', label: 'projected increase in offer engagement through clearer states and filtering' },
+      { value: '+15–25%', label: 'projected lift in reservation completion through simplified booking flows' },
+      { value: '2x', label: 'increase in cross-line-of-business engagement per member' },
+      { value: '+25–40%', label: 'projected increase in repeat weekly offer interactions' },
+    ],
+  },
+
+  // 4. IMAGE OVERVIEW
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hrx-offers/offer-overview.webp',
+    alt: 'HRX personalized offers list and detail modal',
+  },
+
+  // 5. PISO
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: 'Offers are the core incentive engine of casino loyalty. They expire. They have limited inventory. They vary by segment, property, and booking method. Players must quickly understand what they have, what requires action, and what is about to disappear. The system needed to support dynamic data from multiple sources while remaining simple enough for daily use.',
+      },
+      {
+        label: 'Strategy',
+        content: 'Design offers as a flexible framework, not a single flow. Standardize states across list and detail views. Make action requirements obvious. Surface urgency when inventory is low. Support multiple booking types without breaking consistency.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'A unified offers experience with dynamic filtering, sorting, calendar planning, inventory enforcement, reservation flows, cancellation, modification, and location-based personalization.',
+      },
+      {
+        label: 'Impact',
+        content: 'Clearer offer states increase engagement and urgency. Faster reservation flows reduce abandonment. Better visibility across properties drives cross-line-of-business revenue and return visits.',
+      },
+    ],
+  },
+
+  // 6. CONTENT + IMAGE
+  {
+    id: 'content-daily-driver',
+    type: 'content-image',
+    title: 'Designing the control layer',
+    body: 'The offers screen balances personalization with control. Location context, filtering, sorting, calendar planning, and action toggles work together without overwhelming the user. Players can narrow by property, date, category, or required action in seconds. Complex campaign logic stays behind the scenes while the interface remains fast to scan and simple to use.',
+    imageSrc: '/images/hrx-offers/general-controls.png',
+    imageAlt: 'HRX offers list with states and tags',
+  },
+
+  
+  // 10. CONTENT + IMAGE
+  {
+    id: 'content-detail-surface',
+    type: 'content-image',
+    title: 'Offer detail as a decision surface',
+    body: 'The offer modal communicates everything required to take action. Dates are formatted based on configuration. Multi-property offers are labeled clearly. Disclaimers expand only when needed. Reservation success triggers immediate feedback and returns users to the same scroll position. Cancel and modify flows respect booking windows and inventory limits. This reduces support tickets and increases confidence in booking.',
+    imageSrc: '/images/hrx-offers/modify-cancel.png',
+    imageAlt: 'Offer detail modal showing date formatting, location rules, and terms expansion',
+  },
+
+  // 9. CARD SECTION
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Key decisions that increased engagement',
+    cards: [
+      {
+        imageSrc: '/images/hrx-offers/calendar-views.webp',
+        title: 'Calendar planning',
+        description: 'Players can switch from list view to calendar view to plan their week. This supports trip planning, events, and multi-day stays.',
+      },
+      {
+        imageSrc: '/images/hrx-offers/ready-toggle.png',
+        title: 'Ready to Reserve toggle',
+        description: 'A focused mode that surfaces only offers requiring action. This helps high-value players prioritize reservations quickly.',
+      },
+      {
+        imageSrc: '/images/hrx-offers/offer-filter.webp',
+        title: 'Dynamic filtering and sorting',
+        description: 'Filters are generated from available data per location. Sorting defaults to expiring soon. Preferences persist across sessions.',
+      },
+      {
+        imageSrc: '/images/hrx-offers/location-switch3.png',
+        title: 'Location intelligence',
+        description: 'Users can switch properties and see offer counts per location. Locations are sorted by relevance and persist across sessions.',
+      },
+    ],
+  },
+
+  // 7. CONTENT + IMAGE
+  {
+    id: 'content-reservation-framework',
+    type: 'content-image',
+    title: 'Flexible reservation framework',
+    body: 'Offers are not uniform. Some require selecting a reward. Some require choosing a quantity. Some require both. Others open a hotel booking engine or launch a phone call. The system adapts based on configuration. Single-item offers reserve in one tap. Multi-item offers enforce inventory. Quantity-based offers apply min and max logic. Backup rewards surface automatically when primary items are sold out. Revenue logic stays strict while the experience stays predictable.',
+    imageSrc: '/images/hrx-offers/offer-options.png',
+    imageAlt: 'Offer detail modal with reservation options and inventory rules',
+  },
+
+  // 12. RETROSPECTIVE
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'Offers are not just promotions. They are behavior triggers. The next opportunity is deeper personalization through predictive ranking and lifecycle-based surfacing. The tighter the alignment between player behavior and offer timing, the higher the return.',
+    imageSrc: '/images/hrx-offers/offers-retro.png',
+    imageAlt: 'HRX offers retrospective',
+  },
+
+  // 13. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
    PAGE COMPONENT
    ============================================ */
 
@@ -1321,6 +1473,21 @@ export default function ProjectPage() {
 
         {/* Render sections from array */}
         {hrxAppOnboardingSections.map((section) => renderSection(section, slug))}
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HRX: OFFERS PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hrx-offers') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HRX: Offers" />
+
+        {/* Render sections from array */}
+        {hrxOffersSections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

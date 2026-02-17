@@ -53,6 +53,17 @@ const allProjects = [
     context: ['Enterprise', 'D2C'],
   },
   {
+    slug: 'hrx-offers',
+    title: 'HRX: Offers',
+    sentence: 'Designing a scalable offers system that turns incentives into action.',
+    tags: ['Mobile', 'App', 'Enterprise'],
+    year: '2025',
+    image: '/images/hrx-offers/offer-hero4.png',
+    platform: ['Mobile App'],
+    focus: ['Systems', 'Conversion'],
+    context: ['Enterprise', 'D2C'],
+  },
+  {
     slug: 'hp-internal-ai',
     title: 'HP Internal AI Assistant',
     sentence: 'Designing a secure, locally hosted AI assistant for an HP executive.',

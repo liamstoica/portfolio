@@ -15,6 +15,7 @@ const projectImages: Record<string, string> = {
     'hrx-experiences-webviews': '/images/hard-rock-app/hrx-hero.png',
   'hrx-app-moments': '/images/hrx-moments/moments-hero4.png',
   'hrx-app-onboarding': '/images/hrx-onboarding/mockup-hero.png',
+  'hrx-offers': '/images/hrx-offers/offer-hero4.png',
   'hp-internal-ai': '/images/hp-ai/hero-mockup2.png',
   'track-tennis': '/images/track-tennis/track-tennis-hero.png',
 }

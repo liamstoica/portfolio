@@ -56,6 +56,13 @@ export const projects: Project[] = [
     color: '#E0E7FF',
   },
   {
+    slug: 'hrx-offers',
+    title: 'HRX: Offers',
+    description: 'Offers turn intent into revenue',
+    role: 'Product Designer',
+    color: '#E0E7FF',
+  },
+  {
     slug: 'hp-internal-ai',
     title: 'HP Internal AI',
     description: 'Designing a secure, locally hosted AI assistant for an HP executive to turn internal knowledge into actionable output.',

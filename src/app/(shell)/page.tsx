@@ -22,7 +22,7 @@ const workProjects = [
     title: 'HRX App: Moments',
     sentence: 'Designing a discovery engine that turns inspiration into bookings.',
     tags: ['Mobile', 'App'],
-    year: '2025—Ongoing',
+    year: '2025',
     image: '/images/hrx-moments/moments-hero6.png',
   },
   {
@@ -30,7 +30,7 @@ const workProjects = [
     title: 'HRX App: Experiences + Webviews',
     sentence: 'Creating app-to-web booking journeys that preserve trust, context, and conversion.',
     tags: ['Mobile', 'App'],
-    year: '2025—Ongoing',
+    year: '2025',
     image: '/images/hard-rock-app/hrx-hero.png',
   },
   {
@@ -40,6 +40,14 @@ const workProjects = [
     tags: ['Mobile', 'App'],
     year: '2025',
     image: '/images/hrx-onboarding/mockup-hero.png',
+  },
+  {
+    slug: 'hrx-offers',
+    title: 'HRX: Offers',
+    sentence: 'Designing a scalable offers system that turns incentives into action.',
+    tags: ['Mobile', 'App'],
+    year: '2025',
+    image: '/images/hrx-offers/offer-hero4.png',
   },
   {
     slug: 'hp-internal-ai',
