@@ -274,7 +274,7 @@ const hardRockSections: CaseStudySection[] = [
     type: 'header-content',
     title: "One brand shouldn't feel like thirty websites",
     subtitle: "Hard Rock’s digital presence had become a patchwork of legacy microsites and siloed business lines. What should have felt like a single global brand instead felt fragmented, text heavy, and difficult to navigate, especially on mobile. The cost was not just inconsistency. Fragmentation reduced discovery, buried high intent actions, and limited cross property exploration. This quietly constrained conversion, repeat engagement, and long term value.",
-    date: 'Apr 2024 - Present',
+    date: 'Apr 2025 - Present',
     collaborators: 'Lead UX/UI Designer',
     align: 'center',
   },
@@ -656,7 +656,7 @@ const hrxExperiencesWebviewsSections: CaseStudySection[] = [
     type: 'header-content',
     title: "Booking shouldn’t feel like a handoff",
     subtitle: "The Hard Rock Experience app’s Experiences tab was intended to be the fastest way for members to book hotels, dining, shows, and on property experiences. The challenge was structural. Every booking ultimately lived on the web. My role was to design a system where app and web worked together as one continuous experience, so members could book with confidence without losing context or momentum. Getting this right mattered ahead of the Las Vegas flagship launch, where booking performance and trust would be under a spotlight.",
-    date: '2025 — Present',
+    date: '2025',
     collaborators: 'Product Designer',
     align: 'center',
   },
@@ -807,7 +807,7 @@ const hrxAppMomentsSections: CaseStudySection[] = [
     type: 'header-content',
     title: 'Inspiration should lead to action',
     subtitle: "Moments was introduced as part of the HRX Lifestyle upgrade to give Hard Rock properties a new way to showcase experiences and turn inspiration into bookings. Instead of static promotions or fragmented content, Moments brings real, timely experiences to life through immersive video and clear calls to action. My role was to design a net-new system that felt familiar, effortless, and intentional. One that maximized fun while quietly driving discovery and conversion across the ecosystem.",
-    date: '2025 — Present',
+    date: '2025',
     collaborators: 'Product Designer',
     align: 'center',
   },
@@ -1345,14 +1345,14 @@ const hrxOffersSections: CaseStudySection[] = [
         description: 'Players can switch from list view to calendar view to plan their week. This supports trip planning, events, and multi-day stays.',
       },
       {
-        imageSrc: '/images/hrx-offers/ready-toggle.png',
-        title: 'Ready to Reserve toggle',
-        description: 'A focused mode that surfaces only offers requiring action. This helps high-value players prioritize reservations quickly.',
-      },
-      {
         imageSrc: '/images/hrx-offers/offer-filter.webp',
         title: 'Dynamic filtering and sorting',
         description: 'Filters are generated from available data per location. Sorting defaults to expiring soon. Preferences persist across sessions.',
+      },
+      {
+        imageSrc: '/images/hrx-offers/ready-toggle.png',
+        title: 'Ready to Reserve toggle',
+        description: 'A focused mode that surfaces only offers requiring action. This helps high-value players prioritize reservations quickly.',
       },
       {
         imageSrc: '/images/hrx-offers/location-switch3.png',
@@ -1383,6 +1383,157 @@ const hrxOffersSections: CaseStudySection[] = [
   },
 
   // 13. MORE PROJECTS
+  {
+    id: 'more-projects',
+    type: 'more-projects',
+  },
+]
+
+/* ============================================
+   HRX: MYBEAT & MOBILE KEY PROJECT - SECTION CONFIGURATION
+   ============================================
+   
+   To reorder sections: simply move objects within this array.
+   Each section is independent and can be placed in any order.
+   
+   ============================================ */
+
+const hrxMyBeatMobileKeySections: CaseStudySection[] = [
+  // 1. HERO MEDIA - Full viewport image
+  {
+    id: 'hero-media',
+    type: 'hero-media',
+    src: '/images/hrx-mybeat/mybeat-hero3.png',
+    alt: 'HRX MyBeat & Mobile Key',
+    mediaType: 'image',
+  },
+
+  // 2. HEADER CONTENT - Title, subtitle, metadata
+  {
+    id: 'header-content',
+    type: 'header-content',
+    title: 'The heartbeat of the member experience',
+    subtitle: 'MyBeat is the most personal tab in the HRX app. It brings together member points, tier status, identity, bookings, offer reservations, and key actions in one place, so members never have to hunt for what matters. My role was to redesign MyBeat to feel less bland, more premium, and more useful, while improving clarity across states, errors, and high-stakes moments like mobile key access.',
+    date: '2025',
+    collaborators: 'Product Designer',
+    align: 'center',
+  },
+
+  // 3. RESULTS STATS
+  {
+    id: 'results',
+    type: 'results-stats',
+    title: 'Member experience outcomes',
+    stats: [
+      { value: '+15–25%', label: 'projected increase in MyBeat repeat visits through clearer hierarchy and quick actions' },
+      { value: '+10–18%', label: 'projected lift in downstream conversions from contextual CTAs tied to bookings' },
+      { value: '1', label: 'unified "personal status" header for points, tier, and identity access' },
+      { value: '0', label: 'dead-end key states through clearer feedback and recovery paths' },
+    ],
+  },
+
+  // 4. IMAGE OVERVIEW
+  {
+    id: 'image-overview',
+    type: 'image-block',
+    src: '/images/hrx-mybeat/mybeat-overview.webp',
+    alt: 'MyBeat overview with Unity highlights, upcoming bookings, and mobile key entry points',
+  },
+
+  // 5. PISO
+  {
+    id: 'piso',
+    type: 'piso',
+    items: [
+      {
+        label: 'Problem',
+        content: 'HRX was built to replace the previous Unity member app, which struggled with clarity around points, tier status, reward usage, and mobile key reliability. Members often had to search for critical information, and high-stakes moments like unlocking a room lacked clear guidance. We had the opportunity to rebuild MyBeat from the ground up and correct those experience gaps while supporting a more modern, premium loyalty ecosystem.',
+      },
+      {
+        label: 'Strategy',
+        content: 'Reimagine MyBeat as the member layer of HRX. Surface points, tier, and identity immediately. Clarify how rewards are earned and spent. Centralize upcoming bookings and offer reservations. For mobile key, design explicit system states, feedback, and recovery paths so users always understand what is happening and how to proceed.',
+      },
+      {
+        label: 'Outcomes',
+        content: 'A rebuilt MyBeat experience anchored by a Unity highlights header, clearer reward visibility, integrated reservation management, and a mobile key flow designed around state clarity and reliability.',
+      },
+      {
+        label: 'Impact',
+        content: 'Members gain confidence in their status, spending power, and access. Reduced confusion around rewards increases engagement and point usage. Clearer mobile key states improve trust in the app during the most critical on-property moment.',
+      },
+    ],
+  },
+
+  // 6. CONTENT + IMAGE
+  {
+    id: 'content-unity-home',
+    type: 'content-image',
+    title: 'Designing a personal home for Unity',
+    body: 'The Unity highlights header gives members instant access to their points balance, tier status, and digital ID. It anchors MyBeat with the information users check most, and it creates a clear gateway into rewards, progress, and account history. The goal is simple: reduce searching and increase repeat visits by making the app feel like it understands the user.',
+    imageSrc: '/images/hrx-mybeat/mybeat-controls.png',
+    imageAlt: 'Unity highlights header with points, tier, and digital ID access',
+  },
+
+  // 7. CONTENT + IMAGE
+  {
+    id: 'content-upcoming-bookings',
+    type: 'content-image',
+    title: 'Key actions at a glance',
+    body: 'MyBeat is where members check what matters most. From points balance and tier progress to transaction history, free play, and reward usage, high-frequency actions are accessible directly from the header. Instead of navigating through layers, members can quickly view spending history, track earnings by currency, and understand how their benefits translate into real value. This shifts MyBeat from a passive summary into an active control center.',
+    imageSrc: '/images/hrx-mybeat/key-actions.webp',
+    imageAlt: 'Upcoming bookings section with actionable reservations and quick actions',
+  },
+
+  // 8. CARD SECTION
+  {
+    id: 'cards-strategy',
+    type: 'card-section',
+    title: 'Key decisions that made MyBeat feel personal',
+    cards: [
+      {
+        imageSrc: '/images/hrx-offers/mybeat-bookings.png',
+        title: 'Reservations feel connected',
+        description: 'Stays, dining, tournaments, and giveaways live in one unified view. Each reservation supports modification or cancellation without leaving MyBeat.',
+      },
+      {
+        imageSrc: '/images/hrx-offers/mybeat-reservation.png',
+        title: 'Stay details that drive more value',
+        description: 'Reservations expand into a full stay view with room details, guests, and contextual upgrades. Enhancements are surfaced at the right moment to increase engagement and incremental revenue.',
+      },
+      {
+        imageSrc: '/images/hrx-mybeat/mybeat-checkin.png',
+        title: 'Seamless on-property access',
+        description: 'Check-in, room details, and mobile key live alongside bookings and status. Critical arrival actions are easy to access when they matter most.',
+      },
+      {
+        imageSrc: '/images/hrx-mybeat/mybeat-transactions.webp',
+        title: 'Clarity across transactions and spending',
+        description: 'Points, free play, and promotional rewards are clearly separated. Filters by currency and date range make earning and spending easy to understand.',
+      },
+    ],
+  },
+
+  // 9. CONTENT + IMAGE
+  {
+    id: 'content-mobile-key',
+    type: 'content-image',
+    title: 'Mobile key that builds confidence',
+    body: 'Mobile key is a trust moment. When it fails, the user is standing at a door. The HRX experience needed clear states, readable feedback, and calm recovery paths so users feel guided instead of stuck. The goal was not just to unlock a door, but to reduce uncertainty and make the digital experience feel reliable.',
+    imageSrc: '/images/hrx-mybeat/mobile-key.png',
+    imageAlt: 'Mobile key states and recovery messaging',
+  },
+
+  // 10. RETROSPECTIVE
+  {
+    id: 'content-retrospective',
+    type: 'content-image',
+    title: 'My retrospective',
+    body: 'The strongest MyBeat experiences feel like they adapt to the user. The next opportunity is deeper personalization of layout and quick actions based on behavior, bookings, and tier. For mobile key, continued success depends on pairing clear UI states with technical reliability, then measuring where users drop into recovery so the flow stays confident under real conditions.',
+    imageSrc: '/images/hrx-mybeat/mybeat-retro.png',
+    imageAlt: 'HRX MyBeat retrospective',
+  },
+
+  // 11. MORE PROJECTS
   {
     id: 'more-projects',
     type: 'more-projects',
@@ -1488,6 +1639,21 @@ export default function ProjectPage() {
 
         {/* Render sections from array */}
         {hrxOffersSections.map((section) => renderSection(section, slug))}
+      </div>
+    )
+  }
+
+  // ==========================================
+  // HRX: MYBEAT & MOBILE KEY PROJECT - Array-driven rendering
+  // ==========================================
+  if (slug === 'hrx-mybeat-mobile-key') {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a]">
+        {/* Fixed header */}
+        <CaseHeader projectName="HRX: MyBeat & Mobile Key" />
+
+        {/* Render sections from array */}
+        {hrxMyBeatMobileKeySections.map((section) => renderSection(section, slug))}
       </div>
     )
   }

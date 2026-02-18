@@ -63,6 +63,13 @@ export const projects: Project[] = [
     color: '#E0E7FF',
   },
   {
+    slug: 'hrx-mybeat-mobile-key',
+    title: 'HRX: MyBeat & Mobile Key',
+    description: 'Your personal command center',
+    role: 'Product Designer',
+    color: '#E0E7FF',
+  },
+  {
     slug: 'hp-internal-ai',
     title: 'HP Internal AI',
     description: 'Designing a secure, locally hosted AI assistant for an HP executive to turn internal knowledge into actionable output.',

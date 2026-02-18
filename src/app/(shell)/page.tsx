@@ -26,6 +26,14 @@ const workProjects = [
     image: '/images/hrx-moments/moments-hero6.png',
   },
   {
+    slug: 'hrx-mybeat-mobile-key',
+    title: 'HRX App: MyBeat + Mobile Key',
+    sentence: 'Unifying identity, reservations, and mobile key into a personal command center.',
+    tags: ['Mobile', 'App'],
+    year: '2025',
+    image: '/images/hrx-mybeat/mybeat-hero2.png',
+  },
+  {
     slug: 'hrx-experiences-webviews',
     title: 'HRX App: Experiences + Webviews',
     sentence: 'Creating app-to-web booking journeys that preserve trust, context, and conversion.',
